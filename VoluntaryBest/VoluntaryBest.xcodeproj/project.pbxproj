@@ -22,6 +22,8 @@
 		403757A72965E241006C834E /* SignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757A62965E241006C834E /* SignController.m */; };
 		403757AA2965E25D006C834E /* ForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757A92965E25D006C834E /* ForumController.m */; };
 		403757B02965E28C006C834E /* AssistanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757AF2965E28C006C834E /* AssistanceController.m */; };
+		403757B329687A80006C834E /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757B229687A80006C834E /* SettingsView.m */; };
+		403757BB29688DD7006C834E /* touxiang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 403757BA29688DD7006C834E /* touxiang.jpg */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		403757A92965E25D006C834E /* ForumController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumController.m; sourceTree = "<group>"; };
 		403757AE2965E28C006C834E /* AssistanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistanceController.h; sourceTree = "<group>"; };
 		403757AF2965E28C006C834E /* AssistanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssistanceController.m; sourceTree = "<group>"; };
+		403757B129687A80006C834E /* SettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
+		403757B229687A80006C834E /* SettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
+		403757BA29688DD7006C834E /* touxiang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touxiang.jpg; sourceTree = "<group>"; };
 		BFD62B9CE786727B1EF9B7F1 /* Pods-VoluntaryBest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.debug.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoluntaryBest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45F58C014DFCF0A7D03608 /* Pods-VoluntaryBest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.release.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 		403757482965C9B9006C834E = {
 			isa = PBXGroup;
 			children = (
+				403757B429688CB4006C834E /* images */,
 				403757532965C9B9006C834E /* VoluntaryBest */,
 				4037576F2965C9BB006C834E /* VoluntaryBestTests */,
 				403757792965C9BB006C834E /* VoluntaryBestUITests */,
@@ -276,6 +282,8 @@
 		403757992965E13D006C834E /* V */ = {
 			isa = PBXGroup;
 			children = (
+				403757B129687A80006C834E /* SettingsView.h */,
+				403757B229687A80006C834E /* SettingsView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -366,6 +374,54 @@
 				403757AF2965E28C006C834E /* AssistanceController.m */,
 			);
 			path = C;
+			sourceTree = "<group>";
+		};
+		403757B429688CB4006C834E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				403757B929688CFF006C834E /* InMain */,
+				403757B829688CEC006C834E /* InAssistance */,
+				403757B729688CE0006C834E /* InSign */,
+				403757B629688CD7006C834E /* InForum */,
+				403757B529688CBD006C834E /* InSettings */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		403757B529688CBD006C834E /* InSettings */ = {
+			isa = PBXGroup;
+			children = (
+				403757BA29688DD7006C834E /* touxiang.jpg */,
+			);
+			path = InSettings;
+			sourceTree = "<group>";
+		};
+		403757B629688CD7006C834E /* InForum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InForum;
+			sourceTree = "<group>";
+		};
+		403757B729688CE0006C834E /* InSign */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InSign;
+			sourceTree = "<group>";
+		};
+		403757B829688CEC006C834E /* InAssistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InAssistance;
+			sourceTree = "<group>";
+		};
+		403757B929688CFF006C834E /* InMain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InMain;
 			sourceTree = "<group>";
 		};
 		ADCDA92C70442D99033CEC9E /* Frameworks */ = {
@@ -491,6 +547,7 @@
 			files = (
 				403757642965C9BB006C834E /* LaunchScreen.storyboard in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
+				403757BB29688DD7006C834E /* touxiang.jpg in Resources */,
 				4037575F2965C9B9006C834E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +607,7 @@
 				403757672965C9BB006C834E /* main.m in Sources */,
 				4037578F2965DF43006C834E /* MainController.m in Sources */,
 				403757592965C9B9006C834E /* SceneDelegate.m in Sources */,
+				403757B329687A80006C834E /* SettingsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

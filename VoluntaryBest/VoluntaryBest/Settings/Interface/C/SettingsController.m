@@ -6,7 +6,8 @@
 //
 
 #import "SettingsController.h"
-
+#import "SettingsView.h"
+#import "Masonry.h"
 @interface SettingsController ()
 
 @end
@@ -16,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBarHidden = YES;
+    
+    SettingsView* myView = [[SettingsView alloc] init];
+    
+    [self.view addSubview:myView];
+    
+    [myView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(self.view.frame.size);
+    }];
+    
+    [myView LayoutSelf];
 }
 
 /*

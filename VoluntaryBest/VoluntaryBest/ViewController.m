@@ -30,7 +30,7 @@
     [buttonStart addTarget:self action:@selector(startMainView) forControlEvents:UIControlEventTouchUpInside];
     
     
-    buttonStart.frame = CGRectMake(300, 300, 100, 50);
+    buttonStart.frame = CGRectMake(100, 300, 100, 50);
     
     [self.view addSubview:buttonStart];
     
@@ -83,7 +83,7 @@
     UITabBarController* tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = arrayForTabBarController;
     //背景色
-    tabBarController.view.backgroundColor = [UIColor whiteColor];
+    tabBarController.tabBar.backgroundColor = [UIColor systemGray6Color];
     //透明度
     tabBarController.tabBar.translucent = NO;
     //呈现风格
