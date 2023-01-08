@@ -11,11 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SettingsView : UIView
 
-
+@property (nonatomic, strong) UIScrollView* scrollViewInSettings;
+@property (nonatomic, strong) UIView* headView;
 
 - (void) LayoutSelf;
-- (void) LayoutButtons;
+- (void) LayoutHeadView;
 - (void) LayoutScrollView;
+- (void) LayoutAchievements;
+
 @end
 
 NS_ASSUME_NONNULL_END
