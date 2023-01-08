@@ -48,6 +48,20 @@
     buttonHeadImage.layer.cornerRadius = Width*0.075;
     buttonHeadImage.layer.masksToBounds = YES;
     [buttonHeadImage addTarget:self action:@selector(replaceImage) forControlEvents:UIControlEventTouchUpInside];
+    
+    //名称
+    UILabel* labelName = [[UILabel alloc] init];
+    labelName.text = @"志同道合01";
+    labelName.font = [UIFont systemFontOfSize:20];
+    labelName.textColor = [UIColor blackColor];
+    [self.headView addSubview:labelName];
+    [labelName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonHeadImage.mas_right).with.offset(20);
+        make.bottom.equalTo(buttonHeadImage.mas_bottom).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Width*0.1);
+    }];
+    
     //修改按钮
     UIButton* buttonModify = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonModify setBackgroundImage:[UIImage imageNamed:@"xiugai.png"] forState:UIControlStateNormal];
@@ -89,17 +103,127 @@
 }
 
 - (void) LayoutAchievements {
-    UIView* achievementsView = [[UIView alloc] init];
-    [self addSubview:achievementsView];
-    [achievementsView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.achievementView = [[UIView alloc] init];
+    [self addSubview:self.achievementView];
+    [self.achievementView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.scrollViewInSettings).with.offset(Width*0.05);
         make.right.equalTo(self.scrollViewInSettings).with.offset(-Width*0.05);
         make.top.equalTo(self.scrollViewInSettings).with.offset(30);
-        make.height.mas_equalTo(Height*0.15);
+        make.height.mas_equalTo(Height*0.12);
     }];
-    achievementsView.backgroundColor = [UIColor whiteColor];
+    self.achievementView.backgroundColor = [UIColor whiteColor];
     
-    achievementsView.layer.cornerRadius = 20;
-    achievementsView.layer.masksToBounds = YES;
+    self.achievementView.layer.cornerRadius = 20;
+    self.achievementView.layer.masksToBounds = YES;
+    
+    
+    //参与活动
+    UILabel* label1 = [[UILabel alloc] init];
+    label1.text = @"参与活动";
+    label1.textAlignment = NSTextAlignmentCenter;
+    label1.textColor = [UIColor blackColor];
+    [self addSubview:label1];
+    [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.achievementView).with.offset(0);
+        make.top.equalTo(self.achievementView).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.05);
+    }];
+    UILabel* labelCount1 = [[UILabel alloc] init];
+    labelCount1.text = @"0";
+    labelCount1.font = [UIFont systemFontOfSize:25];
+    labelCount1.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:labelCount1];
+    [labelCount1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label1.mas_left).with.offset(0);
+        make.top.equalTo(label1.mas_bottom).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.07);
+    }];
+    //公益贡献
+    UILabel* label2 = [[UILabel alloc] init];
+    label2.text = @"公益贡献";
+    label2.textAlignment = NSTextAlignmentCenter;
+    label2.textColor = [UIColor blackColor];
+    [self addSubview:label2];
+    [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label1.mas_right).with.offset(0);
+        make.top.equalTo(label1.mas_top).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.05);
+    }];
+    UILabel* labelCount2 = [[UILabel alloc] init];
+    labelCount2.text = @"0";
+    labelCount2.font = [UIFont systemFontOfSize:25];
+    labelCount2.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:labelCount2];
+    [labelCount2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label2.mas_left).with.offset(0);
+        make.top.equalTo(label2.mas_bottom).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.07);
+    }];
+    //我的勋章
+    UILabel* label3 = [[UILabel alloc] init];
+    label3.text = @"我的勋章";
+    label3.textAlignment = NSTextAlignmentCenter;
+    label3.textColor = [UIColor blackColor];
+    [self addSubview:label3];
+    [label3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label2.mas_right).with.offset(0);
+        make.top.equalTo(label2.mas_top).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.05);
+    }];
+    
+    UILabel* labelCount3 = [[UILabel alloc] init];
+    labelCount3.text = @"0";
+    labelCount3.font = [UIFont systemFontOfSize:25];
+    labelCount3.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:labelCount3];
+    [labelCount3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label3.mas_left).with.offset(0);
+        make.top.equalTo(label3.mas_bottom).with.offset(0);
+        make.width.mas_equalTo(Width*0.3);
+        make.height.mas_equalTo(Height*0.07);
+    }];
+    
+    
+    [self LayoutActivity];
+}
+
+- (void) LayoutActivity {
+    self.activityView = [[UIView alloc] init];
+    [self addSubview:self.activityView];
+    [self.activityView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.scrollViewInSettings).with.offset(Width*0.05);
+        make.right.equalTo(self.scrollViewInSettings).with.offset(-Width*0.05);
+        make.top.equalTo(self.achievementView.mas_bottom).with.offset(30);
+        make.height.mas_equalTo(Height*0.2);
+    }];
+    self.activityView.backgroundColor = [UIColor whiteColor];
+    
+    self.activityView.layer.cornerRadius = 20;
+    self.activityView.layer.masksToBounds = YES;
+    
+    UIView* grayView = [[UIView alloc] init];
+    grayView.backgroundColor = [UIColor systemGray3Color];
+    grayView.frame = CGRectMake(0, 40, Width, 0.5);
+    [self.activityView addSubview:grayView];
+    
+    UILabel* labelAct = [[UILabel alloc] init];
+    labelAct.text = @"我的活动";
+    labelAct.textAlignment = NSTextAlignmentCenter;
+    [self.activityView addSubview:labelAct];
+    [labelAct mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.activityView).with.offset(0);
+        make.top.equalTo(self.activityView).with.offset(0);
+        make.width.mas_equalTo(Width*0.2);
+        make.height.mas_equalTo(40);
+    }];
+    
+}
+- (void) LayoutService {
+    
 }
 @end

@@ -14,11 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIScrollView* scrollViewInSettings;
 @property (nonatomic, strong) UIView* headView;
 
+@property (nonatomic, strong) UIView* achievementView;
+@property (nonatomic, strong) UIView* activityView;
 - (void) LayoutSelf;
 - (void) LayoutHeadView;
 - (void) LayoutScrollView;
 - (void) LayoutAchievements;
-
+- (void) LayoutActivity;
 @end
 
 NS_ASSUME_NONNULL_END

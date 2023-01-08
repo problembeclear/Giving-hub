@@ -59,7 +59,7 @@
     //使导航栏上方不留白，并设置颜色
     UINavigationBarAppearance* appear = [[UINavigationBarAppearance alloc] init];
     [appear configureWithOpaqueBackground];
-    appear.backgroundColor = [UIColor cyanColor];
+    appear.backgroundColor = [UIColor greenColor];
     appear.shadowColor = [UIColor clearColor];
     
     navMain.navigationBar.standardAppearance = appear;
@@ -89,7 +89,7 @@
     //呈现风格
     tabBarController.modalPresentationStyle = UIModalPresentationFullScreen;
     //初始所在界面
-    tabBarController.selectedIndex = 0;
+    tabBarController.selectedIndex = 4;
     
     [self presentViewController:tabBarController animated:NO completion:nil];
 }
