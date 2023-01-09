@@ -26,6 +26,7 @@
 
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+<<<<<<< HEAD
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     self.headImage = [[UIImageView alloc] init];
@@ -117,6 +118,9 @@
         make.bottom.equalTo(self.contentView).with.offset(-10);
     }];
     return self;
+=======
+    return 0;
+>>>>>>> 9274f9823c11555ed5c32e805675f5f882aaffcd
 }
 
 - (void) layoutSubviews {

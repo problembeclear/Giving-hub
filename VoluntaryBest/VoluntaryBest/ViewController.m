@@ -89,7 +89,7 @@
     //呈现风格
     tabBarController.modalPresentationStyle = UIModalPresentationFullScreen;
     //初始所在界面
-    tabBarController.selectedIndex = 4;
+    tabBarController.selectedIndex = 0;
     
     [self presentViewController:tabBarController animated:NO completion:nil];
 }
