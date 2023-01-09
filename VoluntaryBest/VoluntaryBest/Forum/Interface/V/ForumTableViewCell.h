@@ -15,8 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel* labelName;
 @property (nonatomic, strong) UILabel* labelTime;
 @property (nonatomic, strong) UIButton* buttonMore;
-
-
+@property (nonatomic, strong) UILabel* content;
+@property (nonatomic, strong) UIView* viewForImage;
+@property (nonatomic, strong) UILabel* labelLocation;
+@property (nonatomic ,strong) UIButton* buttonLike;
+@property (nonatomic, strong) UIButton* buttonComment;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ForumView : UIView
+@interface ForumView : UIView <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UISegmentedControl* segmentControlInForum;
 @property (nonatomic, strong) UITableView* tableView;
 
