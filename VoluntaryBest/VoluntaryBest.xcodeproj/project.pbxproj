@@ -96,7 +96,7 @@
 		403757C0296ABA3A006C834E /* ForumView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumView.m; sourceTree = "<group>"; };
 		403757C2296AD613006C834E /* ForumTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForumTableViewCell.h; sourceTree = "<group>"; };
 		403757C3296AD613006C834E /* ForumTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumTableViewCell.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
+
 		403757C5296C88F7006C834E /* peitu1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peitu1.jpg; sourceTree = "<group>"; };
 		403757C7296C88FC006C834E /* peitu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peitu2.jpg; sourceTree = "<group>"; };
 		403757C9296C9664006C834E /* touxiang0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touxiang0.jpg; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		403757CD296CA289006C834E /* icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2.png"; sourceTree = "<group>"; };
 		403757CF296CA28F006C834E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		403757D1296CA2CC006C834E /* pinglun-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinglun-2.png"; sourceTree = "<group>"; };
-=======
+
 		B9E58988296C696900B7D15E /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		B9E58989296C696900B7D15E /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		B9E5898F296C6EAD00B7D15E /* MainPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPickerView.h; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		B9E58996296C848A00B7D15E /* xiaoxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaoxi.png; sourceTree = "<group>"; };
 		B9E58997296C848A00B7D15E /* saomiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saomiao.png; sourceTree = "<group>"; };
 		B9E58998296C848A00B7D15E /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
->>>>>>> 9274f9823c11555ed5c32e805675f5f882aaffcd
+
 		BFD62B9CE786727B1EF9B7F1 /* Pods-VoluntaryBest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.debug.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoluntaryBest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45F58C014DFCF0A7D03608 /* Pods-VoluntaryBest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.release.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.release.xcconfig"; sourceTree = "<group>"; };
@@ -641,22 +641,22 @@
 				403757642965C9BB006C834E /* LaunchScreen.storyboard in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
+
 				403757CC296CA119006C834E /* gengduo-2.png in Resources */,
 				403757CA296C9664006C834E /* touxiang0.jpg in Resources */,
 				403757D2296CA2CC006C834E /* pinglun-2.png in Resources */,
-=======
+
 				B9E5899B296C848A00B7D15E /* sousuo.png in Resources */,
->>>>>>> 9274f9823c11555ed5c32e805675f5f882aaffcd
+
 				403757BD296A9AC8006C834E /* xiugai.png in Resources */,
 				403757C8296C88FC006C834E /* peitu2.jpg in Resources */,
 				403757D0296CA28F006C834E /* icon.png in Resources */,
 				403757BB29688DD7006C834E /* touxiang.jpg in Resources */,
-<<<<<<< HEAD
+
 				403757C6296C88F8006C834E /* peitu1.jpg in Resources */,
-=======
+
 				B9E5899A296C848A00B7D15E /* saomiao.png in Resources */,
->>>>>>> 9274f9823c11555ed5c32e805675f5f882aaffcd
+
 				4037575F2965C9B9006C834E /* Main.storyboard in Resources */,
 				403757CE296CA289006C834E /* icon-2.png in Resources */,
 			);
