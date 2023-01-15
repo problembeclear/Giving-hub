@@ -43,12 +43,28 @@
     SignController* controllerForSign = [[SignController alloc] init];
     ForumController* controllerForForum = [[ForumController alloc] init];
     SettingsController* controllerForSettings = [[SettingsController alloc] init];
+    
+    controllerForMain.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"shouye-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"shouye-4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    controllerForAssistance.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"援助" image:[[UIImage imageNamed:@"aixin-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"aixin-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    controllerForSign.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"签到" image:[[UIImage imageNamed:@"dingwei"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"dingwei-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    controllerForForum.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"公益圈" image:[[UIImage imageNamed:@"friends"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"friends-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    controllerForSettings.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"wode"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"wode-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
     //设置标题文字
-    controllerForMain.title = @"首页";
-    controllerForAssistance.title = @"援助";
-    controllerForSign.title = @"签到";
-    controllerForForum.title = @"公益圈";
-    controllerForSettings.title = @"我的";
+//    controllerForMain.title = @"首页";
+//    controllerForAssistance.title = @"援助";
+//    controllerForSign.title = @"签到";
+//    controllerForForum.title = @"公益圈";
+//    controllerForSettings.title = @"我的";
     
     UINavigationController* navMain = [[UINavigationController alloc] initWithRootViewController:controllerForMain];
     UINavigationController* navAssistance = [[UINavigationController alloc] initWithRootViewController:controllerForAssistance];

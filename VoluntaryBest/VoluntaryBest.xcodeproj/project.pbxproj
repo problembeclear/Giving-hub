@@ -70,6 +70,17 @@
 		B9B192D8297406BB00CC0811 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B192D5297406BB00CC0811 /* 3.jpeg */; };
 		B9B192D9297406BB00CC0811 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B192D6297406BB00CC0811 /* 1.jpeg */; };
 		B9B192DA297406BB00CC0811 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B192D7297406BB00CC0811 /* 2.jpeg */; };
+		B9B193002974260300CC0811 /* qidong.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B192FF2974260300CC0811 /* qidong.jpeg */; };
+		B9B193022974260D00CC0811 /* shouye-3.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193012974260D00CC0811 /* shouye-3.png */; };
+		B9B193042974262900CC0811 /* shouye-4.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193032974262900CC0811 /* shouye-4.png */; };
+		B9B193062974263200CC0811 /* aixin-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193052974263200CC0811 /* aixin-2.png */; };
+		B9B193082974263800CC0811 /* aixin-3.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193072974263800CC0811 /* aixin-3.png */; };
+		B9B1930A2974263D00CC0811 /* dingwei.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193092974263D00CC0811 /* dingwei.png */; };
+		B9B1930C2974264300CC0811 /* dingwei-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1930B2974264300CC0811 /* dingwei-2.png */; };
+		B9B1930E2974264800CC0811 /* friends-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1930D2974264800CC0811 /* friends-2.png */; };
+		B9B193102974264D00CC0811 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1930F2974264D00CC0811 /* friends.png */; };
+		B9B193122974265400CC0811 /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193112974265400CC0811 /* wode-2.png */; };
+		B9B193142974265900CC0811 /* wode.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193132974265900CC0811 /* wode.png */; };
 		B9E5898A296C696900B7D15E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58989296C696900B7D15E /* MainView.m */; };
 		B9E58991296C6EAD00B7D15E /* MainPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58990296C6EAD00B7D15E /* MainPickerView.m */; };
 		B9E58994296C6EC200B7D15E /* MainPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58993296C6EC200B7D15E /* MainPickerViewController.m */; };
@@ -184,6 +195,17 @@
 		B9B192D5297406BB00CC0811 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		B9B192D6297406BB00CC0811 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		B9B192D7297406BB00CC0811 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		B9B192FF2974260300CC0811 /* qidong.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qidong.jpeg; sourceTree = "<group>"; };
+		B9B193012974260D00CC0811 /* shouye-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouye-3.png"; sourceTree = "<group>"; };
+		B9B193032974262900CC0811 /* shouye-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouye-4.png"; sourceTree = "<group>"; };
+		B9B193052974263200CC0811 /* aixin-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aixin-2.png"; sourceTree = "<group>"; };
+		B9B193072974263800CC0811 /* aixin-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aixin-3.png"; sourceTree = "<group>"; };
+		B9B193092974263D00CC0811 /* dingwei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dingwei.png; sourceTree = "<group>"; };
+		B9B1930B2974264300CC0811 /* dingwei-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dingwei-2.png"; sourceTree = "<group>"; };
+		B9B1930D2974264800CC0811 /* friends-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-2.png"; sourceTree = "<group>"; };
+		B9B1930F2974264D00CC0811 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		B9B193112974265400CC0811 /* wode-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wode-2.png"; sourceTree = "<group>"; };
+		B9B193132974265900CC0811 /* wode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wode.png; sourceTree = "<group>"; };
 		B9E58988296C696900B7D15E /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		B9E58989296C696900B7D15E /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		B9E5898F296C6EAD00B7D15E /* MainPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPickerView.h; sourceTree = "<group>"; };
@@ -500,6 +522,7 @@
 			children = (
 				403758942973EF2E006C834E /* qidongtu.jpeg */,
 				4037588F2973EF2D006C834E /* QQ20221215-1.jpg */,
+				B9B192FE297425DA00CC0811 /* sum */,
 				B9E58995296C847400B7D15E /* InMain */,
 				403757B829688CEC006C834E /* InAssistance */,
 				403757B729688CE0006C834E /* InSign */,
@@ -605,6 +628,24 @@
 				EF45F58C014DFCF0A7D03608 /* Pods-VoluntaryBest.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9B192FE297425DA00CC0811 /* sum */ = {
+			isa = PBXGroup;
+			children = (
+				B9B192FF2974260300CC0811 /* qidong.jpeg */,
+				B9B193012974260D00CC0811 /* shouye-3.png */,
+				B9B193032974262900CC0811 /* shouye-4.png */,
+				B9B193052974263200CC0811 /* aixin-2.png */,
+				B9B193072974263800CC0811 /* aixin-3.png */,
+				B9B193092974263D00CC0811 /* dingwei.png */,
+				B9B1930B2974264300CC0811 /* dingwei-2.png */,
+				B9B1930D2974264800CC0811 /* friends-2.png */,
+				B9B1930F2974264D00CC0811 /* friends.png */,
+				B9B193112974265400CC0811 /* wode-2.png */,
+				B9B193132974265900CC0811 /* wode.png */,
+			);
+			path = sum;
 			sourceTree = "<group>";
 		};
 		B9E58987296C694D00B7D15E /* V */ = {
@@ -797,6 +838,8 @@
 				4037589E2973EF2E006C834E /* qidongtu.jpeg in Resources */,
 				403757642965C9BB006C834E /* LaunchScreen.storyboard in Resources */,
 				B9B192C12973C27A00CC0811 /* meigui.png in Resources */,
+				B9B193082974263800CC0811 /* aixin-3.png in Resources */,
+				B9B193022974260D00CC0811 /* shouye-3.png in Resources */,
 				B9B192B62973C25E00CC0811 /* xingxing.png in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
@@ -810,20 +853,29 @@
 				403758B02973F8BD006C834E /* mima.png in Resources */,
 				B9B192CB2973C28C00CC0811 /* chazhao-.png in Resources */,
 				403758AF2973F8BD006C834E /* zhanghao.png in Resources */,
+				B9B1930E2974264800CC0811 /* friends-2.png in Resources */,
+				B9B1930C2974264300CC0811 /* dingwei-2.png in Resources */,
 				B9E5899B296C848A00B7D15E /* sousuo.png in Resources */,
 				403757BD296A9AC8006C834E /* xiugai.png in Resources */,
+				B9B193062974263200CC0811 /* aixin-2.png in Resources */,
 				B9B192CD2973C28C00CC0811 /* qizhi.png in Resources */,
+				B9B1930A2974263D00CC0811 /* dingwei.png in Resources */,
+				B9B193102974264D00CC0811 /* friends.png in Resources */,
 				B9B192CC2973C28C00CC0811 /* gongyi.png in Resources */,
 				403758992973EF2E006C834E /* QQ20221215-1.jpg in Resources */,
 				B9B192D9297406BB00CC0811 /* 1.jpeg in Resources */,
 				B9B192C52973C27F00CC0811 /* gongyi-2.png in Resources */,
 				403757C8296C88FC006C834E /* peitu2.jpg in Resources */,
+				B9B193042974262900CC0811 /* shouye-4.png in Resources */,
 				403757D0296CA28F006C834E /* icon.png in Resources */,
+				B9B193002974260300CC0811 /* qidong.jpeg in Resources */,
 				B9B192C22973C27A00CC0811 /* ketang.png in Resources */,
 				B9B192DA297406BB00CC0811 /* 2.jpeg in Resources */,
+				B9B193142974265900CC0811 /* wode.png in Resources */,
 				403757BB29688DD7006C834E /* touxiang.jpg in Resources */,
 				B9B192CE2973C28C00CC0811 /* yaoqing.png in Resources */,
 				403757C6296C88F8006C834E /* peitu1.jpg in Resources */,
+				B9B193122974265400CC0811 /* wode-2.png in Resources */,
 				B9B192BE2973C27A00CC0811 /* jiangbei.png in Resources */,
 				B9B192D8297406BB00CC0811 /* 3.jpeg in Resources */,
 				B9B192BF2973C27A00CC0811 /* home.png in Resources */,
