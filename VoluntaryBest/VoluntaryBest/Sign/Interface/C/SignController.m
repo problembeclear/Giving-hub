@@ -6,7 +6,7 @@
 //
 
 #import "SignController.h"
-
+#import "SignView.h"
 @interface SignController ()
 
 @end
@@ -16,6 +16,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SignView* signView = [[SignView alloc] init];
+    [signView LayoutSelf];
 }
 
 /*

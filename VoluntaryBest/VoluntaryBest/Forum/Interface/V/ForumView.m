@@ -51,7 +51,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.estimatedRowHeight = 300;
+    self.tableView.estimatedRowHeight = 400;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     [self addSubview:self.tableView];
@@ -81,7 +81,28 @@
         [cell.content setLineBreakMode:NSLineBreakByWordWrapping];
         cell.content.numberOfLines = 0;
         
-        cell.content.text = @"我今天吃了一只烤鸭一块巧克力一个煎饼果子一个炸鸡腿一串烤面筋一个水果蛋糕一份烤冷面一份小龙虾喝了一杯杨枝甘露一瓶可乐一桶珍珠奶茶";
+      
+        
+        UIImageView* imageFirst = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"peitu1.jpg"]];
+        UIImageView* imageSecond = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"peitu2.jpg"]];
+        
+        
+        [cell.content addSubview:imageFirst];
+        [cell.content addSubview:imageSecond];
+        [imageFirst mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell.content).with.offset(0);
+            make.width.mas_equalTo((Width-30)/3);
+            make.height.mas_equalTo((Width-30)/3);
+            make.bottom.equalTo(cell.buttonLike.mas_top).with.offset(-10);
+            make.top.equalTo(cell.content.mas_bottom).with.offset(10);
+        }];
+        [imageSecond mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageFirst.mas_right).with.offset(20);
+            make.width.mas_equalTo((Width-30)/3);
+            make.height.mas_equalTo((Width-30)/3);
+            make.bottom.equalTo(cell.buttonLike.mas_top).with.offset(-10);
+            make.top.equalTo(cell.content.mas_bottom).with.offset(10);
+        }];
     }
     
     

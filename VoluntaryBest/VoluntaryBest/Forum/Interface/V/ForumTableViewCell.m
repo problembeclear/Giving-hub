@@ -84,7 +84,7 @@
         make.left.equalTo(self.contentView).with.offset(15);
         make.top.equalTo(self.labelTime.mas_bottom).with.offset(20);
         make.width.mas_equalTo(Width - 30);
-        make.bottom.equalTo(self.viewForImage.mas_top).with.offset(0);
+        make.height.mas_equalTo(90);
     }];
     
     [self.viewForImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -124,16 +124,18 @@
     self.headImage.image = [UIImage imageNamed:@"touxiang0.jpg"];
     
     self.labelName.text = @"abcd";
-    
+    self.labelName.font = [UIFont systemFontOfSize:25];
     
     self.labelTime.text = @"1分钟前";
     [self.buttonMore setBackgroundImage:[UIImage imageNamed:@"gengduo-2.png"] forState:UIControlStateNormal];
     
-    self.content.text = @"我今天吃了一只烤鸭一块巧克力一个煎饼果子一个炸鸡腿一串烤面筋一个水果蛋糕一份烤冷面一份小龙虾喝了一杯杨枝甘露一瓶可乐一桶珍珠奶茶";
+    self.content.text = @"我年少偶然识得人间绝色，见水不是水是水光潋滟，见山不是山是水色空蒙，见你不是你，是西子，是风雨同舟者。";
     
-    self.viewForImage.backgroundColor = [UIColor greenColor];
     
-    self.labelLocation.text = @"中国陕西西安";
+    
+    self.labelLocation.text = @"陕西西安";
+    self.labelLocation.textColor = [UIColor grayColor];
+    self.labelLocation.font = [UIFont systemFontOfSize:10];
     
     [self.buttonLike setImage:[UIImage imageNamed:@"icon-2.png"] forState:UIControlStateNormal];
     [self.buttonLike setImage:[UIImage imageNamed:@"icon.png"] forState:UIControlStateSelected];
