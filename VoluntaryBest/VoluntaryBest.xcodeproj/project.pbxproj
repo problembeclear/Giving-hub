@@ -34,6 +34,15 @@
 		403757CE296CA289006C834E /* icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 403757CD296CA289006C834E /* icon-2.png */; };
 		403757D0296CA28F006C834E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 403757CF296CA28F006C834E /* icon.png */; };
 		403757D2296CA2CC006C834E /* pinglun-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 403757D1296CA2CC006C834E /* pinglun-2.png */; };
+		403758892973E6A8006C834E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758882973E6A8006C834E /* LoginViewController.m */; };
+		4037588C2973E6BE006C834E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4037588B2973E6BE006C834E /* LoginView.m */; };
+		4037588E2973EB4C006C834E /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 4037588D2973EB4C006C834E /* return.png */; };
+		403758992973EF2E006C834E /* QQ20221215-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4037588F2973EF2D006C834E /* QQ20221215-1.jpg */; };
+		4037589E2973EF2E006C834E /* qidongtu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 403758942973EF2E006C834E /* qidongtu.jpeg */; };
+		403758A42973F42C006C834E /* zhuce.png in Resources */ = {isa = PBXBuildFile; fileRef = 403758A32973F42B006C834E /* zhuce.png */; };
+		403758A62973F430006C834E /* denglu.png in Resources */ = {isa = PBXBuildFile; fileRef = 403758A52973F430006C834E /* denglu.png */; };
+		403758A92973F529006C834E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758A82973F529006C834E /* SignUpViewController.m */; };
+		403758AC2973F545006C834E /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758AB2973F545006C834E /* SignUpView.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
@@ -123,6 +132,19 @@
 		403757CD296CA289006C834E /* icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2.png"; sourceTree = "<group>"; };
 		403757CF296CA28F006C834E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		403757D1296CA2CC006C834E /* pinglun-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinglun-2.png"; sourceTree = "<group>"; };
+		403758872973E6A8006C834E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		403758882973E6A8006C834E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4037588A2973E6BE006C834E /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		4037588B2973E6BE006C834E /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		4037588D2973EB4C006C834E /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
+		4037588F2973EF2D006C834E /* QQ20221215-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "QQ20221215-1.jpg"; sourceTree = "<group>"; };
+		403758942973EF2E006C834E /* qidongtu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qidongtu.jpeg; sourceTree = "<group>"; };
+		403758A32973F42B006C834E /* zhuce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuce.png; sourceTree = "<group>"; };
+		403758A52973F430006C834E /* denglu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denglu.png; sourceTree = "<group>"; };
+		403758A72973F529006C834E /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		403758A82973F529006C834E /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		403758AA2973F545006C834E /* SignUpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
+		403758AB2973F545006C834E /* SignUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -290,6 +312,7 @@
 		403757912965DF7C006C834E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				403758832973E62D006C834E /* Login */,
 				403757972965E12F006C834E /* Interface */,
 			);
 			path = Settings;
@@ -460,6 +483,8 @@
 		403757B429688CB4006C834E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				403758942973EF2E006C834E /* qidongtu.jpeg */,
+				4037588F2973EF2D006C834E /* QQ20221215-1.jpg */,
 				B9E58995296C847400B7D15E /* InMain */,
 				403757B829688CEC006C834E /* InAssistance */,
 				403757B729688CE0006C834E /* InSign */,
@@ -472,8 +497,11 @@
 		403757B529688CBD006C834E /* InSettings */ = {
 			isa = PBXGroup;
 			children = (
+				4037588D2973EB4C006C834E /* return.png */,
 				403757BC296A9AC8006C834E /* xiugai.png */,
 				403757BA29688DD7006C834E /* touxiang.jpg */,
+				403758A32973F42B006C834E /* zhuce.png */,
+				403758A52973F430006C834E /* denglu.png */,
 			);
 			path = InSettings;
 			sourceTree = "<group>";
@@ -504,6 +532,45 @@
 			children = (
 			);
 			path = InAssistance;
+			sourceTree = "<group>";
+		};
+		403758832973E62D006C834E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				403758862973E699006C834E /* C */,
+				403758852973E695006C834E /* V */,
+				403758842973E63F006C834E /* M */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		403758842973E63F006C834E /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		403758852973E695006C834E /* V */ = {
+			isa = PBXGroup;
+			children = (
+				4037588A2973E6BE006C834E /* LoginView.h */,
+				4037588B2973E6BE006C834E /* LoginView.m */,
+				403758AA2973F545006C834E /* SignUpView.h */,
+				403758AB2973F545006C834E /* SignUpView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		403758862973E699006C834E /* C */ = {
+			isa = PBXGroup;
+			children = (
+				403758872973E6A8006C834E /* LoginViewController.h */,
+				403758882973E6A8006C834E /* LoginViewController.m */,
+				403758A72973F529006C834E /* SignUpViewController.h */,
+				403758A82973F529006C834E /* SignUpViewController.m */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 		ADCDA92C70442D99033CEC9E /* Frameworks */ = {
@@ -707,14 +774,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4037589E2973EF2E006C834E /* qidongtu.jpeg in Resources */,
 				403757642965C9BB006C834E /* LaunchScreen.storyboard in Resources */,
 				B9B192C12973C27A00CC0811 /* meigui.png in Resources */,
 				B9B192B62973C25E00CC0811 /* xingxing.png in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
 				B9B192C62973C27F00CC0811 /* shipin.png in Resources */,
+				403758A42973F42C006C834E /* zhuce.png in Resources */,
 				403757CC296CA119006C834E /* gengduo-2.png in Resources */,
 				B9B192B82973C27400CC0811 /* gouwulan.png in Resources */,
+				403758A62973F430006C834E /* denglu.png in Resources */,
 				403757CA296C9664006C834E /* touxiang0.jpg in Resources */,
 				403757D2296CA2CC006C834E /* pinglun-2.png in Resources */,
 				B9B192CB2973C28C00CC0811 /* chazhao-.png in Resources */,
@@ -722,6 +792,7 @@
 				403757BD296A9AC8006C834E /* xiugai.png in Resources */,
 				B9B192CD2973C28C00CC0811 /* qizhi.png in Resources */,
 				B9B192CC2973C28C00CC0811 /* gongyi.png in Resources */,
+				403758992973EF2E006C834E /* QQ20221215-1.jpg in Resources */,
 				B9B192C52973C27F00CC0811 /* gongyi-2.png in Resources */,
 				403757C8296C88FC006C834E /* peitu2.jpg in Resources */,
 				403757D0296CA28F006C834E /* icon.png in Resources */,
@@ -732,6 +803,7 @@
 				B9B192BE2973C27A00CC0811 /* jiangbei.png in Resources */,
 				B9B192BF2973C27A00CC0811 /* home.png in Resources */,
 				B9B192C02973C27A00CC0811 /* maomi.png in Resources */,
+				4037588E2973EB4C006C834E /* return.png in Resources */,
 				B9E5899A296C848A00B7D15E /* saomiao.png in Resources */,
 				4037575F2965C9B9006C834E /* Main.storyboard in Resources */,
 				B9B192B42973C25A00CC0811 /* dunpai.png in Resources */,
@@ -787,6 +859,7 @@
 			files = (
 				4037579D2965E175006C834E /* SettingsController.m in Sources */,
 				B9B192AC2973BF3000CC0811 /* ScanView.m in Sources */,
+				4037588C2973E6BE006C834E /* LoginView.m in Sources */,
 				B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */,
 				B9B192B22973BFAD00CC0811 /* SearchView.m in Sources */,
 				403757AA2965E25D006C834E /* ForumController.m in Sources */,
@@ -794,10 +867,12 @@
 				B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */,
 				403757C4296AD613006C834E /* ForumTableViewCell.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
+				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				4037575C2965C9B9006C834E /* ViewController.m in Sources */,
 				403757562965C9B9006C834E /* AppDelegate.m in Sources */,
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
+				403758A92973F529006C834E /* SignUpViewController.m in Sources */,
 				B9E58994296C6EC200B7D15E /* MainPickerViewController.m in Sources */,
 				403757672965C9BB006C834E /* main.m in Sources */,
 				B9B192A92973BEF400CC0811 /* NewsView.m in Sources */,
@@ -805,6 +880,7 @@
 				4037578F2965DF43006C834E /* MainController.m in Sources */,
 				403757592965C9B9006C834E /* SceneDelegate.m in Sources */,
 				403757B329687A80006C834E /* SettingsView.m in Sources */,
+				403758892973E6A8006C834E /* LoginViewController.m in Sources */,
 				B9E58991296C6EAD00B7D15E /* MainPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

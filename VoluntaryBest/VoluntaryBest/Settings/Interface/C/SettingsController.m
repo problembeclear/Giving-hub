@@ -8,6 +8,7 @@
 #import "SettingsController.h"
 #import "SettingsView.h"
 #import "Masonry.h"
+#import "LoginViewController.h"
 @interface SettingsController ()
 
 @end
@@ -18,6 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildLoginInterface) name:@"pressImage" object:nil];
     
     SettingsView* myView = [[SettingsView alloc] init];
     
@@ -39,5 +42,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (void) buildLoginInterface {
+    LoginViewController* loginViewController = [[LoginViewController alloc] init];
+    loginViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:loginViewController animated:YES completion:nil];
+    
+}
 @end

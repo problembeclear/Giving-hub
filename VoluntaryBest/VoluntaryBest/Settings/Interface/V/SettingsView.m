@@ -76,7 +76,7 @@
 }
 
 - (void) replaceImage {
-    NSLog(@"11");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressImage" object:nil];
 }
 - (void) modifyDetails {
     NSLog(@"MODIFY");
