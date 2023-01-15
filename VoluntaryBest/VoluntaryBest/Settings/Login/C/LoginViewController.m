@@ -25,6 +25,8 @@
     [self.view addSubview:login];
     login.frame = self.view.bounds;
     
+    
+    
 }
 
 - (void) returnToSettingsView {

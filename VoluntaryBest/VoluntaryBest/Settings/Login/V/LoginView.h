@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginView : UIView
-
+@property (nonatomic, strong) UITextField* countField;
+@property (nonatomic, strong) UITextField* passwordField;
 - (void) LayoutSelf;
 @end
 
