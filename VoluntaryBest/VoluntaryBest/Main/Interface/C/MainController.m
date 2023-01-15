@@ -9,6 +9,9 @@
 #import "MainView.h"
 #import "Masonry.h"
 #import "MainPickerViewController.h"
+#import "NewsViewController.h"
+#import "ScanviewController.h"
+#import "SearchViewController.h"
 @interface MainController ()
 
 @end
@@ -24,29 +27,53 @@
     //添加view
     MainView* mainView = [[MainView alloc] init];
     [self.view addSubview:mainView];
-    
     [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(self.view.frame.size);
     }];
-    
-    
     [mainView initView];
     
     
-    //pressLocationCenter的通知
+    //通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationView) name:@"pressLocationButton" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchView) name:@"pressSearchButton" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scanView) name:@"pressScanButton" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsView) name:@"pressNewsButton" object:nil];
     // Do any additional setup after loading the view.
 }
 - (void)locationView{
-    NSLog(@"222");
     MainPickerViewController* pickerController = [[MainPickerViewController alloc] init];
     pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:pickerController animated:YES completion:nil];
 }
+- (void)searchView{
+    SearchViewController* pickerController = [[SearchViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
+}
+- (void)scanView{
+    ScanViewController* pickerController = [[ScanViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
+}
+- (void)newsView{
+    NewsViewController* pickerController = [[NewsViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
+}
 - (void)dealloc{
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressSearchButton" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressLocationButton" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressScanButton" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressNewsButton" object:nil];
+
 }
 /*
 #pragma mark - Navigation

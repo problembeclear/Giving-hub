@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainView : UIView
 - (void)initView;
+@property (nonatomic, strong) UITextField* textFieldItem;
+@property (nonatomic, strong) UIScrollView* scrollActivity;
+@property (nonatomic, strong) UIScrollView* scrollButton;
 
 @end
 
