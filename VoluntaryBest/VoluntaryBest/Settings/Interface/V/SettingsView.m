@@ -23,7 +23,7 @@
 - (void) LayoutHeadView {
     
     self.headView = [[UIView alloc] init];
-    self.headView.backgroundColor = [UIColor colorWithRed:48.0/255 green:200.0/255 blue:149.0/255 alpha:1];
+    self.headView.backgroundColor = [UIColor colorWithRed:100.0/255 green:200.0/255 blue:149.0/255 alpha:1];
     
     [self addSubview:self.headView];
     

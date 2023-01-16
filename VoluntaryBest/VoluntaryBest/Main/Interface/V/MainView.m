@@ -155,6 +155,18 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
+    buttonSearch.backgroundColor = [UIColor colorWithRed:95.0/255 green:198.0/255 blue:167.0/255 alpha:1];
+    UILabel* labelsearch = [[UILabel alloc] init];
+    labelsearch.text = @"找活动";
+    [self addSubview:labelsearch];
+    [labelsearch mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonSearch).with.offset(8);
+        make.top.equalTo(buttonSearch).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
     
     UIButton* buttonOrg = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:buttonOrg];
@@ -165,17 +177,36 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
+    buttonOrg.backgroundColor = [UIColor colorWithRed:103.0/255 green:152.0/255 blue:239.0/255 alpha:1];
+    UILabel* labelOrg = [[UILabel alloc] init];
+    labelOrg.text = @"找组织";
+    [self addSubview:labelOrg];
+    [labelOrg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonOrg).with.offset(8);
+        make.top.equalTo(buttonOrg).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
     
     UIButton* buttonBenefit = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:buttonBenefit];
     [buttonBenefit setImage:[UIImage imageNamed:@"gongyi"] forState:UIControlStateNormal];
     [buttonBenefit mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonOrg).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(55);
-        make.width.mas_equalTo(HEIGHT*0.06);
-        make.height.mas_equalTo(HEIGHT*0.06);
+        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
     }];
-    
+    buttonBenefit.backgroundColor = [UIColor colorWithRed:239.0/255 green:181.0/255 blue:64.0/255 alpha:1];
+    UILabel* labelBenefit = [[UILabel alloc] init];
+    labelBenefit.text = @"身边公益";
+    [self addSubview:labelBenefit];
+    [labelBenefit mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonBenefit).with.offset(0);
+        make.top.equalTo(buttonBenefit).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
     
     
     UIButton* buttonFriends = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -183,33 +214,59 @@
     [buttonFriends setImage:[UIImage imageNamed:@"yaoqing"] forState:UIControlStateNormal];
     [buttonFriends mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonBenefit).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(60);
-        make.width.mas_equalTo(HEIGHT*0.05);
+        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
+    }];
+    buttonFriends.backgroundColor = [UIColor colorWithRed:163.0/255 green:146.0/255 blue:241.0/255 alpha:1];
+    UILabel* labelFriends = [[UILabel alloc] init];
+    labelFriends.text = @"邀请朋友";
+    [self addSubview:labelFriends];
+    [labelFriends mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonFriends).with.offset(0);
+        make.top.equalTo(buttonFriends).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
-    
 }
 - (void)initScrollActivity{
     self.scrollActivity = [[UIScrollView  alloc] init];
-    self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, HEIGHT*0.4);
+    self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, HEIGHT);
     self.scrollActivity.backgroundColor = [UIColor redColor];
     [self addSubview:self.scrollActivity];
     self.scrollActivity.showsVerticalScrollIndicator = NO;
     self.scrollActivity.showsHorizontalScrollIndicator = NO;
+    self.scrollActivity.scrollEnabled = NO;
+    self.scrollActivity.pagingEnabled = NO;
     [self.scrollActivity mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).with.offset(0);
             make.top.equalTo(self).with.offset(0);
             make.width.mas_equalTo(WIDTH);
-            make.height.mas_equalTo(HEIGHT*0.4);
+            make.height.mas_equalTo(HEIGHT);
     }];
-     
-    
+    for(int i = 0; i < 3; i++){
+            NSString* strName = [NSString stringWithFormat:@"%d.jpeg",i+1];
+            UIImage* image = [UIImage imageNamed:strName];
+            UIImageView* iView = [[UIImageView alloc]initWithImage:image];
+            iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);
+            [self.scrollActivity addSubview:iView];
+        }
+    NSTimer* timer = [[NSTimer alloc] init];
+    timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timer) userInfo:nil repeats:YES];
     [self initScrollerButton];
+}
+- (void)timer {
+    int dir = self.scrollActivity.contentOffset.x/WIDTH;
+    if(dir != 2){
+        [self.scrollActivity setContentOffset:CGPointMake(WIDTH * (dir % 3 + 1), 0) animated:NO];
+    } else {
+        self.scrollActivity.contentOffset = CGPointMake(0, 0);
+    }
 }
 - (void)initScrollerButton{
     self.scrollButton = [[UIScrollView  alloc] init];
     self.scrollButton.contentSize = CGSizeMake(WIDTH*1.2, HEIGHT*0.2);
-    self.scrollButton.backgroundColor = [UIColor yellowColor];
+    self.scrollButton.backgroundColor = [UIColor clearColor];
     self.scrollButton.pagingEnabled = YES;
     self.scrollButton.scrollEnabled = YES;
     [self addSubview:self.scrollButton];
