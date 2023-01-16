@@ -278,7 +278,6 @@
             make.width.mas_equalTo(WIDTH);
             make.height.mas_equalTo(HEIGHT*0.2);
     }];
-    
     UIButton* buttonClass = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonClass];
     [buttonClass setImage:[UIImage imageNamed:@"shipin"] forState:UIControlStateNormal];
@@ -288,6 +287,15 @@
         make.width.mas_equalTo(HEIGHT*0.05);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    UILabel* labelClass = [[UILabel alloc] init];
+    labelClass.text = @"志愿学堂";
+    [self.scrollButton addSubview:labelClass];
+    [labelClass mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonClass).with.offset(-11);
+        make.top.equalTo(buttonClass).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
     
     
     UIButton* buttonLike = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -295,9 +303,18 @@
     [buttonLike setImage:[UIImage imageNamed:@"gongyi-2"] forState:UIControlStateNormal];
     [buttonLike mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonClass).with.offset(-8);
-        make.top.equalTo(buttonClass).with.offset(HEIGHT*0.07);
+        make.top.equalTo(buttonClass).with.offset(HEIGHT*0.09);
         make.width.mas_equalTo(HEIGHT*0.06);
         make.height.mas_equalTo(HEIGHT*0.06);
+    }];
+    UILabel* labelLike = [[UILabel alloc] init];
+    labelLike.text = @"消费赞";
+    [self.scrollButton addSubview:labelLike];
+    [labelLike mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonLike).with.offset(0);
+        make.top.equalTo(buttonLike).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
     }];
     
     UIButton* buttonInsurance = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -309,15 +326,33 @@
         make.width.mas_equalTo(HEIGHT*0.05);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    UILabel* labelInsurance = [[UILabel alloc] init];
+    labelInsurance.text = @"领保险";
+    [self.scrollButton addSubview:labelInsurance];
+    [labelInsurance mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonInsurance).with.offset(0);
+        make.top.equalTo(buttonInsurance).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
     
     UIButton* buttonBuy = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonBuy];
     [buttonBuy setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
     [buttonBuy mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonInsurance).with.offset(0);
-        make.top.equalTo(buttonInsurance).with.offset(HEIGHT*0.08);
+        make.top.equalTo(buttonInsurance).with.offset(HEIGHT*0.1);
         make.width.mas_equalTo(HEIGHT*0.045);
         make.height.mas_equalTo(HEIGHT*0.045);
+    }];
+    UILabel* labelBuy = [[UILabel alloc] init];
+    labelBuy.text = @"益起购";
+    [self.scrollButton addSubview:labelBuy];
+    [labelBuy mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonBuy).with.offset(-4);
+        make.top.equalTo(buttonBuy).with.offset(HEIGHT*0.03);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
     }];
     
     UIButton* buttonStar = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -329,15 +364,33 @@
         make.width.mas_equalTo(HEIGHT*0.05);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    UILabel* labelStar = [[UILabel alloc] init];
+    labelStar.text = @"公益繁星";
+    [self.scrollButton addSubview:labelStar];
+    [labelStar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonStar).with.offset(-11);
+        make.top.equalTo(buttonStar).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
     
     UIButton* buttonClasses = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonClasses];
     [buttonClasses setImage:[UIImage imageNamed:@"ketang"] forState:UIControlStateNormal];
     [buttonClasses mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonStar).with.offset(-8);
-        make.top.equalTo(buttonStar).with.offset(HEIGHT*0.07);
+        make.top.equalTo(buttonStar).with.offset(HEIGHT*0.09);
         make.width.mas_equalTo(HEIGHT*0.06);
         make.height.mas_equalTo(HEIGHT*0.06);
+    }];
+    UILabel* labelClasses = [[UILabel alloc] init];
+    labelClasses.text = @"小课堂";
+    [self.scrollButton addSubview:labelClasses];
+    [labelClasses mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonClasses).with.offset(3);
+        make.top.equalTo(buttonClasses).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
     }];
     
     UIButton* buttonHome = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -349,15 +402,38 @@
         make.width.mas_equalTo(HEIGHT*0.05);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    UILabel* labelHome = [[UILabel alloc] init];
+    labelHome.text = @"幸福家园";
+    [self.scrollButton addSubview:labelHome];
+    [labelHome mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonHome).with.offset(-11);
+        make.top.equalTo(buttonHome).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
+    
     UIButton* buttonLikes = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonLikes];
     [buttonLikes setImage:[UIImage imageNamed:@"jiangbei"] forState:UIControlStateNormal];
     [buttonLikes mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonHome).with.offset(0);
-        make.top.equalTo(buttonHome).with.offset(HEIGHT*0.08);
+        make.top.equalTo(buttonHome).with.offset(HEIGHT*0.1);
         make.width.mas_equalTo(HEIGHT*0.04);
         make.height.mas_equalTo(HEIGHT*0.04);
     }];
+    UILabel* labelLikes = [[UILabel alloc] init];
+    labelLikes.text = @"爱心榜";
+    [self.scrollButton addSubview:labelLikes];
+    [labelLikes mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonLikes).with.offset(-4);
+        make.top.equalTo(buttonLikes).with.offset(HEIGHT*0.03);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
     
     UIButton* buttonFlower = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonFlower];
@@ -368,14 +444,34 @@
         make.width.mas_equalTo(HEIGHT*0.05);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    UILabel* labelFlowers = [[UILabel alloc] init];
+    labelFlowers.text = @"信用分";
+    [self.scrollButton addSubview:labelFlowers];
+    [labelFlowers mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonFlower).with.offset(0);
+        make.top.equalTo(buttonFlower).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
     
     UIButton* buttonCat = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollButton addSubview:buttonCat];
     [buttonCat setImage:[UIImage imageNamed:@"maomi"] forState:UIControlStateNormal];
     [buttonCat mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonFlower).with.offset(0);
-        make.top.equalTo(buttonFlower).with.offset(HEIGHT*0.08);
+        make.top.equalTo(buttonFlower).with.offset(HEIGHT*0.09);
         make.width.mas_equalTo(HEIGHT*0.05);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    UILabel* labelCat = [[UILabel alloc] init];
+    labelCat.text = @"低碳公益";
+    [self.scrollButton addSubview:labelCat];
+    [labelCat mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonCat).with.offset(-11);
+        make.top.equalTo(buttonCat).with.offset(HEIGHT*0.04);
+        make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
 //    UIButton* buttonHome = [UIButton buttonWithType:UIButtonTypeCustom];
