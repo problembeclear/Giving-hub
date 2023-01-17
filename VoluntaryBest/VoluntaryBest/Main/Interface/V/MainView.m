@@ -106,7 +106,7 @@
     
     self.textFieldItem = [[UITextField alloc] init];
     self.textFieldItem.frame = CGRectMake(70, HEIGHT*0.1, WIDTH - 80 - HEIGHT*0.05, HEIGHT*0.05);
-    self.textFieldItem.backgroundColor = [UIColor whiteColor];
+    self.textFieldItem.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     self.textFieldItem.text = @"志愿汇";
     [self addSubview:self.textFieldItem];
     
@@ -128,19 +128,22 @@
     labelDataOne.backgroundColor = [UIColor whiteColor];
     labelDataOne.text = dateStr;
     [self addSubview:labelDataOne];
+    labelDataOne.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     
     UILabel* labelDataTwo = [[UILabel alloc] init];
     labelDataTwo.frame = CGRectMake(30, HEIGHT*0.125, 40, HEIGHT*0.025);
     labelDataTwo.backgroundColor = [UIColor whiteColor];
     labelDataTwo.text = [NSString stringWithFormat:@"%@月", dateStrTwo];
     [self addSubview:labelDataTwo];
+    labelDataTwo.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     
     
     UIButton* buttonMore = [UIButton buttonWithType:UIButtonTypeCustom];
     buttonMore.frame = CGRectMake(WIDTH - 25 - HEIGHT*0.05, HEIGHT*0.1, HEIGHT*0.05, HEIGHT*0.05);
     buttonMore.backgroundColor = [UIColor whiteColor];
-    [buttonMore setImage:[UIImage imageNamed:@"liebiao.png"] forState:UIControlStateNormal];
+    [buttonMore setImage:[UIImage imageNamed:@"liebiao"] forState:UIControlStateNormal];
     [self addSubview:buttonMore];
+    buttonMore.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     
     [self addButton];
     
@@ -151,7 +154,7 @@
     [buttonSearch setImage:[UIImage imageNamed:@"chazhao-"] forState:UIControlStateNormal];
     [buttonSearch mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.textFieldItem).with.offset(-50);
-        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.top.equalTo(self.textFieldItem).with.offset(100);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -173,7 +176,7 @@
     [buttonOrg setImage:[UIImage imageNamed:@"qizhi"] forState:UIControlStateNormal];
     [buttonOrg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonSearch).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.top.equalTo(self.textFieldItem).with.offset(100);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -193,7 +196,7 @@
     [buttonBenefit setImage:[UIImage imageNamed:@"gongyi"] forState:UIControlStateNormal];
     [buttonBenefit mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonOrg).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.top.equalTo(self.textFieldItem).with.offset(100);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -214,7 +217,7 @@
     [buttonFriends setImage:[UIImage imageNamed:@"yaoqing"] forState:UIControlStateNormal];
     [buttonFriends mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonBenefit).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(50);
+        make.top.equalTo(self.textFieldItem).with.offset(100);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -232,7 +235,7 @@
 - (void)initScrollActivity{
     self.scrollActivity = [[UIScrollView  alloc] init];
     self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, HEIGHT);
-    self.scrollActivity.backgroundColor = [UIColor redColor];
+    //self.scrollActivity.backgroundColor = [UIColor redColor];
     [self addSubview:self.scrollActivity];
     self.scrollActivity.showsVerticalScrollIndicator = NO;
     self.scrollActivity.showsHorizontalScrollIndicator = NO;
