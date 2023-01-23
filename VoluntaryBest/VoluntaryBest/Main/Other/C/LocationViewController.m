@@ -1,32 +1,31 @@
 //
-//  MainPickerViewController.m
+//  LocationViewController.m
 //  VoluntaryBest
 //
-//  Created by 王璐 on 2023/1/9.
+//  Created by 王璐 on 2023/1/23.
 //
 
-#import "MainPickerViewController.h"
-#import "MainPickerView.h"
+#import "LocationViewController.h"
+#import "LocationView.h"
 #import "Masonry.h"
-@interface MainPickerViewController ()
+
+@interface LocationViewController ()
 
 @end
 
-@implementation MainPickerViewController
+@implementation LocationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MainPickerView* pickerView = [[MainPickerView alloc] init];
     
-    [self.view addSubview:pickerView];
+    LocationView* locationView = [[LocationView alloc] init];
     
-    [pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:locationView];
+    
+    [locationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(self.view.frame.size);
     }];
-    [pickerView initView];
-    
-    
-    
+    [locationView initView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mainView) name:@"returnMain" object:nil];
     // Do any additional setup after loading the view.

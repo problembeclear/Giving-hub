@@ -78,12 +78,12 @@
 		B9B193102974264D00CC0811 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B1930F2974264D00CC0811 /* friends.png */; };
 		B9B193122974265400CC0811 /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193112974265400CC0811 /* wode-2.png */; };
 		B9B193142974265900CC0811 /* wode.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B193132974265900CC0811 /* wode.png */; };
-		B9B1932A2976C46D00CC0811 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193272976C46D00CC0811 /* 1.jpeg */; };
-		B9B1932B2976C46D00CC0811 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193282976C46D00CC0811 /* 3.jpeg */; };
-		B9B1932C2976C46D00CC0811 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193292976C46D00CC0811 /* 2.jpeg */; };
+		B9B1932A2976C46D00CC0811 /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193272976C46D00CC0811 /* Main1.jpeg */; };
+		B9B1932B2976C46D00CC0811 /* Main3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193282976C46D00CC0811 /* Main3.jpeg */; };
+		B9B1932C2976C46D00CC0811 /* Main2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9B193292976C46D00CC0811 /* Main2.jpeg */; };
+		B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1932E297E94EB00CC0811 /* LocationViewController.m */; };
+		B9B19332297E950000CC0811 /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B19331297E950000CC0811 /* LocationView.m */; };
 		B9E5898A296C696900B7D15E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58989296C696900B7D15E /* MainView.m */; };
-		B9E58991296C6EAD00B7D15E /* MainPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58990296C6EAD00B7D15E /* MainPickerView.m */; };
-		B9E58994296C6EC200B7D15E /* MainPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E58993296C6EC200B7D15E /* MainPickerViewController.m */; };
 		B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58996296C848A00B7D15E /* xiaoxi.png */; };
 		B9E5899A296C848A00B7D15E /* saomiao.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58997296C848A00B7D15E /* saomiao.png */; };
 		B9E5899B296C848A00B7D15E /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58998296C848A00B7D15E /* sousuo.png */; };
@@ -203,15 +203,15 @@
 		B9B1930F2974264D00CC0811 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		B9B193112974265400CC0811 /* wode-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wode-2.png"; sourceTree = "<group>"; };
 		B9B193132974265900CC0811 /* wode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wode.png; sourceTree = "<group>"; };
-		B9B193272976C46D00CC0811 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpeg; path = ../../../../images/1.jpeg; sourceTree = "<group>"; };
-		B9B193282976C46D00CC0811 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = ../../../../images/3.jpeg; sourceTree = "<group>"; };
-		B9B193292976C46D00CC0811 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpeg; path = ../../../../images/2.jpeg; sourceTree = "<group>"; };
+		B9B193272976C46D00CC0811 /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Main1.jpeg; path = ../../../../images/Main1.jpeg; sourceTree = "<group>"; };
+		B9B193282976C46D00CC0811 /* Main3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Main3.jpeg; path = ../../../../images/Main3.jpeg; sourceTree = "<group>"; };
+		B9B193292976C46D00CC0811 /* Main2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Main2.jpeg; path = ../../../../images/Main2.jpeg; sourceTree = "<group>"; };
+		B9B1932D297E94EB00CC0811 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		B9B1932E297E94EB00CC0811 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		B9B19330297E950000CC0811 /* LocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationView.h; sourceTree = "<group>"; };
+		B9B19331297E950000CC0811 /* LocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
 		B9E58988296C696900B7D15E /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		B9E58989296C696900B7D15E /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		B9E5898F296C6EAD00B7D15E /* MainPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPickerView.h; sourceTree = "<group>"; };
-		B9E58990296C6EAD00B7D15E /* MainPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPickerView.m; sourceTree = "<group>"; };
-		B9E58992296C6EC200B7D15E /* MainPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPickerViewController.h; sourceTree = "<group>"; };
-		B9E58993296C6EC200B7D15E /* MainPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPickerViewController.m; sourceTree = "<group>"; };
 		B9E58996296C848A00B7D15E /* xiaoxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaoxi.png; sourceTree = "<group>"; };
 		B9E58997296C848A00B7D15E /* saomiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saomiao.png; sourceTree = "<group>"; };
 		B9E58998296C848A00B7D15E /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
@@ -677,8 +677,8 @@
 		B9E5898D296C6E7B00B7D15E /* V */ = {
 			isa = PBXGroup;
 			children = (
-				B9E5898F296C6EAD00B7D15E /* MainPickerView.h */,
-				B9E58990296C6EAD00B7D15E /* MainPickerView.m */,
+				B9B19330297E950000CC0811 /* LocationView.h */,
+				B9B19331297E950000CC0811 /* LocationView.m */,
 				B9B192A72973BEF400CC0811 /* NewsView.h */,
 				B9B192A82973BEF400CC0811 /* NewsView.m */,
 				B9B192AA2973BF3000CC0811 /* ScanView.h */,
@@ -692,8 +692,8 @@
 		B9E5898E296C6E8900B7D15E /* C */ = {
 			isa = PBXGroup;
 			children = (
-				B9E58992296C6EC200B7D15E /* MainPickerViewController.h */,
-				B9E58993296C6EC200B7D15E /* MainPickerViewController.m */,
+				B9B1932D297E94EB00CC0811 /* LocationViewController.h */,
+				B9B1932E297E94EB00CC0811 /* LocationViewController.m */,
 				B9B1929E2973BE3300CC0811 /* NewsViewController.h */,
 				B9B1929F2973BE3300CC0811 /* NewsViewController.m */,
 				B9B192A12973BE6100CC0811 /* ScanViewController.h */,
@@ -707,9 +707,9 @@
 		B9E58995296C847400B7D15E /* InMain */ = {
 			isa = PBXGroup;
 			children = (
-				B9B193272976C46D00CC0811 /* 1.jpeg */,
-				B9B193292976C46D00CC0811 /* 2.jpeg */,
-				B9B193282976C46D00CC0811 /* 3.jpeg */,
+				B9B193272976C46D00CC0811 /* Main1.jpeg */,
+				B9B193292976C46D00CC0811 /* Main2.jpeg */,
+				B9B193282976C46D00CC0811 /* Main3.jpeg */,
 				B9B192C72973C28C00CC0811 /* chazhao-.png */,
 				B9B192C82973C28C00CC0811 /* gongyi.png */,
 				B9B192C92973C28C00CC0811 /* qizhi.png */,
@@ -865,11 +865,11 @@
 				403758992973EF2E006C834E /* QQ20221215-1.jpg in Resources */,
 				B9B192C52973C27F00CC0811 /* gongyi-2.png in Resources */,
 				403757C8296C88FC006C834E /* peitu2.jpg in Resources */,
-				B9B1932C2976C46D00CC0811 /* 2.jpeg in Resources */,
+				B9B1932C2976C46D00CC0811 /* Main2.jpeg in Resources */,
 				B9B193042974262900CC0811 /* shouye-4.png in Resources */,
 				403757D0296CA28F006C834E /* icon.png in Resources */,
 				B9B193002974260300CC0811 /* qidong.jpeg in Resources */,
-				B9B1932B2976C46D00CC0811 /* 3.jpeg in Resources */,
+				B9B1932B2976C46D00CC0811 /* Main3.jpeg in Resources */,
 				B9B192C22973C27A00CC0811 /* ketang.png in Resources */,
 				B9B193142974265900CC0811 /* wode.png in Resources */,
 				403757BB29688DD7006C834E /* touxiang.jpg in Resources */,
@@ -880,7 +880,7 @@
 				B9B192BF2973C27A00CC0811 /* home.png in Resources */,
 				B9B192C02973C27A00CC0811 /* maomi.png in Resources */,
 				4037588E2973EB4C006C834E /* return.png in Resources */,
-				B9B1932A2976C46D00CC0811 /* 1.jpeg in Resources */,
+				B9B1932A2976C46D00CC0811 /* Main1.jpeg in Resources */,
 				B9E5899A296C848A00B7D15E /* saomiao.png in Resources */,
 				4037575F2965C9B9006C834E /* Main.storyboard in Resources */,
 				B9B192B42973C25A00CC0811 /* dunpai.png in Resources */,
@@ -935,6 +935,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4037579D2965E175006C834E /* SettingsController.m in Sources */,
+				B9B19332297E950000CC0811 /* LocationView.m in Sources */,
+				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
 				B9B192AC2973BF3000CC0811 /* ScanView.m in Sources */,
 				4037588C2973E6BE006C834E /* LoginView.m in Sources */,
 				B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */,
@@ -951,7 +953,6 @@
 				403757562965C9B9006C834E /* AppDelegate.m in Sources */,
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
 				403758A92973F529006C834E /* SignUpViewController.m in Sources */,
-				B9E58994296C6EC200B7D15E /* MainPickerViewController.m in Sources */,
 				403757672965C9BB006C834E /* main.m in Sources */,
 				B9B192A92973BEF400CC0811 /* NewsView.m in Sources */,
 				B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */,
@@ -959,7 +960,6 @@
 				403757592965C9B9006C834E /* SceneDelegate.m in Sources */,
 				403757B329687A80006C834E /* SettingsView.m in Sources */,
 				403758892973E6A8006C834E /* LoginViewController.m in Sources */,
-				B9E58991296C6EAD00B7D15E /* MainPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

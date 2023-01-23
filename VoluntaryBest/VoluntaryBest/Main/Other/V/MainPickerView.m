@@ -36,7 +36,7 @@
     self.locationPicker.dataSource = self;
     self.locationPicker.backgroundColor = [UIColor redColor];
     
-    self.locationPicker.frame = CGRectMake(0, 100, WIDTH,  100);
+    self.locationPicker.frame = CGRectMake(0, 100, WIDTH, HEIGHT - 150);
     [self addSubview:self.locationPicker];
     
     
@@ -46,13 +46,21 @@
     return 2;
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 10;
+    if (component == 0) {
+        return 35;
+    } else {
+        return 50;
+    }
 }
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return @"111";
 }
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
-    return 50;
+    if (component == 0) {
+        return 50;
+    } else {
+        return 300;
+    }
 }
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
     return 50;

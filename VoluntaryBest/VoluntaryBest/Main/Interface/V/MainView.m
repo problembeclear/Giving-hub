@@ -248,7 +248,7 @@
             make.height.mas_equalTo(HEIGHT);
     }];
     for(int i = 0; i < 3; i++){
-            NSString* strName = [NSString stringWithFormat:@"%d.jpeg",i+1];
+            NSString* strName = [NSString stringWithFormat:@"Main%d.jpeg",i+1];
             UIImage* image = [UIImage imageNamed:strName];
             UIImageView* iView = [[UIImageView alloc]initWithImage:image];
             iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);

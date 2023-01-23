@@ -8,7 +8,7 @@
 #import "MainController.h"
 #import "MainView.h"
 #import "Masonry.h"
-#import "MainPickerViewController.h"
+#import "LocationViewController.h"
 #import "NewsViewController.h"
 #import "ScanviewController.h"
 #import "SearchViewController.h"
@@ -41,7 +41,7 @@
     // Do any additional setup after loading the view.
 }
 - (void)locationView{
-    MainPickerViewController* pickerController = [[MainPickerViewController alloc] init];
+    LocationViewController* pickerController = [[LocationViewController alloc] init];
     pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:pickerController animated:YES completion:nil];
