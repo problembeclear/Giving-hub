@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LocationView : UIView
 @property (nonatomic, strong) UITextField* searchTextField;
+@property (nonatomic, copy) NSMutableArray* cityArray;
+@property (nonatomic, strong) UIScrollView* cityScrollView;
+@property (nonatomic, strong) UIScrollView* exactScrollView;
 - (void)initView;
 
 @end
