@@ -99,12 +99,18 @@
 }
 - (void)pressCityButton:(UIButton*)button {
     button.selected = !button.selected;
-    NSLog(@"111");
     if (button.selected == YES) {
         button.backgroundColor = [UIColor whiteColor];
+        if (button.tag == 1) {
+            [self initExactScrollViewBeijing];
+        }
     } else {
         button.backgroundColor = [UIColor colorWithRed:216.0/255 green:216.0/255 blue:216.0/255 alpha:0.8];
     }
+}
+- (void)initExactScrollViewBeijing {
+    [self.exactScrollView removeFromSuperview];
+    
 }
 - (void) initExactScrollViewRecommend {
     

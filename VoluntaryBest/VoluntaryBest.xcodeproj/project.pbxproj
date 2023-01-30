@@ -318,13 +318,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		4037578A2965DEF1006C834E /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
 		4037578C2965DEFF006C834E /* C */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +332,6 @@
 			children = (
 				B9E58987296C694D00B7D15E /* V */,
 				4037578C2965DEFF006C834E /* C */,
-				4037578A2965DEF1006C834E /* M */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
