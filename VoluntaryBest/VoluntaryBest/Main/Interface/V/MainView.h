@@ -19,6 +19,7 @@ UICollectionViewDataSource>
 @property (nonatomic, strong) UIScrollView* scrollButton;
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) UICollectionViewFlowLayout* flowLayout;
+@property (strong, nonatomic) UIButton* locationButton;
 
 @end
 

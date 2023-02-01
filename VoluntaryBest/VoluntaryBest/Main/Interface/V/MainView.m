@@ -21,19 +21,19 @@
     [self initCollctionView];
     
     //地区选择
-    UIButton* locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [locationButton setTitle:@"杭州市" forState:UIControlStateNormal];
-    [self.scrollBack addSubview:locationButton];
-    [locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
-    [locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.locationButton setTitle:@"杭州市" forState:UIControlStateNormal];
+    [self.scrollBack addSubview:self.locationButton];
+    [self.locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
+    [self.locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(0);
         make.top.equalTo(self).with.offset(34);
         make.width.mas_equalTo(WIDTH*0.3);
         make.height.mas_equalTo(HEIGHT*0.05);
         
     }];
-    [locationButton addTarget:self action:@selector(pressLoactionButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.locationButton addTarget:self action:@selector(pressLoactionButton:) forControlEvents:UIControlEventTouchUpInside];
     //locationButton.backgroundColor = [UIColor yellowColor];
     
     //志愿者人数标签
@@ -149,10 +149,31 @@
     buttonMore.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     
     
-    
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addLocationText:) name:@"postLocationtext" object:nil];
+
+
     
     [self addButton];
+}
+- (void)addLocationText:(NSNotification*)sender{
+    [self.locationButton removeFromSuperview];
+    
+    self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.locationButton setTitle:sender.userInfo[@"111"] forState:UIControlStateNormal];
+    [self.scrollBack addSubview:self.locationButton];
+    [self.locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
+    [self.locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).with.offset(0);
+        make.top.equalTo(self).with.offset(34);
+        make.width.mas_equalTo(WIDTH*0.3);
+        make.height.mas_equalTo(HEIGHT*0.05);
+        
+    }];
+    [self.locationButton addTarget:self action:@selector(pressLoactionButton:) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"postLocationtext" object:nil];
 }
 - (void)addButton{
     UIButton* buttonSearch = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -539,7 +560,6 @@
 - (void)pressNewsButton:(UIButton*)buttonNews{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressNewsButton" object:nil];
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
