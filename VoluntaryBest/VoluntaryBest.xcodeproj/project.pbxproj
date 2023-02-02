@@ -47,6 +47,8 @@
 		403758B02973F8BD006C834E /* mima.png in Resources */ = {isa = PBXBuildFile; fileRef = 403758AE2973F8BD006C834E /* mima.png */; };
 		403758B3297415C2006C834E /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758B2297415C2006C834E /* SignView.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
+		B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */; };
+		B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E4298C1CDE0083BE7A /* ResultSearchView.m */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
 		B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A52973BE8E00CC0811 /* SearchViewController.m */; };
@@ -166,6 +168,10 @@
 		403758AE2973F8BD006C834E /* mima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mima.png; sourceTree = "<group>"; };
 		403758B1297415C2006C834E /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Settings/Login/V/SignView.h; sourceTree = SOURCE_ROOT; };
 		403758B2297415C2006C834E /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Settings/Login/V/SignView.m; sourceTree = SOURCE_ROOT; };
+		B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchViewController.h; sourceTree = "<group>"; };
+		B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultSearchViewController.m; sourceTree = "<group>"; };
+		B93109E3298C1CDE0083BE7A /* ResultSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchView.h; sourceTree = "<group>"; };
+		B93109E4298C1CDE0083BE7A /* ResultSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultSearchView.m; sourceTree = "<group>"; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -677,6 +683,8 @@
 				B9B192AB2973BF3000CC0811 /* ScanView.m */,
 				B9B192B02973BFAD00CC0811 /* SearchView.h */,
 				B9B192B12973BFAD00CC0811 /* SearchView.m */,
+				B93109E3298C1CDE0083BE7A /* ResultSearchView.h */,
+				B93109E4298C1CDE0083BE7A /* ResultSearchView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -692,6 +700,8 @@
 				B9B192A22973BE6100CC0811 /* ScanViewController.m */,
 				B9B192A42973BE8E00CC0811 /* SearchViewController.h */,
 				B9B192A52973BE8E00CC0811 /* SearchViewController.m */,
+				B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */,
+				B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -929,6 +939,7 @@
 				4037579D2965E175006C834E /* SettingsController.m in Sources */,
 				B9B19332297E950000CC0811 /* LocationView.m in Sources */,
 				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
+				B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */,
 				B9B192AC2973BF3000CC0811 /* ScanView.m in Sources */,
 				4037588C2973E6BE006C834E /* LoginView.m in Sources */,
 				B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */,
@@ -942,6 +953,7 @@
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				4037575C2965C9B9006C834E /* ViewController.m in Sources */,
+				B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */,
 				403757562965C9B9006C834E /* AppDelegate.m in Sources */,
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
 				403758A92973F529006C834E /* SignUpViewController.m in Sources */,

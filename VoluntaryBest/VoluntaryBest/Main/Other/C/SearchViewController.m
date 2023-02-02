@@ -6,6 +6,7 @@
 //
 
 #import "SearchViewController.h"
+#import "ResultSearchViewController.h"
 #import "SearchView.h"
 #import "Masonry.h"
 @interface SearchViewController ()
@@ -29,13 +30,23 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mainView) name:@"returnMain" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchView) name:@"resultViewController" object:nil];
+
     // Do any additional setup after loading the view.
+}
+- (void)searchView {
+    
+    ResultSearchViewController* pickerController = [[ResultSearchViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:YES completion:nil];
 }
 - (void)mainView{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"returnMain" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"resultViewController" object:nil];
 }
 
 /*
