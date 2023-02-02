@@ -108,7 +108,7 @@
     
     
     self.textFieldItem = [[UITextField alloc] init];
-    self.textFieldItem.frame = CGRectMake(70, HEIGHT*0.1, WIDTH - 80 - HEIGHT*0.05, HEIGHT*0.05);
+    self.textFieldItem.frame = CGRectMake(70, HEIGHT*0.05, WIDTH - 80 - HEIGHT*0.05, HEIGHT*0.05);
     self.textFieldItem.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     self.textFieldItem.text = @"志愿汇";
     [self.scrollBack addSubview:self.textFieldItem];
@@ -127,14 +127,14 @@
     NSString *dateStrTwo = [formatter stringFromDate:date];
     
     UILabel* labelDataOne = [[UILabel alloc] init];
-    labelDataOne.frame = CGRectMake(30, HEIGHT*0.1, 40, HEIGHT*0.025);
+    labelDataOne.frame = CGRectMake(30, HEIGHT*0.05, 40, HEIGHT*0.025);
     labelDataOne.backgroundColor = [UIColor whiteColor];
     labelDataOne.text = dateStr;
     [self.scrollBack addSubview:labelDataOne];
     labelDataOne.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
     
     UILabel* labelDataTwo = [[UILabel alloc] init];
-    labelDataTwo.frame = CGRectMake(30, HEIGHT*0.125, 40, HEIGHT*0.025);
+    labelDataTwo.frame = CGRectMake(30, HEIGHT*0.075, 40, HEIGHT*0.025);
     labelDataTwo.backgroundColor = [UIColor whiteColor];
     labelDataTwo.text = [NSString stringWithFormat:@"%@月", dateStrTwo];
     [self.scrollBack addSubview:labelDataTwo];
@@ -181,7 +181,7 @@
     [buttonSearch setImage:[UIImage imageNamed:@"chazhao-"] forState:UIControlStateNormal];
     [buttonSearch mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.textFieldItem).with.offset(-50);
-        make.top.equalTo(self.textFieldItem).with.offset(100);
+        make.top.equalTo(self.textFieldItem).with.offset(60);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -203,7 +203,7 @@
     [buttonOrg setImage:[UIImage imageNamed:@"qizhi"] forState:UIControlStateNormal];
     [buttonOrg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonSearch).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(100);
+        make.top.equalTo(self.textFieldItem).with.offset(60);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -223,7 +223,7 @@
     [buttonBenefit setImage:[UIImage imageNamed:@"gongyi"] forState:UIControlStateNormal];
     [buttonBenefit mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonOrg).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(100);
+        make.top.equalTo(self.textFieldItem).with.offset(60);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -244,7 +244,7 @@
     [buttonFriends setImage:[UIImage imageNamed:@"yaoqing"] forState:UIControlStateNormal];
     [buttonFriends mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonBenefit).with.offset((WIDTH - 40 - HEIGHT*0.07*4)/3  + HEIGHT*0.07);
-        make.top.equalTo(self.textFieldItem).with.offset(100);
+        make.top.equalTo(self.textFieldItem).with.offset(60);
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
@@ -258,15 +258,33 @@
         make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    
+    
+    UILabel* labelGoodActivity = [[UILabel alloc] init];
+    labelGoodActivity.text = @"精选活动";
+    [self.scrollBack addSubview:labelGoodActivity];
+    [labelGoodActivity mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(labelsearch).with.offset(-13);
+        make.top.equalTo(labelsearch).with.offset(HEIGHT*0.05);
+        make.width.mas_equalTo(HEIGHT*0.12);
+        make.height.mas_equalTo(HEIGHT*0.06);
+    }];
+    labelGoodActivity.backgroundColor = [UIColor colorWithRed:180.0/255 green:180.0/255 blue:180.0/255 alpha:0.85];
+    labelGoodActivity.font = [UIFont systemFontOfSize:25];
+    labelGoodActivity.textAlignment = NSTextAlignmentCenter;
+    labelGoodActivity.layer.cornerRadius = 10;
+    labelGoodActivity.layer.masksToBounds = YES;
+//    labelGoodActivity.layer.borderColor = [[UIColor grayColor] CGColor];
+//    labelGoodActivity.layer.borderWidth = 1;
 }
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];
     
 //    self.scrollButton.contentSize = CGSizeMake(WIDTH*1.2, HEIGHT*0.2);
-    self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*5);
+    self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2);
     [self addSubview:self.scrollBack];
     self.scrollBack.backgroundColor = [UIColor clearColor];
-    self.scrollBack.pagingEnabled = YES;
+    self.scrollBack.pagingEnabled = NO;
     self.scrollBack.scrollEnabled = YES;
     self.scrollBack.showsVerticalScrollIndicator = NO;
     self.scrollBack.showsHorizontalScrollIndicator = NO;
@@ -525,8 +543,8 @@
 - (void)initCollctionView {
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 10, HEIGHT / 5 - 20);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, HEIGHT*0.4, WIDTH, HEIGHT*3) collectionViewLayout:self.flowLayout];
+    self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, HEIGHT*0.32, WIDTH, HEIGHT*3) collectionViewLayout:self.flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"111"];
@@ -537,14 +555,211 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 20;
+    return 10;
 }
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    //NSString* str = [NSString stringWithFormat:@"%ld", indexPath.row];
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"111" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor grayColor];
+    cell.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:0.85];
     if (indexPath.row == 0) {
-        
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView1.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"您的捐发申请已通过！这里是您的捐发步骤";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 1) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView2.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"助学、筑梦、铸人！贫困儿童资助活动";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 2) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView9.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"禁毒有你，绝不毒行！禁毒知识讲解会。";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 3) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView4.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"清岭行动，绿色小公民在行动！";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 4) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView5.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"尊老，爱老，敬老，助老。孤寡老人陪伴活动。";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 5) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView7.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"为你点灯，筑梦启航。山区支教志愿者招聘！";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 6) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView6.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"愿爱融化孤独。为自闭症儿童送温暖。";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 7) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView3.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"志愿者在行动！西安图书馆志愿者招聘！";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 8) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView10.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"时光正佳，好好爱她。母亲节送温暖活动";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+    } else if (indexPath.row == 9) {
+        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView8.jpeg"]];
+        [cell addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell).with.offset(10);
+            make.top.equalTo(cell).with.offset(10);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
+        UILabel* labelText = [[UILabel alloc] init];
+        labelText.text = @"以爱防爱，健康平等。预防艾滋病知识宣讲。";
+        [cell addSubview:labelText];
+        labelText.font = [UIFont systemFontOfSize:19];
+        labelText.numberOfLines = 3;
+        [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(imageView).with.offset(0);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.width.mas_equalTo(WIDTH/2 - 30);
+            make.height.mas_equalTo(WIDTH/2 - 30);
+        }];
     }
     return cell;
 }
