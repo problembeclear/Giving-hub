@@ -196,6 +196,27 @@
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
     
+    UIButton* buttonSays = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.scrollBack addSubview:buttonSays];
+    [buttonSays setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonSays mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(labelsearch).with.offset(0);
+        make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
+    }];
+    [buttonSays addTarget:self action:@selector(pressSays) forControlEvents:UIControlEventTouchUpInside];
+    UILabel* labelSays = [[UILabel alloc] init];
+    labelSays.text = @"精选名句";
+    [self.scrollBack addSubview:labelSays];
+    [labelSays mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonSays).with.offset(0);
+        make.top.equalTo(buttonSays).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
     
     
     UIButton* buttonOrg = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -214,6 +235,28 @@
     [labelOrg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonOrg).with.offset(8);
         make.top.equalTo(buttonOrg).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
+    
+    
+    UIButton* buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.scrollBack addSubview:buttonTwo];
+    [buttonTwo setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonTwo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(labelOrg).with.offset(0);
+        make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
+    }];
+    UILabel* labelTwo = [[UILabel alloc] init];
+    labelTwo.text = @"精选名句";
+    [self.scrollBack addSubview:labelTwo];
+    [labelTwo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonTwo).with.offset(0);
+        make.top.equalTo(buttonTwo).with.offset(HEIGHT*0.07);
         make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
@@ -239,6 +282,26 @@
     }];
     
     
+    
+    UIButton* buttonThree = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.scrollBack addSubview:buttonThree];
+    [buttonThree setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonThree mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(labelBenefit).with.offset(0);
+        make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
+    }];
+    UILabel* labelThree = [[UILabel alloc] init];
+    labelThree.text = @"精选名句";
+    [self.scrollBack addSubview:labelThree];
+    [labelThree mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonThree).with.offset(0);
+        make.top.equalTo(buttonThree).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
     UIButton* buttonFriends = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonFriends];
     [buttonFriends setImage:[UIImage imageNamed:@"yaoqing"] forState:UIControlStateNormal];
@@ -259,13 +322,34 @@
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
     
+    UIButton* buttonFour = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.scrollBack addSubview:buttonFour];
+    [buttonFour setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonFour mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(labelFriends).with.offset(0);
+        make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
+        make.width.mas_equalTo(HEIGHT*0.07);
+        make.height.mas_equalTo(HEIGHT*0.07);
+    }];
+    UILabel* labelFive = [[UILabel alloc] init];
+    labelFive.text = @"精选名句";
+    [self.scrollBack addSubview:labelFive];
+    [labelFive mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(buttonFour).with.offset(0);
+        make.top.equalTo(buttonFour).with.offset(HEIGHT*0.07);
+        make.width.mas_equalTo(HEIGHT*0.1);
+        make.height.mas_equalTo(HEIGHT*0.05);
+    }];
+    
+    
+    
     
     UILabel* labelGoodActivity = [[UILabel alloc] init];
     labelGoodActivity.text = @"精选活动";
     [self.scrollBack addSubview:labelGoodActivity];
     [labelGoodActivity mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(labelsearch).with.offset(-13);
-        make.top.equalTo(labelsearch).with.offset(HEIGHT*0.05);
+        make.left.equalTo(self).with.offset(20);
+        make.top.equalTo(labelFive).with.offset(HEIGHT*0.05);
         make.width.mas_equalTo(HEIGHT*0.12);
         make.height.mas_equalTo(HEIGHT*0.06);
     }];
@@ -274,13 +358,10 @@
     labelGoodActivity.textAlignment = NSTextAlignmentCenter;
     labelGoodActivity.layer.cornerRadius = 10;
     labelGoodActivity.layer.masksToBounds = YES;
-//    labelGoodActivity.layer.borderColor = [[UIColor grayColor] CGColor];
-//    labelGoodActivity.layer.borderWidth = 1;
 }
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];
     
-//    self.scrollButton.contentSize = CGSizeMake(WIDTH*1.2, HEIGHT*0.2);
     self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2);
     [self addSubview:self.scrollBack];
     self.scrollBack.backgroundColor = [UIColor clearColor];
@@ -295,6 +376,9 @@
             make.height.mas_equalTo(HEIGHT);
     }];
     [self addSubview:self.scrollBack];
+}
+- (void)pressSays {
+    NSLog(@"11111");
 }
 - (void)initScrollActivity{
     self.scrollActivity = [[UIScrollView  alloc] init];
@@ -330,221 +414,11 @@
         self.scrollActivity.contentOffset = CGPointMake(0, 0);
     }
 }
-//- (void)initScrollerButton{
-//    self.scrollButton = [[UIScrollView  alloc] init];
-//    self.scrollButton.contentSize = CGSizeMake(WIDTH*1.2, HEIGHT*0.2);
-//    self.scrollButton.backgroundColor = [UIColor clearColor];
-//    self.scrollButton.pagingEnabled = YES;
-//    self.scrollButton.scrollEnabled = YES;
-//    [self.scrollBack addSubview:self.scrollButton];
-//    [self.scrollButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self.scrollActivity).with.offset(0);
-//            make.top.equalTo(self.scrollActivity).with.offset(HEIGHT*0.4);
-//            make.width.mas_equalTo(WIDTH);
-//            make.height.mas_equalTo(HEIGHT*0.2);
-//    }];
-//    UIButton* buttonClass = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonClass];
-//    [buttonClass setImage:[UIImage imageNamed:@"shipin"] forState:UIControlStateNormal];
-//    [buttonClass mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.scrollButton).with.offset((WIDTH-HEIGHT*0.05*4)/5);
-//        make.top.equalTo(self.scrollButton).with.offset(HEIGHT*0.02);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelClass = [[UILabel alloc] init];
-//    labelClass.text = @"志愿学堂";
-//    [self.scrollBack addSubview:labelClass];
-//    [labelClass mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonClass).with.offset(-11);
-//        make.top.equalTo(buttonClass).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//
-//    UIButton* buttonLike = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonLike];
-//    [buttonLike setImage:[UIImage imageNamed:@"gongyi-2"] forState:UIControlStateNormal];
-//    [buttonLike mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonClass).with.offset(-8);
-//        make.top.equalTo(buttonClass).with.offset(HEIGHT*0.09);
-//        make.width.mas_equalTo(HEIGHT*0.06);
-//        make.height.mas_equalTo(HEIGHT*0.06);
-//    }];
-//    UILabel* labelLike = [[UILabel alloc] init];
-//    labelLike.text = @"消费赞";
-//    [self.scrollBack addSubview:labelLike];
-//    [labelLike mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonLike).with.offset(0);
-//        make.top.equalTo(buttonLike).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//    UIButton* buttonInsurance = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonInsurance];
-//    [buttonInsurance setImage:[UIImage imageNamed:@"dunpai"] forState:UIControlStateNormal];
-//    [buttonInsurance mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonClass).with.offset(HEIGHT*0.05+(WIDTH-HEIGHT*0.05*4)/5);
-//        make.top.equalTo(self.scrollButton).with.offset(HEIGHT*0.02);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelInsurance = [[UILabel alloc] init];
-//    labelInsurance.text = @"领保险";
-//    [self.scrollBack addSubview:labelInsurance];
-//    [labelInsurance mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonInsurance).with.offset(0);
-//        make.top.equalTo(buttonInsurance).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//    UIButton* buttonBuy = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonBuy];
-//    [buttonBuy setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
-//    [buttonBuy mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonInsurance).with.offset(0);
-//        make.top.equalTo(buttonInsurance).with.offset(HEIGHT*0.1);
-//        make.width.mas_equalTo(HEIGHT*0.045);
-//        make.height.mas_equalTo(HEIGHT*0.045);
-//    }];
-//    UILabel* labelBuy = [[UILabel alloc] init];
-//    labelBuy.text = @"益起购";
-//    [self.scrollBack addSubview:labelBuy];
-//    [labelBuy mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonBuy).with.offset(-4);
-//        make.top.equalTo(buttonBuy).with.offset(HEIGHT*0.03);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//    UIButton* buttonStar = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonStar];
-//    [buttonStar setImage:[UIImage imageNamed:@"xingxing"] forState:UIControlStateNormal];
-//    [buttonStar mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonInsurance).with.offset(HEIGHT*0.05+(WIDTH-HEIGHT*0.05*4)/5);
-//        make.top.equalTo(self.scrollButton).with.offset(HEIGHT*0.02);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelStar = [[UILabel alloc] init];
-//    labelStar.text = @"公益繁星";
-//    [self.scrollBack addSubview:labelStar];
-//    [labelStar mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonStar).with.offset(-11);
-//        make.top.equalTo(buttonStar).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//    UIButton* buttonClasses = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonClasses];
-//    [buttonClasses setImage:[UIImage imageNamed:@"ketang"] forState:UIControlStateNormal];
-//    [buttonClasses mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonStar).with.offset(-8);
-//        make.top.equalTo(buttonStar).with.offset(HEIGHT*0.09);
-//        make.width.mas_equalTo(HEIGHT*0.06);
-//        make.height.mas_equalTo(HEIGHT*0.06);
-//    }];
-//    UILabel* labelClasses = [[UILabel alloc] init];
-//    labelClasses.text = @"小课堂";
-//    [self.scrollBack addSubview:labelClasses];
-//    [labelClasses mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonClasses).with.offset(3);
-//        make.top.equalTo(buttonClasses).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//    UIButton* buttonHome = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonHome];
-//    [buttonHome setImage:[UIImage imageNamed:@"home"] forState:UIControlStateNormal];
-//    [buttonHome mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonStar).with.offset(HEIGHT*0.05+(WIDTH-HEIGHT*0.05*4)/5);
-//        make.top.equalTo(self.scrollButton).with.offset(HEIGHT*0.02);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelHome = [[UILabel alloc] init];
-//    labelHome.text = @"幸福家园";
-//    [self.scrollBack addSubview:labelHome];
-//    [labelHome mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonHome).with.offset(-11);
-//        make.top.equalTo(buttonHome).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//
-//
-//    UIButton* buttonLikes = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonLikes];
-//    [buttonLikes setImage:[UIImage imageNamed:@"jiangbei"] forState:UIControlStateNormal];
-//    [buttonLikes mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonHome).with.offset(0);
-//        make.top.equalTo(buttonHome).with.offset(HEIGHT*0.1);
-//        make.width.mas_equalTo(HEIGHT*0.04);
-//        make.height.mas_equalTo(HEIGHT*0.04);
-//    }];
-//    UILabel* labelLikes = [[UILabel alloc] init];
-//    labelLikes.text = @"爱心榜";
-//    [self.scrollBack addSubview:labelLikes];
-//    [labelLikes mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonLikes).with.offset(-4);
-//        make.top.equalTo(buttonLikes).with.offset(HEIGHT*0.03);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//
-//
-//    UIButton* buttonFlower = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonFlower];
-//    [buttonFlower setImage:[UIImage imageNamed:@"meigui"] forState:UIControlStateNormal];
-//    [buttonFlower mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonHome).with.offset(HEIGHT*0.05+(WIDTH-HEIGHT*0.05*4)/5);
-//        make.top.equalTo(self.scrollButton).with.offset(HEIGHT*0.02);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelFlowers = [[UILabel alloc] init];
-//    labelFlowers.text = @"信用分";
-//    [self.scrollBack addSubview:labelFlowers];
-//    [labelFlowers mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonFlower).with.offset(0);
-//        make.top.equalTo(buttonFlower).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//
-//
-//
-//    UIButton* buttonCat = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.scrollBack addSubview:buttonCat];
-//    [buttonCat setImage:[UIImage imageNamed:@"maomi"] forState:UIControlStateNormal];
-//    [buttonCat mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonFlower).with.offset(0);
-//        make.top.equalTo(buttonFlower).with.offset(HEIGHT*0.09);
-//        make.width.mas_equalTo(HEIGHT*0.05);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//    UILabel* labelCat = [[UILabel alloc] init];
-//    labelCat.text = @"低碳公益";
-//    [self.scrollBack addSubview:labelCat];
-//    [labelCat mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(buttonCat).with.offset(-11);
-//        make.top.equalTo(buttonCat).with.offset(HEIGHT*0.04);
-//        make.width.mas_equalTo(HEIGHT*0.1);
-//        make.height.mas_equalTo(HEIGHT*0.05);
-//    }];
-//}
 - (void)initCollctionView {
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, HEIGHT*0.32, WIDTH, HEIGHT*3) collectionViewLayout:self.flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, HEIGHT*0.45, WIDTH, HEIGHT*3) collectionViewLayout:self.flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"111"];
