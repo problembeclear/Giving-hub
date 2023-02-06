@@ -39,10 +39,10 @@
     ResultSearchViewController* pickerController = [[ResultSearchViewController alloc] init];
     pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:pickerController animated:YES completion:nil];
+    [self presentViewController:pickerController animated:NO completion:nil];
 }
 - (void)mainView{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"returnMain" object:nil];

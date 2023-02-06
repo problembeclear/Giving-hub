@@ -62,6 +62,10 @@
 		B9310A05298C3AB80083BE7A /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A02298C3AB80083BE7A /* Main1.jpeg */; };
 		B9310A06298C3AB80083BE7A /* Main2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A03298C3AB80083BE7A /* Main2.jpeg */; };
 		B9310A07298C3AB80083BE7A /* Main3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A04298C3AB80083BE7A /* Main3.jpeg */; };
+		B9310A57298EC2BB0083BE7A /* SaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A56298EC2BA0083BE7A /* SaysViewController.m */; };
+		B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A59298EC2CD0083BE7A /* SaysView.m */; };
+		B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A5E298ECA2E0083BE7A /* Manager.m */; };
+		B9310A62298ECA3F0083BE7A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A61298ECA3F0083BE7A /* Model.m */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
 		B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A52973BE8E00CC0811 /* SearchViewController.m */; };
@@ -195,6 +199,14 @@
 		B9310A02298C3AB80083BE7A /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main1.jpeg; sourceTree = "<group>"; };
 		B9310A03298C3AB80083BE7A /* Main2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main2.jpeg; sourceTree = "<group>"; };
 		B9310A04298C3AB80083BE7A /* Main3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main3.jpeg; sourceTree = "<group>"; };
+		B9310A55298EC2BA0083BE7A /* SaysViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaysViewController.h; sourceTree = "<group>"; };
+		B9310A56298EC2BA0083BE7A /* SaysViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaysViewController.m; sourceTree = "<group>"; };
+		B9310A58298EC2CD0083BE7A /* SaysView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaysView.h; sourceTree = "<group>"; };
+		B9310A59298EC2CD0083BE7A /* SaysView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaysView.m; sourceTree = "<group>"; };
+		B9310A5D298ECA2E0083BE7A /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		B9310A5E298ECA2E0083BE7A /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		B9310A60298ECA3F0083BE7A /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		B9310A61298ECA3F0083BE7A /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -648,6 +660,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B9310A5C298EC9AB0083BE7A /* M */ = {
+			isa = PBXGroup;
+			children = (
+				B9310A5D298ECA2E0083BE7A /* Manager.h */,
+				B9310A5E298ECA2E0083BE7A /* Manager.m */,
+				B9310A60298ECA3F0083BE7A /* Model.h */,
+				B9310A61298ECA3F0083BE7A /* Model.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		B9B192FE297425DA00CC0811 /* sum */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,18 +701,11 @@
 		B9E5898B296C6E4F00B7D15E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B9310A5C298EC9AB0083BE7A /* M */,
 				B9E5898E296C6E8900B7D15E /* C */,
 				B9E5898D296C6E7B00B7D15E /* V */,
-				B9E5898C296C6E6A00B7D15E /* M */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		B9E5898C296C6E6A00B7D15E /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		B9E5898D296C6E7B00B7D15E /* V */ = {
@@ -705,6 +721,8 @@
 				B9B192B12973BFAD00CC0811 /* SearchView.m */,
 				B93109E3298C1CDE0083BE7A /* ResultSearchView.h */,
 				B93109E4298C1CDE0083BE7A /* ResultSearchView.m */,
+				B9310A58298EC2CD0083BE7A /* SaysView.h */,
+				B9310A59298EC2CD0083BE7A /* SaysView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -722,6 +740,8 @@
 				B9B192A52973BE8E00CC0811 /* SearchViewController.m */,
 				B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */,
 				B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */,
+				B9310A55298EC2BA0083BE7A /* SaysViewController.h */,
+				B9310A56298EC2BA0083BE7A /* SaysViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -978,7 +998,9 @@
 			files = (
 				4037579D2965E175006C834E /* SettingsController.m in Sources */,
 				B9B19332297E950000CC0811 /* LocationView.m in Sources */,
+				B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */,
 				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
+				B9310A57298EC2BB0083BE7A /* SaysViewController.m in Sources */,
 				B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */,
 				B9B192AC2973BF3000CC0811 /* ScanView.m in Sources */,
 				4037588C2973E6BE006C834E /* LoginView.m in Sources */,
@@ -993,7 +1015,9 @@
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				4037575C2965C9B9006C834E /* ViewController.m in Sources */,
+				B9310A62298ECA3F0083BE7A /* Model.m in Sources */,
 				B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */,
+				B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */,
 				403757562965C9B9006C834E /* AppDelegate.m in Sources */,
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
 				403758A92973F529006C834E /* SignUpViewController.m in Sources */,

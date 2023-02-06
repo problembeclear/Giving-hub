@@ -32,7 +32,7 @@
     // Do any additional setup after loading the view.
 }
 - (void)searchView {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 

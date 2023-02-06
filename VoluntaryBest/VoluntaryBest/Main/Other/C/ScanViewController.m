@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view.
 }
 - (void)mainView{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"returnMain" object:nil];

@@ -378,7 +378,7 @@
     [self addSubview:self.scrollBack];
 }
 - (void)pressSays {
-    NSLog(@"11111");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
 }
 - (void)initScrollActivity{
     self.scrollActivity = [[UIScrollView  alloc] init];

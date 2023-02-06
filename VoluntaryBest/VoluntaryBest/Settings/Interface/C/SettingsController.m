@@ -45,7 +45,7 @@
 - (void) buildLoginInterface {
     LoginViewController* loginViewController = [[LoginViewController alloc] init];
     loginViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:loginViewController animated:YES completion:nil];
+    [self presentViewController:loginViewController animated:NO completion:nil];
     
 }
 @end
