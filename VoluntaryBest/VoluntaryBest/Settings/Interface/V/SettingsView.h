@@ -10,9 +10,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SettingsView : UIView
+<
+UITableViewDelegate,
+UITableViewDataSource
+>
 
 @property (nonatomic, strong) UIScrollView* scrollViewInSettings;
 @property (nonatomic, strong) UIView* headView;
+
 
 @property (nonatomic, strong) UIView* achievementView;
 @property (nonatomic, strong) UIView* activityView;

@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-
+#import "TabViewController.h"
 @interface SceneDelegate ()
 
 @end
@@ -15,9 +15,12 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    //创建根视图控制器并初始化
+    self.window.rootViewController = [[UIViewController alloc] init] ;
+    
+    TabViewController* mainController = [[TabViewController alloc] init];
+    
+    self.window.rootViewController = mainController;
 }
 
 

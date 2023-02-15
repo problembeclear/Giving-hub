@@ -7,9 +7,16 @@
 
 #import "SettingsView.h"
 #import "Masonry.h"
+#import "SettingsTableView.h"
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
+
+@interface SettingsView ()
+@property (nonatomic, strong) SettingsTableView;
+
+@end
+
 
 @implementation SettingsView
 
@@ -81,20 +88,23 @@
 - (void) modifyDetails {
     NSLog(@"MODIFY");
 }
+
+
+
 - (void) LayoutScrollView {
     self.scrollViewInSettings = [[UIScrollView alloc] init];
     [self addSubview:self.scrollViewInSettings];
-    
+
 //    [self.scrollViewInSettings mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.left.equalTo(self).with.offset(0);
 //        make.top.equalTo(self).with.offset(Height*0.2);
 //        make.width.mas_equalTo(Width);
 //        make.height.mas_equalTo(Height*0.8);
 //    }];
-    
+
     self.scrollViewInSettings.frame = CGRectMake(0, Height*0.2, Width, Height*2);
     self.scrollViewInSettings.backgroundColor = [UIColor systemGray5Color];
-    
+
     self.scrollViewInSettings.showsVerticalScrollIndicator = YES;
     self.scrollViewInSettings.showsHorizontalScrollIndicator = NO;
     self.scrollViewInSettings.contentSize = CGSizeMake(0, Height*2);
@@ -112,11 +122,11 @@
         make.height.mas_equalTo(Height*0.12);
     }];
     self.achievementView.backgroundColor = [UIColor whiteColor];
-    
+
     self.achievementView.layer.cornerRadius = 20;
     self.achievementView.layer.masksToBounds = YES;
-    
-    
+
+
     //参与活动
     UILabel* label1 = [[UILabel alloc] init];
     label1.text = @"参与活动";
@@ -175,7 +185,7 @@
         make.width.mas_equalTo(Width*0.3);
         make.height.mas_equalTo(Height*0.05);
     }];
-    
+
     UILabel* labelCount3 = [[UILabel alloc] init];
     labelCount3.text = @"0";
     labelCount3.font = [UIFont systemFontOfSize:25];
@@ -187,8 +197,8 @@
         make.width.mas_equalTo(Width*0.3);
         make.height.mas_equalTo(Height*0.07);
     }];
-    
-    
+
+
     [self LayoutActivity];
 }
 
@@ -202,15 +212,15 @@
         make.height.mas_equalTo(Height*0.2);
     }];
     self.activityView.backgroundColor = [UIColor whiteColor];
-    
+
     self.activityView.layer.cornerRadius = 20;
     self.activityView.layer.masksToBounds = YES;
-    
+
     UIView* grayView = [[UIView alloc] init];
     grayView.backgroundColor = [UIColor systemGray3Color];
     grayView.frame = CGRectMake(0, 40, Width, 0.5);
     [self.activityView addSubview:grayView];
-    
+
     UILabel* labelAct = [[UILabel alloc] init];
     labelAct.text = @"我的活动";
     labelAct.textAlignment = NSTextAlignmentCenter;
@@ -221,9 +231,12 @@
         make.width.mas_equalTo(Width*0.2);
         make.height.mas_equalTo(40);
     }];
-    
+
 }
 - (void) LayoutService {
-    
+
 }
+
+
+
 @end

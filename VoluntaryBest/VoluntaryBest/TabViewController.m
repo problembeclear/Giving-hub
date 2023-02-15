@@ -1,11 +1,11 @@
 //
-//  ViewController.m
+//  TabViewController.m
 //  VoluntaryBest
 //
-//  Created by 张思扬 on 2023/1/4.
+//  Created by 张思扬 on 2023/2/15.
 //
 
-#import "ViewController.h"
+#import "TabViewController.h"
 #import "MainController.h"
 #import "AssistanceController.h"
 #import "SignController.h"
@@ -13,26 +13,30 @@
 #import "SettingsController.h"
 #import "FMDB.h"
 #import "Masonry.h"
-@interface ViewController ()
+@interface TabViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TabViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor cyanColor];
     
-    UIButton* buttonStart = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [buttonStart setTitle:@"进入" forState:UIControlStateNormal];
+    UIImageView* preView = [[UIImageView alloc] init] ;
     
-    [buttonStart addTarget:self action:@selector(startMainView) forControlEvents:UIControlEventTouchUpInside];
+    preView.image = [UIImage imageNamed:@"qidongtu.jpeg"] ;
     
+    preView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
-    buttonStart.frame = CGRectMake(100, 300, 100, 50);
+    [self.view addSubview:preView] ;
+
+    //计时器来添加加载事件
+    NSTimer* preTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(startMainView) userInfo:nil repeats:NO] ;
     
-    [self.view addSubview:buttonStart];
+    [[NSRunLoop currentRunLoop] addTimer:preTimer forMode:NSDefaultRunLoopMode] ;
+    
     
 }
 
@@ -109,4 +113,7 @@
     
     [self presentViewController:tabBarController animated:NO completion:nil];
 }
+
+
+
 @end
