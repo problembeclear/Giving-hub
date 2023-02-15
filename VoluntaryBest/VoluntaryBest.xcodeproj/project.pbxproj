@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		401F5AFF29911B6000EF22B4 /* tupian2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 401F5AFE29911B5F00EF22B4 /* tupian2.jpeg */; };
-		401F5B0529911E6200EF22B4 /* SettingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B0429911E6200EF22B4 /* SettingsTableView.m */; };
 		401F5B0B299CD33000EF22B4 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B0A299CD33000EF22B4 /* TabViewController.m */; };
 		401F5B0E299CD6B700EF22B4 /* ViewForVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B0D299CD6B700EF22B4 /* ViewForVideo.m */; };
 		401F5B14299CD7F500EF22B4 /* CellForVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B13299CD7F500EF22B4 /* CellForVideo.m */; };
 		401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B17299CD9AF00EF22B4 /* MyPlayer.m */; };
 		401F5B1A299CE97F00EF22B4 /* videoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 401F5B19299CE97F00EF22B4 /* videoImage.png */; };
 		401F5B22299CED7800EF22B4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 401F5B21299CED7800EF22B4 /* background.jpg */; };
+		401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B24299D0ABE00EF22B4 /* SettingsCell.m */; };
 		403757562965C9B9006C834E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757552965C9B9006C834E /* AppDelegate.m */; };
 		403757592965C9B9006C834E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757582965C9B9006C834E /* SceneDelegate.m */; };
 		4037575F2965C9B9006C834E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4037575D2965C9B9006C834E /* Main.storyboard */; };
@@ -129,8 +129,6 @@
 
 /* Begin PBXFileReference section */
 		401F5AFE29911B5F00EF22B4 /* tupian2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tupian2.jpeg; sourceTree = "<group>"; };
-		401F5B0329911E6200EF22B4 /* SettingsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsTableView.h; sourceTree = "<group>"; };
-		401F5B0429911E6200EF22B4 /* SettingsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableView.m; sourceTree = "<group>"; };
 		401F5B09299CD33000EF22B4 /* TabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		401F5B0A299CD33000EF22B4 /* TabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		401F5B0C299CD6B700EF22B4 /* ViewForVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewForVideo.h; path = VoluntaryBest/ViewForVideo.h; sourceTree = SOURCE_ROOT; };
@@ -141,6 +139,8 @@
 		401F5B17299CD9AF00EF22B4 /* MyPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPlayer.m; sourceTree = "<group>"; };
 		401F5B19299CE97F00EF22B4 /* videoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoImage.png; sourceTree = "<group>"; };
 		401F5B21299CED7800EF22B4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		401F5B23299D0ABE00EF22B4 /* SettingsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		401F5B24299D0ABE00EF22B4 /* SettingsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
 		403757512965C9B9006C834E /* VoluntaryBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoluntaryBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403757542965C9B9006C834E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		403757552965C9B9006C834E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -473,8 +473,8 @@
 			children = (
 				403757B129687A80006C834E /* SettingsView.h */,
 				403757B229687A80006C834E /* SettingsView.m */,
-				401F5B0329911E6200EF22B4 /* SettingsTableView.h */,
-				401F5B0429911E6200EF22B4 /* SettingsTableView.m */,
+				401F5B23299D0ABE00EF22B4 /* SettingsCell.h */,
+				401F5B24299D0ABE00EF22B4 /* SettingsCell.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1047,6 +1047,7 @@
 				401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */,
 				403757C4296AD613006C834E /* ForumTableViewCell.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
+				401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */,
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				B9310A62298ECA3F0083BE7A /* Model.m in Sources */,
@@ -1063,7 +1064,6 @@
 				403757592965C9B9006C834E /* SceneDelegate.m in Sources */,
 				403757B329687A80006C834E /* SettingsView.m in Sources */,
 				403758892973E6A8006C834E /* LoginViewController.m in Sources */,
-				401F5B0529911E6200EF22B4 /* SettingsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

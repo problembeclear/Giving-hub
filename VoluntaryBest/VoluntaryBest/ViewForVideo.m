@@ -23,11 +23,12 @@
     
     [self addSubview:backgroundView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, 428, 826)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, 428, 826) style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor systemGray6Color];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
+    
     
     [backgroundView addSubview:self.tableView];
     

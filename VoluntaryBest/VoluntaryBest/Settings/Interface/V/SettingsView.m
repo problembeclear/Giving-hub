@@ -7,13 +7,13 @@
 
 #import "SettingsView.h"
 #import "Masonry.h"
-#import "SettingsTableView.h"
+#import "SettingsCell.h"
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
 
 @interface SettingsView ()
-@property (nonatomic, strong) SettingsTableView;
+@property (nonatomic, strong) UITableView* tableView;
 
 @end
 
@@ -24,7 +24,8 @@
     self.backgroundColor = [UIColor whiteColor];
     
     [self LayoutHeadView];
-    [self LayoutScrollView];
+    //    [self LayoutScrollView];
+    [self LayoutTableView];
     
 }
 - (void) LayoutHeadView {
@@ -90,153 +91,168 @@
 }
 
 
-
-- (void) LayoutScrollView {
-    self.scrollViewInSettings = [[UIScrollView alloc] init];
-    [self addSubview:self.scrollViewInSettings];
-
-//    [self.scrollViewInSettings mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self).with.offset(0);
-//        make.top.equalTo(self).with.offset(Height*0.2);
-//        make.width.mas_equalTo(Width);
-//        make.height.mas_equalTo(Height*0.8);
+//
+//- (void) LayoutScrollView {
+//    self.scrollViewInSettings = [[UIScrollView alloc] init];
+//    [self addSubview:self.scrollViewInSettings];
+//
+////    [self.scrollViewInSettings mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.left.equalTo(self).with.offset(0);
+////        make.top.equalTo(self).with.offset(Height*0.2);
+////        make.width.mas_equalTo(Width);
+////        make.height.mas_equalTo(Height*0.8);
+////    }];
+//
+//    self.scrollViewInSettings.frame = CGRectMake(0, Height*0.2, Width, Height*2);
+//    self.scrollViewInSettings.backgroundColor = [UIColor systemGray5Color];
+//
+//    self.scrollViewInSettings.showsVerticalScrollIndicator = YES;
+//    self.scrollViewInSettings.showsHorizontalScrollIndicator = NO;
+//    self.scrollViewInSettings.contentSize = CGSizeMake(0, Height*2);
+//    self.scrollViewInSettings.scrollEnabled = YES;
+//    [self LayoutAchievements];
+//}
+//
+//- (void) LayoutAchievements {
+//    self.achievementView = [[UIView alloc] init];
+//    [self addSubview:self.achievementView];
+//    [self.achievementView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.scrollViewInSettings).with.offset(Width*0.05);
+//        make.right.equalTo(self.scrollViewInSettings).with.offset(-Width*0.05);
+//        make.top.equalTo(self.scrollViewInSettings).with.offset(30);
+//        make.height.mas_equalTo(Height*0.12);
 //    }];
+//    self.achievementView.backgroundColor = [UIColor whiteColor];
+//
+//    self.achievementView.layer.cornerRadius = 20;
+//    self.achievementView.layer.masksToBounds = YES;
+//
+//
+//    //参与活动
+//    UILabel* label1 = [[UILabel alloc] init];
+//    label1.text = @"参与活动";
+//    label1.textAlignment = NSTextAlignmentCenter;
+//    label1.textColor = [UIColor blackColor];
+//    [self addSubview:label1];
+//    [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.achievementView).with.offset(0);
+//        make.top.equalTo(self.achievementView).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.05);
+//    }];
+//    UILabel* labelCount1 = [[UILabel alloc] init];
+//    labelCount1.text = @"0";
+//    labelCount1.font = [UIFont systemFontOfSize:25];
+//    labelCount1.textAlignment = NSTextAlignmentCenter;
+//    [self addSubview:labelCount1];
+//    [labelCount1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(label1.mas_left).with.offset(0);
+//        make.top.equalTo(label1.mas_bottom).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.07);
+//    }];
+//    //公益贡献
+//    UILabel* label2 = [[UILabel alloc] init];
+//    label2.text = @"公益贡献";
+//    label2.textAlignment = NSTextAlignmentCenter;
+//    label2.textColor = [UIColor blackColor];
+//    [self addSubview:label2];
+//    [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(label1.mas_right).with.offset(0);
+//        make.top.equalTo(label1.mas_top).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.05);
+//    }];
+//    UILabel* labelCount2 = [[UILabel alloc] init];
+//    labelCount2.text = @"0";
+//    labelCount2.font = [UIFont systemFontOfSize:25];
+//    labelCount2.textAlignment = NSTextAlignmentCenter;
+//    [self addSubview:labelCount2];
+//    [labelCount2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(label2.mas_left).with.offset(0);
+//        make.top.equalTo(label2.mas_bottom).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.07);
+//    }];
+//    //我的勋章
+//    UILabel* label3 = [[UILabel alloc] init];
+//    label3.text = @"我的勋章";
+//    label3.textAlignment = NSTextAlignmentCenter;
+//    label3.textColor = [UIColor blackColor];
+//    [self addSubview:label3];
+//    [label3 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(label2.mas_right).with.offset(0);
+//        make.top.equalTo(label2.mas_top).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.05);
+//    }];
+//
+//    UILabel* labelCount3 = [[UILabel alloc] init];
+//    labelCount3.text = @"0";
+//    labelCount3.font = [UIFont systemFontOfSize:25];
+//    labelCount3.textAlignment = NSTextAlignmentCenter;
+//    [self addSubview:labelCount3];
+//    [labelCount3 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(label3.mas_left).with.offset(0);
+//        make.top.equalTo(label3.mas_bottom).with.offset(0);
+//        make.width.mas_equalTo(Width*0.3);
+//        make.height.mas_equalTo(Height*0.07);
+//    }];
+//}
 
-    self.scrollViewInSettings.frame = CGRectMake(0, Height*0.2, Width, Height*2);
-    self.scrollViewInSettings.backgroundColor = [UIColor systemGray5Color];
-
-    self.scrollViewInSettings.showsVerticalScrollIndicator = YES;
-    self.scrollViewInSettings.showsHorizontalScrollIndicator = NO;
-    self.scrollViewInSettings.contentSize = CGSizeMake(0, Height*2);
-    self.scrollViewInSettings.scrollEnabled = YES;
-    [self LayoutAchievements];
+- (void) LayoutTableView {
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.2, Width, Height*0.71) style:UITableViewStyleGrouped];
+    
+    self.tableView.backgroundColor = [UIColor orangeColor];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self addSubview:self.tableView];
 }
 
-- (void) LayoutAchievements {
-    self.achievementView = [[UIView alloc] init];
-    [self addSubview:self.achievementView];
-    [self.achievementView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.scrollViewInSettings).with.offset(Width*0.05);
-        make.right.equalTo(self.scrollViewInSettings).with.offset(-Width*0.05);
-        make.top.equalTo(self.scrollViewInSettings).with.offset(30);
-        make.height.mas_equalTo(Height*0.12);
-    }];
-    self.achievementView.backgroundColor = [UIColor whiteColor];
-
-    self.achievementView.layer.cornerRadius = 20;
-    self.achievementView.layer.masksToBounds = YES;
-
-
-    //参与活动
-    UILabel* label1 = [[UILabel alloc] init];
-    label1.text = @"参与活动";
-    label1.textAlignment = NSTextAlignmentCenter;
-    label1.textColor = [UIColor blackColor];
-    [self addSubview:label1];
-    [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.achievementView).with.offset(0);
-        make.top.equalTo(self.achievementView).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.05);
-    }];
-    UILabel* labelCount1 = [[UILabel alloc] init];
-    labelCount1.text = @"0";
-    labelCount1.font = [UIFont systemFontOfSize:25];
-    labelCount1.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:labelCount1];
-    [labelCount1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(label1.mas_left).with.offset(0);
-        make.top.equalTo(label1.mas_bottom).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.07);
-    }];
-    //公益贡献
-    UILabel* label2 = [[UILabel alloc] init];
-    label2.text = @"公益贡献";
-    label2.textAlignment = NSTextAlignmentCenter;
-    label2.textColor = [UIColor blackColor];
-    [self addSubview:label2];
-    [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(label1.mas_right).with.offset(0);
-        make.top.equalTo(label1.mas_top).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.05);
-    }];
-    UILabel* labelCount2 = [[UILabel alloc] init];
-    labelCount2.text = @"0";
-    labelCount2.font = [UIFont systemFontOfSize:25];
-    labelCount2.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:labelCount2];
-    [labelCount2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(label2.mas_left).with.offset(0);
-        make.top.equalTo(label2.mas_bottom).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.07);
-    }];
-    //我的勋章
-    UILabel* label3 = [[UILabel alloc] init];
-    label3.text = @"我的勋章";
-    label3.textAlignment = NSTextAlignmentCenter;
-    label3.textColor = [UIColor blackColor];
-    [self addSubview:label3];
-    [label3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(label2.mas_right).with.offset(0);
-        make.top.equalTo(label2.mas_top).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.05);
-    }];
-
-    UILabel* labelCount3 = [[UILabel alloc] init];
-    labelCount3.text = @"0";
-    labelCount3.font = [UIFont systemFontOfSize:25];
-    labelCount3.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:labelCount3];
-    [labelCount3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(label3.mas_left).with.offset(0);
-        make.top.equalTo(label3.mas_bottom).with.offset(0);
-        make.width.mas_equalTo(Width*0.3);
-        make.height.mas_equalTo(Height*0.07);
-    }];
-
-
-    [self LayoutActivity];
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
-- (void) LayoutActivity {
-    self.activityView = [[UIView alloc] init];
-    [self addSubview:self.activityView];
-    [self.activityView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.scrollViewInSettings).with.offset(Width*0.05);
-        make.right.equalTo(self.scrollViewInSettings).with.offset(-Width*0.05);
-        make.top.equalTo(self.achievementView.mas_bottom).with.offset(30);
-        make.height.mas_equalTo(Height*0.2);
-    }];
-    self.activityView.backgroundColor = [UIColor whiteColor];
-
-    self.activityView.layer.cornerRadius = 20;
-    self.activityView.layer.masksToBounds = YES;
-
-    UIView* grayView = [[UIView alloc] init];
-    grayView.backgroundColor = [UIColor systemGray3Color];
-    grayView.frame = CGRectMake(0, 40, Width, 0.5);
-    [self.activityView addSubview:grayView];
-
-    UILabel* labelAct = [[UILabel alloc] init];
-    labelAct.text = @"我的活动";
-    labelAct.textAlignment = NSTextAlignmentCenter;
-    [self.activityView addSubview:labelAct];
-    [labelAct mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.activityView).with.offset(0);
-        make.top.equalTo(self.activityView).with.offset(0);
-        make.width.mas_equalTo(Width*0.2);
-        make.height.mas_equalTo(40);
-    }];
-
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
 }
-- (void) LayoutService {
 
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+
+
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%ld  %ld", indexPath.section, indexPath.row);
+}
+
+
+
+- (SettingsCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SettingsCell* cell = [tableView dequeueReusableCellWithIdentifier:@"111"];
+    
+    if (cell == nil) {
+        cell = [[SettingsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"123"];
+    }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    cell.labelInSetting.text = [NSString stringWithFormat:@"第%ld组第%ld个", indexPath.section+1, indexPath.row+1];
+    
+    cell.backgroundColor = [UIColor whiteColor];
+    
+    
+    
+    return cell;
 }
 
 
 
 @end
+
+
+
