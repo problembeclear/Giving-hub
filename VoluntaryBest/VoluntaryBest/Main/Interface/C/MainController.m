@@ -13,6 +13,7 @@
 #import "ScanviewController.h"
 #import "SearchViewController.h"
 #import "SaysViewController.h"
+#import "ErShiSiViewController.h"
 @interface MainController ()
 
 @end
@@ -40,6 +41,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scanView) name:@"pressScanButton" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsView) name:@"pressNewsButton" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saysView) name:@"pressSaysButton" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(erShiSiView) name:@"pressErShiSIiButton" object:nil];
     
     // Do any additional setup after loading the view.
 }
@@ -76,6 +78,13 @@
     [self presentViewController:pickerController animated:NO completion:nil];
     
 }
+- (void)erShiSiView{
+    ErShiSiViewController* pickerController = [[ErShiSiViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:NO completion:nil];
+    
+}
 - (void)dealloc{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressSearchButton" object:nil];
@@ -83,6 +92,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressScanButton" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressNewsButton" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressSaysButton" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressErShiSIiButton" object:nil];
     
 }
 /*

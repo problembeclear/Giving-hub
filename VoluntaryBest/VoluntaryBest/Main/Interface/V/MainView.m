@@ -14,6 +14,7 @@
 @implementation MainView
 - (void)initView{
     
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
     self.backgroundColor = [UIColor colorWithRed:48.0/255 green:200.0/255 blue:149.0/255 alpha:1];
     [self initScrollActivity];
     [self initScrollBack];
@@ -255,8 +256,9 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
+    [buttonTwo addTarget:self action:@selector(pressErshisi) forControlEvents:UIControlEventTouchUpInside];
     UILabel* labelTwo = [[UILabel alloc] init];
-    labelTwo.text = @"精选名句";
+    labelTwo.text = @"二十四节气";
     [self.scrollBack addSubview:labelTwo];
     [labelTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonTwo).with.offset(0);
@@ -366,6 +368,10 @@
     labelGoodActivity.textAlignment = NSTextAlignmentCenter;
     labelGoodActivity.layer.cornerRadius = 10;
     labelGoodActivity.layer.masksToBounds = YES;
+}
+- (void)pressErshisi {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressErShiSIiButton" object:nil];
 }
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];

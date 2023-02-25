@@ -54,7 +54,9 @@
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B921331129A9FE5D0066B823 /* CollectionView2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B921331029A9FE5D0066B823 /* CollectionView2.jpeg */; };
 		B921331C29AA033E0066B823 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921331B29AA033E0066B823 /* SignView.m */; };
-		B921331E29AA056C0066B823 /* SignBackPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B921331D29AA056C0066B823 /* SignBackPicture.jpeg */; };
+		B921332229AA0BFE0066B823 /* SignBackPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B921332129AA0BFE0066B823 /* SignBackPicture.jpeg */; };
+		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
+		B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332729AA0DD70066B823 /* ErShiSiView.m */; };
 		B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */; };
 		B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E4298C1CDE0083BE7A /* ResultSearchView.m */; };
 		B93109EB298C2EF00083BE7A /* CollectionView6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109E6298C2EF00083BE7A /* CollectionView6.jpeg */; };
@@ -200,7 +202,11 @@
 		B921331029A9FE5D0066B823 /* CollectionView2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CollectionView2.jpeg; path = ../../../../CollectionView2.jpeg; sourceTree = "<group>"; };
 		B921331A29AA033E0066B823 /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Main/Other/M/SignView.h; sourceTree = SOURCE_ROOT; };
 		B921331B29AA033E0066B823 /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Main/Other/M/SignView.m; sourceTree = SOURCE_ROOT; };
-		B921331D29AA056C0066B823 /* SignBackPicture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SignBackPicture.jpeg; path = ../../../../SignBackPicture.jpeg; sourceTree = "<group>"; };
+		B921332129AA0BFE0066B823 /* SignBackPicture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SignBackPicture.jpeg; path = ../../../../SignBackPicture.jpeg; sourceTree = "<group>"; };
+		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
+		B921332429AA0D960066B823 /* ErShiSiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiViewController.m; sourceTree = "<group>"; };
+		B921332629AA0DD70066B823 /* ErShiSiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiView.h; sourceTree = "<group>"; };
+		B921332729AA0DD70066B823 /* ErShiSiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiView.m; sourceTree = "<group>"; };
 		B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchViewController.h; sourceTree = "<group>"; };
 		B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultSearchViewController.m; sourceTree = "<group>"; };
 		B93109E3298C1CDE0083BE7A /* ResultSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchView.h; sourceTree = "<group>"; };
@@ -681,7 +687,7 @@
 		B921331329AA02970066B823 /* InSign */ = {
 			isa = PBXGroup;
 			children = (
-				B921331D29AA056C0066B823 /* SignBackPicture.jpeg */,
+				B921332129AA0BFE0066B823 /* SignBackPicture.jpeg */,
 			);
 			path = InSign;
 			sourceTree = "<group>";
@@ -758,6 +764,8 @@
 				B93109E4298C1CDE0083BE7A /* ResultSearchView.m */,
 				B9310A58298EC2CD0083BE7A /* SaysView.h */,
 				B9310A59298EC2CD0083BE7A /* SaysView.m */,
+				B921332629AA0DD70066B823 /* ErShiSiView.h */,
+				B921332729AA0DD70066B823 /* ErShiSiView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -777,6 +785,8 @@
 				B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */,
 				B9310A55298EC2BA0083BE7A /* SaysViewController.h */,
 				B9310A56298EC2BA0083BE7A /* SaysViewController.m */,
+				B921332329AA0D960066B823 /* ErShiSiViewController.h */,
+				B921332429AA0D960066B823 /* ErShiSiViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -932,7 +942,7 @@
 				B9B192B62973C25E00CC0811 /* xingxing.png in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
-				B921331E29AA056C0066B823 /* SignBackPicture.jpeg in Resources */,
+				B921332229AA0BFE0066B823 /* SignBackPicture.jpeg in Resources */,
 				B9310A05298C3AB80083BE7A /* Main1.jpeg in Resources */,
 				B9B192C62973C27F00CC0811 /* shipin.png in Resources */,
 				403758A42973F42C006C834E /* zhuce.png in Resources */,
@@ -1053,6 +1063,7 @@
 				B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */,
 				401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */,
 				403757C4296AD613006C834E /* ForumTableViewCell.m in Sources */,
+				B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
 				401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */,
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
@@ -1069,6 +1080,7 @@
 				B9B192A92973BEF400CC0811 /* NewsView.m in Sources */,
 				B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */,
 				4037578F2965DF43006C834E /* MainController.m in Sources */,
+				B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */,
 				403757592965C9B9006C834E /* SceneDelegate.m in Sources */,
 				403757B329687A80006C834E /* SettingsView.m in Sources */,
 				403758892973E6A8006C834E /* LoginViewController.m in Sources */,

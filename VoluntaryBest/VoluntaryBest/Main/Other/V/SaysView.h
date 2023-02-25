@@ -12,15 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SaysView : UIView
-<
-UITableViewDelegate,
-UITableViewDataSource
->
+
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray* array;
 @property (nonatomic, strong) NSDictionary* dictionarySays;
 - (void)initView;
-- (void)getJsonModel;
 @end
 
 NS_ASSUME_NONNULL_END

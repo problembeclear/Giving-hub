@@ -51,7 +51,7 @@
     }];
     self.searchTextField.text = @"🔍搜索附近位置";
     self.searchTextField.textAlignment = NSTextAlignmentCenter;
-    self.searchTextField.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:1];
+    self.searchTextField.backgroundColor = [UIColor colorWithRed:216.0/255 green:216.0/255 blue:216.0/255 alpha:0.8];
     
     
     
@@ -91,7 +91,7 @@
         }];
         buttonCity.tag = i;
         [buttonCity addTarget:self action:@selector(pressCityButton:) forControlEvents:UIControlEventTouchUpInside];
-        buttonCity.backgroundColor = [UIColor colorWithRed:216.0/255 green:216.0/255 blue:216.0/255 alpha:0.8];
+        buttonCity.backgroundColor = [UIColor systemGray6Color];
         if (i==0) {
             buttonCity.backgroundColor = [UIColor whiteColor];
         }

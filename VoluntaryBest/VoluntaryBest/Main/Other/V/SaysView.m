@@ -45,10 +45,10 @@
     
     
     
-    self.tableView = [[UITableView alloc] init];
-    self.tableView.frame = CGRectMake(0, 65, WIDTH, HEIGHT);
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+//    self.tableView = [[UITableView alloc] init];
+//    self.tableView.frame = CGRectMake(0, 65, WIDTH, HEIGHT);
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
     //[self addSubview:self.tableView];
     
     
@@ -66,34 +66,34 @@
     labelText.textAlignment = NSTextAlignmentCenter;
 }
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString* str = [NSString stringWithFormat:@"%ld",indexPath.row];
-    NSLog(@"%@", str);
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if (cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"111"];
-    }
-    UILabel* label = [[UILabel alloc] init];
-    [cell addSubview:label];
-    label.text = self.array[indexPath.row][@"text"];
-    label.numberOfLines = 3;
-    label.font = [UIFont systemFontOfSize:20];
-    label.frame = CGRectMake(20, 20, WIDTH - 40, 60);
-    return cell;
-}
+//- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSString* str = [NSString stringWithFormat:@"%ld",indexPath.row];
+//    NSLog(@"%@", str);
+//    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:str];
+//    if (cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"111"];
+//    }
+//    UILabel* label = [[UILabel alloc] init];
+//    [cell addSubview:label];
+//    label.text = self.array[indexPath.row][@"text"];
+//    label.numberOfLines = 3;
+//    label.font = [UIFont systemFontOfSize:20];
+//    label.frame = CGRectMake(20, 20, WIDTH - 40, 60);
+//    return cell;
+//}
 - (void)returnMian{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"returnMain" object:nil];
-    
+
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-   return 1;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 8;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//   return 1;
+//}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return 8;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 100;
+//}
 
 
 @end
