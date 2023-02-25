@@ -18,10 +18,10 @@
     
     self.backgroundColor = [UIColor whiteColor];
     
-    UIImageView* backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
-    backgroundView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-    
-    [self addSubview:backgroundView];
+//    UIImageView* backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+//    backgroundView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+//
+//    [self addSubview:backgroundView];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, 428, 826) style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor systemGray6Color];
@@ -30,7 +30,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     
     
-    [backgroundView addSubview:self.tableView];
+    [self addSubview:self.tableView];
     
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

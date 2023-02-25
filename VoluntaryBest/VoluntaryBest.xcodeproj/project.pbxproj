@@ -15,6 +15,7 @@
 		401F5B1A299CE97F00EF22B4 /* videoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 401F5B19299CE97F00EF22B4 /* videoImage.png */; };
 		401F5B22299CED7800EF22B4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 401F5B21299CED7800EF22B4 /* background.jpg */; };
 		401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B24299D0ABE00EF22B4 /* SettingsCell.m */; };
+		401F5B2729A9F95900EF22B4 /* qidongtu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 401F5B2629A9F95900EF22B4 /* qidongtu.jpeg */; };
 		403757562965C9B9006C834E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757552965C9B9006C834E /* AppDelegate.m */; };
 		403757592965C9B9006C834E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403757582965C9B9006C834E /* SceneDelegate.m */; };
 		4037575F2965C9B9006C834E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4037575D2965C9B9006C834E /* Main.storyboard */; };
@@ -44,7 +45,6 @@
 		403758892973E6A8006C834E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758882973E6A8006C834E /* LoginViewController.m */; };
 		4037588C2973E6BE006C834E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4037588B2973E6BE006C834E /* LoginView.m */; };
 		4037588E2973EB4C006C834E /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 4037588D2973EB4C006C834E /* return.png */; };
-		4037589E2973EF2E006C834E /* qidongtu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 403758942973EF2E006C834E /* qidongtu.jpeg */; };
 		403758A42973F42C006C834E /* zhuce.png in Resources */ = {isa = PBXBuildFile; fileRef = 403758A32973F42B006C834E /* zhuce.png */; };
 		403758A62973F430006C834E /* denglu.png in Resources */ = {isa = PBXBuildFile; fileRef = 403758A52973F430006C834E /* denglu.png */; };
 		403758A92973F529006C834E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403758A82973F529006C834E /* SignUpViewController.m */; };
@@ -141,6 +141,7 @@
 		401F5B21299CED7800EF22B4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		401F5B23299D0ABE00EF22B4 /* SettingsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
 		401F5B24299D0ABE00EF22B4 /* SettingsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		401F5B2629A9F95900EF22B4 /* qidongtu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qidongtu.jpeg; sourceTree = "<group>"; };
 		403757512965C9B9006C834E /* VoluntaryBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoluntaryBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403757542965C9B9006C834E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		403757552965C9B9006C834E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -186,7 +187,6 @@
 		4037588A2973E6BE006C834E /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		4037588B2973E6BE006C834E /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		4037588D2973EB4C006C834E /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
-		403758942973EF2E006C834E /* qidongtu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qidongtu.jpeg; sourceTree = "<group>"; };
 		403758A32973F42B006C834E /* zhuce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuce.png; sourceTree = "<group>"; };
 		403758A52973F430006C834E /* denglu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denglu.png; sourceTree = "<group>"; };
 		403758A72973F529006C834E /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -580,7 +580,7 @@
 		403757B429688CB4006C834E /* images */ = {
 			isa = PBXGroup;
 			children = (
-				403758942973EF2E006C834E /* qidongtu.jpeg */,
+				401F5B2629A9F95900EF22B4 /* qidongtu.jpeg */,
 				401F5B19299CE97F00EF22B4 /* videoImage.png */,
 				B9B192FE297425DA00CC0811 /* sum */,
 				B9E58995296C847400B7D15E /* InMain */,
@@ -918,11 +918,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4037589E2973EF2E006C834E /* qidongtu.jpeg in Resources */,
 				403757642965C9BB006C834E /* LaunchScreen.storyboard in Resources */,
 				B9B192C12973C27A00CC0811 /* meigui.png in Resources */,
 				B9B193082974263800CC0811 /* aixin-3.png in Resources */,
 				B9B193022974260D00CC0811 /* shouye-3.png in Resources */,
+				401F5B2729A9F95900EF22B4 /* qidongtu.jpeg in Resources */,
 				B9B192B62973C25E00CC0811 /* xingxing.png in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
