@@ -185,7 +185,9 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
-    buttonSearch.backgroundColor = [UIColor colorWithRed:95.0/255 green:198.0/255 blue:167.0/255 alpha:1];
+    buttonSearch.layer.cornerRadius = HEIGHT*0.01;
+    buttonSearch.layer.masksToBounds = YES;
+    buttonSearch.backgroundColor = [UIColor colorWithRed:95.0/255 green:198.0/255 blue:167.0/255 alpha:0.4];
     UILabel* labelsearch = [[UILabel alloc] init];
     labelsearch.text = @"找活动";
     [self.scrollBack addSubview:labelsearch];
@@ -228,9 +230,11 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
-    buttonOrg.backgroundColor = [UIColor colorWithRed:103.0/255 green:152.0/255 blue:239.0/255 alpha:1];
+    buttonOrg.backgroundColor = [UIColor colorWithRed:103.0/255 green:152.0/255 blue:239.0/255 alpha:0.4];
     UILabel* labelOrg = [[UILabel alloc] init];
     labelOrg.text = @"找组织";
+    buttonOrg.layer.cornerRadius = HEIGHT*0.01;
+    buttonOrg.layer.masksToBounds = YES;
     [self.scrollBack addSubview:labelOrg];
     [labelOrg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonOrg).with.offset(8);
@@ -270,9 +274,11 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
-    buttonBenefit.backgroundColor = [UIColor colorWithRed:239.0/255 green:181.0/255 blue:64.0/255 alpha:1];
+    buttonBenefit.backgroundColor = [UIColor colorWithRed:239.0/255 green:181.0/255 blue:64.0/255 alpha:0.4];
     UILabel* labelBenefit = [[UILabel alloc] init];
     labelBenefit.text = @"身边公益";
+    buttonBenefit.layer.cornerRadius = HEIGHT*0.01;
+    buttonBenefit.layer.masksToBounds = YES;
     [self.scrollBack addSubview:labelBenefit];
     [labelBenefit mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonBenefit).with.offset(0);
@@ -311,9 +317,11 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
-    buttonFriends.backgroundColor = [UIColor colorWithRed:163.0/255 green:146.0/255 blue:241.0/255 alpha:1];
+    buttonFriends.backgroundColor = [UIColor colorWithRed:163.0/255 green:146.0/255 blue:241.0/255 alpha:0.4];
     UILabel* labelFriends = [[UILabel alloc] init];
     labelFriends.text = @"邀请朋友";
+    buttonFriends.layer.cornerRadius = HEIGHT*0.01;
+    buttonFriends.layer.masksToBounds = YES;
     [self.scrollBack addSubview:labelFriends];
     [labelFriends mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonFriends).with.offset(0);
@@ -362,7 +370,7 @@
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];
     
-    self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2);
+    self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2.1);
     [self addSubview:self.scrollBack];
     self.scrollBack.backgroundColor = [UIColor clearColor];
     self.scrollBack.pagingEnabled = NO;
@@ -403,13 +411,13 @@
             [self.scrollActivity addSubview:iView];
         }
     NSTimer* timer = [[NSTimer alloc] init];
-    timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timer) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(timer) userInfo:nil repeats:YES];
     //[self initCollctionView];
 }
 - (void)timer {
     int dir = self.scrollActivity.contentOffset.x/WIDTH;
     if(dir != 2){
-        [self.scrollActivity setContentOffset:CGPointMake(WIDTH * (dir % 3 + 1), 0) animated:NO];
+        [self.scrollActivity setContentOffset:CGPointMake(WIDTH * (dir % 3 + 1), 0) animated:YES];
     } else {
         self.scrollActivity.contentOffset = CGPointMake(0, 0);
     }
