@@ -57,6 +57,7 @@
 		B921332229AA0BFE0066B823 /* SignBackPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B921332129AA0BFE0066B823 /* SignBackPicture.jpeg */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
 		B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332729AA0DD70066B823 /* ErShiSiView.m */; };
+		B9252EA529AB51950060CF6C /* SaysBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9252EA429AB51950060CF6C /* SaysBack.jpeg */; };
 		B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */; };
 		B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E4298C1CDE0083BE7A /* ResultSearchView.m */; };
 		B93109EB298C2EF00083BE7A /* CollectionView6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109E6298C2EF00083BE7A /* CollectionView6.jpeg */; };
@@ -207,6 +208,7 @@
 		B921332429AA0D960066B823 /* ErShiSiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiViewController.m; sourceTree = "<group>"; };
 		B921332629AA0DD70066B823 /* ErShiSiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiView.h; sourceTree = "<group>"; };
 		B921332729AA0DD70066B823 /* ErShiSiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiView.m; sourceTree = "<group>"; };
+		B9252EA429AB51950060CF6C /* SaysBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SaysBack.jpeg; sourceTree = "<group>"; };
 		B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchViewController.h; sourceTree = "<group>"; };
 		B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultSearchViewController.m; sourceTree = "<group>"; };
 		B93109E3298C1CDE0083BE7A /* ResultSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchView.h; sourceTree = "<group>"; };
@@ -809,6 +811,7 @@
 				B9B192C42973C27F00CC0811 /* shipin.png */,
 				B9B192B92973C27A00CC0811 /* jiangbei.png */,
 				B9B192BC2973C27A00CC0811 /* meigui.png */,
+				B9252EA429AB51950060CF6C /* SaysBack.jpeg */,
 				B9B192BD2973C27A00CC0811 /* ketang.png */,
 				B9B192BA2973C27A00CC0811 /* home.png */,
 				B9B192B32973C25A00CC0811 /* dunpai.png */,
@@ -984,6 +987,7 @@
 				B9B192CE2973C28C00CC0811 /* yaoqing.png in Resources */,
 				403757C6296C88F8006C834E /* peitu1.jpg in Resources */,
 				B9B193122974265400CC0811 /* wode-2.png in Resources */,
+				B9252EA529AB51950060CF6C /* SaysBack.jpeg in Resources */,
 				B9B192BE2973C27A00CC0811 /* jiangbei.png in Resources */,
 				B93109F8298C2EF90083BE7A /* CollectionView8.jpeg in Resources */,
 				B9B192BF2973C27A00CC0811 /* home.png in Resources */,

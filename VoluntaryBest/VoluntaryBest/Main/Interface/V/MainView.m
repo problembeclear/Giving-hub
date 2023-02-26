@@ -294,7 +294,7 @@
     
     UIButton* buttonThree = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonThree];
-    [buttonThree setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonThree setImage:[UIImage imageNamed:@"dunpai"] forState:UIControlStateNormal];
     [buttonThree mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelBenefit).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -302,7 +302,7 @@
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
     UILabel* labelThree = [[UILabel alloc] init];
-    labelThree.text = @"精选名句";
+    labelThree.text = @"历史今日";
     [self.scrollBack addSubview:labelThree];
     [labelThree mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonThree).with.offset(0);
@@ -397,8 +397,7 @@
 }
 - (void)initScrollActivity{
     self.scrollActivity = [[UIScrollView  alloc] init];
-    self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, HEIGHT);
-    //self.scrollActivity.backgroundColor = [UIColor redColor];
+    self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, 0);
     [self addSubview:self.scrollActivity];
     self.scrollActivity.showsVerticalScrollIndicator = NO;
     self.scrollActivity.showsHorizontalScrollIndicator = NO;
@@ -406,7 +405,7 @@
     self.scrollActivity.pagingEnabled = NO;
     [self.scrollActivity mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).with.offset(0);
-            make.top.equalTo(self).with.offset(0);
+            make.top.equalTo(self).with.offset(-50);
             make.width.mas_equalTo(WIDTH);
             make.height.mas_equalTo(HEIGHT);
     }];

@@ -13,6 +13,21 @@
 - (void)initView{
     
     
+    
+    
+    
+    
+    self.backgroundColor = [UIColor yellowColor];
+    UIImageView* preView = [[UIImageView alloc] init] ;
+    
+    preView.image = [UIImage imageNamed:@"SaysBack.jpeg"] ;
+    
+    preView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
+    
+    [self addSubview:preView] ;
+    
+    
+    
     self.backgroundColor = [UIColor whiteColor];
     UIButton* buttonReturnMain = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonReturnMain setImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
