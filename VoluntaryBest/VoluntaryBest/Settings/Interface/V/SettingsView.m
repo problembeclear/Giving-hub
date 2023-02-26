@@ -39,8 +39,13 @@
         make.left.equalTo(self).with.offset(0);
         make.top.equalTo(self).with.offset(0);
         make.width.mas_equalTo(Width);
-        make.height.mas_equalTo(Height*0.2);
+        make.height.mas_equalTo(Height*0.23);
     }];
+    
+    UIImageView* imageHeader = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"headerbackground.png"]];
+    
+    [self.headView addSubview:imageHeader];
+    
     //头像
     UIButton* buttonHeadImage = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.headView addSubview:buttonHeadImage];
@@ -59,7 +64,7 @@
     
     //名称
     UILabel* labelName = [[UILabel alloc] init];
-    labelName.text = @"志同道合01";
+    labelName.text = @"志愿者01";
     labelName.font = [UIFont systemFontOfSize:20];
     labelName.textColor = [UIColor blackColor];
     [self.headView addSubview:labelName];
@@ -201,9 +206,9 @@
 //}
 
 - (void) LayoutTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.2, Width, Height*0.71) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.2, Width, Height*0.74) style:UITableViewStyleInsetGrouped];
     
-    self.tableView.backgroundColor = [UIColor orangeColor];
+    self.tableView.backgroundColor = [UIColor systemGray5Color];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -220,7 +225,14 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    if (section == 0) {
+        return 3;
+    } else if (section == 1) {
+        return 4;
+    } else {
+        return 2;
+    }
+    return 0;
 }
 
 
@@ -241,9 +253,44 @@
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.labelInSetting.text = [NSString stringWithFormat:@"第%ld组第%ld个", indexPath.section+1, indexPath.row+1];
+    
     
     cell.backgroundColor = [UIColor whiteColor];
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"zhanghuguanli.png"];
+            cell.labelInSetting.text = @"我的账户";
+        } else if (indexPath.row == 1) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"shoucang-3.png"];
+            cell.labelInSetting.text = @"我的收藏";
+        } else {
+            cell.imageInSetting.image = [UIImage imageNamed:@"huodong-5.png"];
+            cell.labelInSetting.text = @"社区活动";
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"yaoqinghaoyou.png"];
+            cell.labelInSetting.text = @"好友";
+        } else if (indexPath.row == 1) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"wodeshipin.png"];
+            cell.labelInSetting.text = @"视频设置";
+        } else if (indexPath.row == 2) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"huodong-4.png"];
+            cell.labelInSetting.text = @"历史活动";
+        } else {
+            cell.imageInSetting.image = [UIImage imageNamed:@"biaozhunicon-.png"];
+            cell.labelInSetting.text = @"课堂";
+        }
+    } else {
+        if (indexPath.row == 0) {
+            cell.imageInSetting.image = [UIImage imageNamed:@"shezhi-2.png"];
+            cell.labelInSetting.text = @"详细设置";
+        } else {
+            cell.imageInSetting.image = [UIImage imageNamed:@"fankui.png"];
+            cell.labelInSetting.text = @"反馈";
+        }
+    }
     
     
     
