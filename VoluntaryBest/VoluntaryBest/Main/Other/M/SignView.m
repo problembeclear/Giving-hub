@@ -14,7 +14,7 @@
     self.backgroundColor = [UIColor yellowColor];
     UIImageView* preView = [[UIImageView alloc] init] ;
     
-    preView.image = [UIImage imageNamed:@"SignBackPicture.jpeg"] ;
+    preView.image = [UIImage imageNamed:@"qiandaojiemiantu.jpg"] ;
     
     preView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     

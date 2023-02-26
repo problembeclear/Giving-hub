@@ -24,9 +24,8 @@ UITableViewDataSource
 @property (nonatomic, strong) UIView* activityView;
 - (void) LayoutSelf;
 - (void) LayoutHeadView;
-- (void) LayoutScrollView;
-- (void) LayoutAchievements;
-- (void) LayoutActivity;
+- (void) LayoutTableView;
+
 @end
 
 NS_ASSUME_NONNULL_END

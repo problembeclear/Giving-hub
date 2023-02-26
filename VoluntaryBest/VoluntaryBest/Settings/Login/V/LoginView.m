@@ -14,7 +14,7 @@
 
 
 - (void) LayoutSelf {
-    self.backgroundColor = [UIColor systemBlueColor];
+    self.backgroundColor = [UIColor systemCyanColor];
     UIButton* buttonReturn = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonReturn setImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
     [self addSubview:buttonReturn];

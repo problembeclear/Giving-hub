@@ -61,6 +61,7 @@
 		404E7BAA29AB93C1006B1832 /* huodong-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7BA129AB93C1006B1832 /* huodong-4.png */; };
 		404E7BAB29AB93C1006B1832 /* shoucang-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7BA229AB93C1006B1832 /* shoucang-3.png */; };
 		404E7BAD29AB995C006B1832 /* headerbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7BAC29AB995C006B1832 /* headerbackground.png */; };
+		404E7BAF29AB9E5B006B1832 /* qiandaojiemiantu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 404E7BAE29AB9E5B006B1832 /* qiandaojiemiantu.jpg */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B921331C29AA033E0066B823 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921331B29AA033E0066B823 /* SignView.m */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
@@ -222,6 +223,7 @@
 		404E7BA129AB93C1006B1832 /* huodong-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huodong-4.png"; sourceTree = "<group>"; };
 		404E7BA229AB93C1006B1832 /* shoucang-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoucang-3.png"; sourceTree = "<group>"; };
 		404E7BAC29AB995C006B1832 /* headerbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerbackground.png; sourceTree = "<group>"; };
+		404E7BAE29AB9E5B006B1832 /* qiandaojiemiantu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qiandaojiemiantu.jpg; sourceTree = "<group>"; };
 		B921331A29AA033E0066B823 /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Main/Other/M/SignView.h; sourceTree = SOURCE_ROOT; };
 		B921331B29AA033E0066B823 /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Main/Other/M/SignView.m; sourceTree = SOURCE_ROOT; };
 		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
@@ -735,6 +737,7 @@
 		B921331329AA02970066B823 /* InSign */ = {
 			isa = PBXGroup;
 			children = (
+				404E7BAE29AB9E5B006B1832 /* qiandaojiemiantu.jpg */,
 			);
 			path = InSign;
 			sourceTree = "<group>";
@@ -1021,6 +1024,7 @@
 				403757BD296A9AC8006C834E /* xiugai.png in Resources */,
 				B9B193062974263200CC0811 /* aixin-2.png in Resources */,
 				404E7BA929AB93C1006B1832 /* wodeshipin.png in Resources */,
+				404E7BAF29AB9E5B006B1832 /* qiandaojiemiantu.jpg in Resources */,
 				B9B192CD2973C28C00CC0811 /* qizhi.png in Resources */,
 				B9B1930A2974263D00CC0811 /* dingwei.png in Resources */,
 				B9B193102974264D00CC0811 /* friends.png in Resources */,

@@ -7,6 +7,7 @@
 
 #import "CellForVideo.h"
 #import "MyPlayer.h"
+#import "UIImageView+WebCache.h"
 @interface CellForVideo ()
 @property (nonatomic, strong, readwrite) UIImageView* coverView;
 @property (nonatomic, strong, readwrite) UIImageView* playButton;
@@ -60,7 +61,9 @@
 #pragma mark - public method
 
 - (void) layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
-    self.coverView.image = [UIImage imageNamed:videoCoverUrl];
+    NSURL* videoImageUrl = [NSURL URLWithString:videoUrl];
+    
+    [self.coverView sd_setImageWithURL:videoImageUrl placeholderImage:[UIImage imageNamed:@"videoImage.png"] options:SDWebImageRefreshCached];
     self.videoUrl = videoUrl;
     
 }
