@@ -301,6 +301,7 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
+    [buttonThree addTarget:self action:@selector(pressHistory) forControlEvents:UIControlEventTouchUpInside];
     UILabel* labelThree = [[UILabel alloc] init];
     labelThree.text = @"历史今日";
     [self.scrollBack addSubview:labelThree];
@@ -310,6 +311,8 @@
         make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);
     }];
+    
+    
     
     UIButton* buttonFriends = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonFriends];
@@ -374,9 +377,11 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressErShiSIiButton" object:nil];
 }
+- (void)pressHistory {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressHistoryButton" object:nil];
+}
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];
-    
     self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2.1);
     [self addSubview:self.scrollBack];
     self.scrollBack.backgroundColor = [UIColor clearColor];

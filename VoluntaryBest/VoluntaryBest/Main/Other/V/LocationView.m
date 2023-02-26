@@ -540,7 +540,6 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"postLocationtext" object:nil userInfo:dictionary];
 
 
-    NSLog(@"1111%@", dictionary);
 
 }
 

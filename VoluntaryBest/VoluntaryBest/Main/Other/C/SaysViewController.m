@@ -34,6 +34,8 @@
     } error:^(NSError * _Nonnull error) {
         NSLog(@"请求失败!");
     }];
+    
+    
 //    [[Manager shareManger]makeData:^(Model * _Nonnull ViewModel) {
 //        self.dic = [ViewModel toDictionary];
 //        [self.viewSays.array addObject:self.dic];

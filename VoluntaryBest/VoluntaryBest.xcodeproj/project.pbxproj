@@ -58,6 +58,10 @@
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
 		B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332729AA0DD70066B823 /* ErShiSiView.m */; };
 		B9252EA529AB51950060CF6C /* SaysBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9252EA429AB51950060CF6C /* SaysBack.jpeg */; };
+		B9252EA829AB7B5F0060CF6C /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9252EA729AB7B5F0060CF6C /* HistoryView.m */; };
+		B9252EAB29AB7B700060CF6C /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9252EAA29AB7B700060CF6C /* HistoryViewController.m */; };
+		B9252EAE29AB7D6E0060CF6C /* ManagerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B9252EAD29AB7D6E0060CF6C /* ManagerTwo.m */; };
+		B9252EB129AB7D990060CF6C /* ModelTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B9252EB029AB7D990060CF6C /* ModelTwo.m */; };
 		B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */; };
 		B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93109E4298C1CDE0083BE7A /* ResultSearchView.m */; };
 		B93109EB298C2EF00083BE7A /* CollectionView6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109E6298C2EF00083BE7A /* CollectionView6.jpeg */; };
@@ -209,6 +213,14 @@
 		B921332629AA0DD70066B823 /* ErShiSiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiView.h; sourceTree = "<group>"; };
 		B921332729AA0DD70066B823 /* ErShiSiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiView.m; sourceTree = "<group>"; };
 		B9252EA429AB51950060CF6C /* SaysBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SaysBack.jpeg; sourceTree = "<group>"; };
+		B9252EA629AB7B5F0060CF6C /* HistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
+		B9252EA729AB7B5F0060CF6C /* HistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
+		B9252EA929AB7B700060CF6C /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		B9252EAA29AB7B700060CF6C /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		B9252EAC29AB7D6E0060CF6C /* ManagerTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerTwo.h; sourceTree = "<group>"; };
+		B9252EAD29AB7D6E0060CF6C /* ManagerTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerTwo.m; sourceTree = "<group>"; };
+		B9252EAF29AB7D990060CF6C /* ModelTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelTwo.h; sourceTree = "<group>"; };
+		B9252EB029AB7D990060CF6C /* ModelTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelTwo.m; sourceTree = "<group>"; };
 		B93109E0298C1C3A0083BE7A /* ResultSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchViewController.h; sourceTree = "<group>"; };
 		B93109E1298C1C3A0083BE7A /* ResultSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultSearchViewController.m; sourceTree = "<group>"; };
 		B93109E3298C1CDE0083BE7A /* ResultSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultSearchView.h; sourceTree = "<group>"; };
@@ -710,6 +722,10 @@
 				B9310A5E298ECA2E0083BE7A /* Manager.m */,
 				B9310A60298ECA3F0083BE7A /* Model.h */,
 				B9310A61298ECA3F0083BE7A /* Model.m */,
+				B9252EAC29AB7D6E0060CF6C /* ManagerTwo.h */,
+				B9252EAD29AB7D6E0060CF6C /* ManagerTwo.m */,
+				B9252EAF29AB7D990060CF6C /* ModelTwo.h */,
+				B9252EB029AB7D990060CF6C /* ModelTwo.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -768,6 +784,8 @@
 				B9310A59298EC2CD0083BE7A /* SaysView.m */,
 				B921332629AA0DD70066B823 /* ErShiSiView.h */,
 				B921332729AA0DD70066B823 /* ErShiSiView.m */,
+				B9252EA629AB7B5F0060CF6C /* HistoryView.h */,
+				B9252EA729AB7B5F0060CF6C /* HistoryView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -789,6 +807,8 @@
 				B9310A56298EC2BA0083BE7A /* SaysViewController.m */,
 				B921332329AA0D960066B823 /* ErShiSiViewController.h */,
 				B921332429AA0D960066B823 /* ErShiSiViewController.m */,
+				B9252EA929AB7B700060CF6C /* HistoryViewController.h */,
+				B9252EAA29AB7B700060CF6C /* HistoryViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1053,6 +1073,7 @@
 				4037579D2965E175006C834E /* SettingsController.m in Sources */,
 				B9B19332297E950000CC0811 /* LocationView.m in Sources */,
 				401F5B0B299CD33000EF22B4 /* TabViewController.m in Sources */,
+				B9252EAB29AB7B700060CF6C /* HistoryViewController.m in Sources */,
 				B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */,
 				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
 				B9310A57298EC2BB0083BE7A /* SaysViewController.m in Sources */,
@@ -1065,9 +1086,11 @@
 				403757B02965E28C006C834E /* AssistanceController.m in Sources */,
 				401F5B0E299CD6B700EF22B4 /* ViewForVideo.m in Sources */,
 				B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */,
+				B9252EB129AB7D990060CF6C /* ModelTwo.m in Sources */,
 				401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */,
 				403757C4296AD613006C834E /* ForumTableViewCell.m in Sources */,
 				B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */,
+				B9252EA829AB7B5F0060CF6C /* HistoryView.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
 				401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */,
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
@@ -1081,6 +1104,7 @@
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
 				403758A92973F529006C834E /* SignUpViewController.m in Sources */,
 				403757672965C9BB006C834E /* main.m in Sources */,
+				B9252EAE29AB7D6E0060CF6C /* ManagerTwo.m in Sources */,
 				B9B192A92973BEF400CC0811 /* NewsView.m in Sources */,
 				B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */,
 				4037578F2965DF43006C834E /* MainController.m in Sources */,
