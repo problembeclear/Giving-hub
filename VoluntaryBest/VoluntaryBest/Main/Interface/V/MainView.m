@@ -249,7 +249,7 @@
     
     UIButton* buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonTwo];
-    [buttonTwo setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonTwo setImage:[UIImage imageNamed:@"gongyi-2"] forState:UIControlStateNormal];
     [buttonTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelOrg).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -260,8 +260,9 @@
     UILabel* labelTwo = [[UILabel alloc] init];
     labelTwo.text = @"二十四节气";
     [self.scrollBack addSubview:labelTwo];
+    labelTwo.textAlignment = NSTextAlignmentCenter;
     [labelTwo mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(buttonTwo).with.offset(0);
+        make.left.equalTo(buttonTwo).with.offset(-10);
         make.top.equalTo(buttonTwo).with.offset(HEIGHT*0.07);
         make.width.mas_equalTo(HEIGHT*0.1);
         make.height.mas_equalTo(HEIGHT*0.05);

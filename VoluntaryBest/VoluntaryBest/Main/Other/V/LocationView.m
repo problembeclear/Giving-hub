@@ -35,7 +35,7 @@
     labelLocation.textAlignment = NSTextAlignmentCenter;
     [labelLocation mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonReturnMain).with.offset(WIDTH*0.1 - 30);
-        make.top.equalTo(buttonReturnMain).with.offset(HEIGHT*0.01);
+        make.top.equalTo(buttonReturnMain).with.offset(0);
         make.width.mas_equalTo(WIDTH*0.8);
         make.height.mas_equalTo(HEIGHT*0.03);
     }];
