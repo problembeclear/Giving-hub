@@ -63,7 +63,7 @@
 - (void) layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
     NSURL* videoImageUrl = [NSURL URLWithString:videoUrl];
     
-    [self.coverView sd_setImageWithURL:videoImageUrl placeholderImage:[UIImage imageNamed:@"videoImage.png"] options:SDWebImageRefreshCached];
+    [self.coverView sd_setImageWithURL:videoImageUrl placeholderImage:[UIImage imageNamed:@"cellImage1.jpg"] options:SDWebImageRefreshCached];
     self.videoUrl = videoUrl;
     
 }

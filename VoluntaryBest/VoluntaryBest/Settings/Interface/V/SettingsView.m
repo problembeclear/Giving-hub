@@ -132,6 +132,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld  %ld", indexPath.section, indexPath.row);
+   
 }
 
 
@@ -142,7 +143,7 @@
     if (cell == nil) {
         cell = [[SettingsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"123"];
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     

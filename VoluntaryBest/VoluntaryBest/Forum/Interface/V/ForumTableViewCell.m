@@ -10,6 +10,8 @@
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
+
+
 @implementation ForumTableViewCell
 
 - (void)awakeFromNib {
@@ -84,7 +86,7 @@
         make.left.equalTo(self.contentView).with.offset(15);
         make.top.equalTo(self.labelTime.mas_bottom).with.offset(20);
         make.width.mas_equalTo(Width - 30);
-        make.height.mas_equalTo(90);
+        make.bottom.equalTo(self.viewForImage.mas_top).with.offset(-5);
     }];
     
     [self.viewForImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -117,23 +119,20 @@
         make.bottom.equalTo(self.contentView).with.offset(-10);
     }];
     return self;
-    return 0;
+    
 }
 
 - (void) layoutSubviews {
-    self.headImage.image = [UIImage imageNamed:@"touxiang0.jpg"];
+    self.headImage.clipsToBounds = YES;
+    self.headImage.layer.cornerRadius = 9;
     
-    self.labelName.text = @"abcd";
+    
     self.labelName.font = [UIFont systemFontOfSize:25];
     
-    self.labelTime.text = @"1分钟前";
     [self.buttonMore setBackgroundImage:[UIImage imageNamed:@"gengduo-2.png"] forState:UIControlStateNormal];
     
-    self.content.text = @"我年少偶然识得人间绝色，见水不是水是水光潋滟，见山不是山是水色空蒙，见你不是你，是西子，是风雨同舟者。";
     
     
-    
-    self.labelLocation.text = @"陕西西安";
     self.labelLocation.textColor = [UIColor grayColor];
     self.labelLocation.font = [UIFont systemFontOfSize:10];
     

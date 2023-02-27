@@ -7,7 +7,8 @@
 
 #import "ViewForVideo.h"
 #import "CellForVideo.h"
-
+#define Width [UIScreen mainScreen].bounds.size.width
+#define Height [UIScreen mainScreen].bounds.size.height
 
 @interface ViewForVideo ()
 @property (nonatomic, strong) UITableView* tableView;
@@ -19,12 +20,12 @@
     
     self.backgroundColor = [UIColor blackColor];
     
-    UIImageView* backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+    UIImageView* backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundForVideo.jpeg"]];
     backgroundView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     
    
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 428, 843) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Width, 843) style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor systemGray6Color];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -36,18 +37,13 @@
     
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 250;
+    return 240;
 
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 50;
-}
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.001;
-}
+
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 4;
 }
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -61,7 +57,12 @@
         cell = [[CellForVideo alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"%ld%ld", indexPath.row, indexPath.section]];
     }
     
-    [cell layoutWithVideoCoverUrl:@"http://img.kaiyanapp.com/a13867a4345e6e8bf516650821af885d.jpeg?imageMogr2/quality/60/format/jpg" videoUrl:@"http://baobab.kaiyanapp.com/api/v1/playUrl?vid=316658&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid="];
+    if (indexPath.section == 1) {
+        [cell layoutWithVideoCoverUrl:@"https://v.api.aa1.cn/api/bz-v4/" videoUrl:@"https://v.api.aa1.cn/api/api-fj/index.php?aa1=suf7y58th48u935"];
+    }
+    
+    
+    
     
     return  cell;
 }

@@ -9,9 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ForumView : UIView <UITableViewDelegate, UITableViewDataSource>
+@interface ForumView : UIView <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic, strong) UISegmentedControl* segmentControlInForum;
 @property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) UIScrollView* scrollView;
 
 - (void) LayoutSelf;
 - (void) LayoutTableView;
