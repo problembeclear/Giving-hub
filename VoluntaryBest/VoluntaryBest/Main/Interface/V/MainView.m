@@ -201,7 +201,7 @@
     
     UIButton* buttonSays = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonSays];
-    [buttonSays setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonSays setImage:[UIImage imageNamed:@"shequpinglun"] forState:UIControlStateNormal];
     [buttonSays mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelsearch).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -249,7 +249,7 @@
     
     UIButton* buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonTwo];
-    [buttonTwo setImage:[UIImage imageNamed:@"gongyi-2"] forState:UIControlStateNormal];
+    [buttonTwo setImage:[UIImage imageNamed:@"ershisijieqi"] forState:UIControlStateNormal];
     [buttonTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelOrg).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -294,7 +294,7 @@
     
     UIButton* buttonThree = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonThree];
-    [buttonThree setImage:[UIImage imageNamed:@"dunpai"] forState:UIControlStateNormal];
+    [buttonThree setImage:[UIImage imageNamed:@"lishi"] forState:UIControlStateNormal];
     [buttonThree mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelBenefit).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -338,7 +338,7 @@
     
     UIButton* buttonFour = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonFour];
-    [buttonFour setImage:[UIImage imageNamed:@"gouwulan"] forState:UIControlStateNormal];
+    [buttonFour setImage:[UIImage imageNamed:@"wenzhang"] forState:UIControlStateNormal];
     [buttonFour mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelFriends).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -346,7 +346,7 @@
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
     UILabel* labelFive = [[UILabel alloc] init];
-    labelFive.text = @"精选名句";
+    labelFive.text = @"精选美文";
     [self.scrollBack addSubview:labelFive];
     [labelFive mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonFour).with.offset(0);
