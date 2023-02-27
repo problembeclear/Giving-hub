@@ -20,6 +20,8 @@
     [self LayoutScrollView];
     [self LayoutTableView];
     
+    [self LayoutTextView];
+    
 }
 - (void) LayoutHead {
     UILabel* labelTitle = [[UILabel alloc] init];
@@ -52,30 +54,58 @@
 
 - (void) changeView:(NSInteger) selectedSegmentIndex {
     if (self.segmentControlInForum.selectedSegmentIndex == 0) {
-        
+        [self.scrollView setContentOffset:CGPointMake(0, 0)];
     } else {
-        
+        [self.scrollView setContentOffset:CGPointMake(Width, 0)];
     }
 }
+
 - (void) LayoutScrollView {
     self.scrollView = [[UIScrollView alloc] init];
     self.scrollView.frame = CGRectMake(0, Height*0.14 - 10, Width, Height*0.78);
     self.scrollView.contentSize = CGSizeMake(Width*2, 0);
     
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.alwaysBounceVertical = NO;
+    self.scrollView.alwaysBounceHorizontal = YES;
+    
+    self.scrollView.backgroundColor = [UIColor systemGreenColor];
+    
+    [self addSubview:self.scrollView];
+    
+    self.scrollView.delegate = self;
+    self.scrollView.tag = 101;
+}
+
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView.tag == 101) {
+        if (scrollView.contentOffset.x >= Width*0.90) {
+            self.segmentControlInForum.selectedSegmentIndex = 1;
+        }
+        if (scrollView.contentOffset.x < Width*0.5) {
+            self.segmentControlInForum.selectedSegmentIndex = 0;
+        }
+        
+    }
     
 }
 
 - (void) LayoutTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.14-10, Width, Height*0.78) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Width, Height*0.78) style:UITableViewStylePlain];
     
     
-    
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.estimatedRowHeight = 400;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    [self addSubview:self.tableView];
+    self.tableView.tag = 102;
+    
+    [self.scrollView addSubview:self.tableView];
     
 }
 
@@ -149,5 +179,19 @@
     return  cell;
 }
 
+- (void) LayoutTextView {
+    UITextView* textView = [[UITextView alloc] initWithFrame:CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25)];
+    [self.scrollView addSubview:textView];
+    textView.backgroundColor = [UIColor whiteColor];
+    
+    textView.layer.cornerRadius = 10;
+    textView.clipsToBounds = YES;
+    
+    
 
+
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self endEditing:YES]; //实现该方法是需要注意view需要是继承UIControl而来的
+}
 @end
