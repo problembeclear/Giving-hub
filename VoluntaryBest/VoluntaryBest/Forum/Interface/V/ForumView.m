@@ -187,8 +187,28 @@
     textView.layer.cornerRadius = 10;
     textView.clipsToBounds = YES;
     
+    textView.text = @"♡\n“不要担心，会变得很好，就像你时常期望的那个样子。”";
+    textView.font = [UIFont systemFontOfSize:30];
     
-
+    UIButton* buttonForSend = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonForSend.titleLabel.text = @"发布";
+    buttonForSend.backgroundColor = [UIColor whiteColor];
+    
+    [buttonForSend setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [buttonForSend setTitle:@"发布" forState:UIControlStateNormal];
+    
+    buttonForSend.layer.cornerRadius = 10;
+    buttonForSend.clipsToBounds = YES;
+    
+    [self.scrollView addSubview:buttonForSend];
+    [buttonForSend mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(textView.mas_right).with.offset(0);
+        make.width.mas_equalTo(Width*0.2);
+        make.top.equalTo(textView.mas_bottom).with.offset(10);
+        make.height.mas_equalTo(Width*0.1);
+    }];
+    
+    
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

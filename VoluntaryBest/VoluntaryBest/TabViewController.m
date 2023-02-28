@@ -51,7 +51,7 @@
     controllerForMain.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"shouye-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
         @"shouye-4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    controllerForAssistance.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"援助" image:[[UIImage imageNamed:@"aixin-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+    controllerForAssistance.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"video" image:[[UIImage imageNamed:@"aixin-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
         @"aixin-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     controllerForSign.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"签到" image:[[UIImage imageNamed:@"dingwei"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
