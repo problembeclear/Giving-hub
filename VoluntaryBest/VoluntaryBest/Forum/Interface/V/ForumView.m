@@ -11,6 +11,13 @@
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
+
+@interface ForumView ()
+    
+@property (nonatomic, strong) UITextView* textView;
+
+@end
+
 @implementation ForumView
 
 - (void) LayoutSelf {
@@ -180,15 +187,15 @@
 }
 
 - (void) LayoutTextView {
-    UITextView* textView = [[UITextView alloc] initWithFrame:CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25)];
-    [self.scrollView addSubview:textView];
-    textView.backgroundColor = [UIColor whiteColor];
+    _textView = [[UITextView alloc] initWithFrame:CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25)];
+    [self.scrollView addSubview:_textView];
+    _textView.backgroundColor = [UIColor whiteColor];
     
-    textView.layer.cornerRadius = 10;
-    textView.clipsToBounds = YES;
+    _textView.layer.cornerRadius = 10;
+    _textView.clipsToBounds = YES;
     
-    textView.text = @"♡\n“不要担心，会变得很好，就像你时常期望的那个样子。”";
-    textView.font = [UIFont systemFontOfSize:30];
+    _textView.text = @"♡\n“不要担心，会变得很好，就像你时常期望的那个样子。”";
+    _textView.font = [UIFont systemFontOfSize:30];
     
     UIButton* buttonForSend = [UIButton buttonWithType:UIButtonTypeCustom];
     buttonForSend.titleLabel.text = @"发布";
@@ -202,16 +209,32 @@
     
     [self.scrollView addSubview:buttonForSend];
     [buttonForSend mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(textView.mas_right).with.offset(0);
+        make.right.equalTo(_textView.mas_right).with.offset(0);
         make.width.mas_equalTo(Width*0.2);
-        make.top.equalTo(textView.mas_bottom).with.offset(10);
+        make.top.equalTo(_textView.mas_bottom).with.offset(10);
         make.height.mas_equalTo(Width*0.1);
     }];
     
+    UIToolbar * topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+       [topView setBarStyle:UIBarStyleBlack];
     
+    topView.barTintColor = [UIColor whiteColor];
+
+    UIBarButtonItem * SwitchButton = [[UIBarButtonItem alloc]initWithTitle:@"Switch" style:UIBarButtonItemStylePlain target:self action:nil];
+
+    UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+
+    UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]initWithTitle:@"收起↓" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
+
+    NSArray * buttonsArray = [NSArray arrayWithObjects:SwitchButton,btnSpace,doneButton,nil];
+
+
+    [topView setItems:buttonsArray];
+    [self.textView setInputAccessoryView:topView];
 
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self endEditing:YES]; //实现该方法是需要注意view需要是继承UIControl而来的
+
+- (IBAction) dismissKeyBoard {
+   [self.textView resignFirstResponder];
 }
 @end
