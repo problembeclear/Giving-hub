@@ -95,7 +95,6 @@
         if (scrollView.contentOffset.x < Width*0.5) {
             self.segmentControlInForum.selectedSegmentIndex = 0;
         }
-        
     }
     
 }

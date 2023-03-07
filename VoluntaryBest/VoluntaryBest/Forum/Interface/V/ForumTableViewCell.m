@@ -137,7 +137,7 @@
     self.labelLocation.font = [UIFont systemFontOfSize:10];
     
     [self.buttonLike setImage:[UIImage imageNamed:@"icon-2.png"] forState:UIControlStateNormal];
-    [self.buttonLike setImage:[UIImage imageNamed:@"icon.png"] forState:UIControlStateSelected];
+    
     
     [self.buttonComment setBackgroundImage:[UIImage imageNamed:@"pinglun-2.png"] forState:UIControlStateNormal];
 
