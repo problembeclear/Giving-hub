@@ -155,7 +155,7 @@
             cell.imageInSetting.image = [UIImage imageNamed:@"zhanghuguanli.png"];
             cell.labelInSetting.text = @"我的账户";
         } else if (indexPath.row == 1) {
-            cell.imageInSetting.image = [UIImage imageNamed:@"shoucang-3.png"];
+            cell.imageInSetting.image = [UIImage imageNamed:@"shoucang-5.png"];
             cell.labelInSetting.text = @"我的收藏";
         } else {
             cell.imageInSetting.image = [UIImage imageNamed:@"huodong-5.png"];
@@ -163,16 +163,16 @@
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            cell.imageInSetting.image = [UIImage imageNamed:@"yaoqinghaoyou.png"];
+            cell.imageInSetting.image = [UIImage imageNamed:@"haoyou1-xianxing.png"];
             cell.labelInSetting.text = @"好友";
         } else if (indexPath.row == 1) {
-            cell.imageInSetting.image = [UIImage imageNamed:@"wodeshipin.png"];
+            cell.imageInSetting.image = [UIImage imageNamed:@"f-video.png"];
             cell.labelInSetting.text = @"视频设置";
         } else if (indexPath.row == 2) {
-            cell.imageInSetting.image = [UIImage imageNamed:@"huodong-4.png"];
+            cell.imageInSetting.image = [UIImage imageNamed:@"huodong-6.png"];
             cell.labelInSetting.text = @"历史活动";
         } else {
-            cell.imageInSetting.image = [UIImage imageNamed:@"biaozhunicon-.png"];
+            cell.imageInSetting.image = [UIImage imageNamed:@"shuben.png"];
             cell.labelInSetting.text = @"课堂";
         }
     } else {

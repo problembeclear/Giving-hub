@@ -13,7 +13,7 @@
 #define Height [UIScreen mainScreen].bounds.size.height
 
 @interface ForumView ()
-    
+
 @property (nonatomic, strong) UITextView* textView;
 
 @end

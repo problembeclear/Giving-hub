@@ -26,7 +26,7 @@
     
     UIImageView* preView = [[UIImageView alloc] init] ;
     
-    preView.image = [UIImage imageNamed:@"qidongtu.jpeg"] ;
+    preView.image = [UIImage imageNamed:@"qidongtu.jpg"] ;
     
     preView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
@@ -51,8 +51,8 @@
     controllerForMain.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"shouye-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
         @"shouye-4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    controllerForAssistance.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"video" image:[[UIImage imageNamed:@"aixin-3"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
-        @"aixin-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    controllerForAssistance.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"video" image:[[UIImage imageNamed:@"video-6.png"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
+        @"video-4.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     controllerForSign.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"签到" image:[[UIImage imageNamed:@"dingwei"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
         @"dingwei-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
