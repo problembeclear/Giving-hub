@@ -70,7 +70,7 @@
 		404E7C2729B787A6006B1832 /* huodong-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2629B787A6006B1832 /* huodong-6.png */; };
 		404E7C2B29B788A5006B1832 /* wodeketang.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2A29B788A5006B1832 /* wodeketang.png */; };
 		404E7C2D29B7893D006B1832 /* shuben.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2C29B7893D006B1832 /* shuben.png */; };
-		40E5396A29C71FE500B66ABC /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5396929C71FE500B66ABC /* Manager.m */; };
+		40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5396929C71FE500B66ABC /* ManagerA.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B921331C29AA033E0066B823 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921331B29AA033E0066B823 /* SignView.m */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
@@ -246,8 +246,8 @@
 		404E7C2629B787A6006B1832 /* huodong-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huodong-6.png"; sourceTree = "<group>"; };
 		404E7C2A29B788A5006B1832 /* wodeketang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wodeketang.png; sourceTree = "<group>"; };
 		404E7C2C29B7893D006B1832 /* shuben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuben.png; sourceTree = "<group>"; };
-		40E5396829C71FE500B66ABC /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
-		40E5396929C71FE500B66ABC /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		40E5396829C71FE500B66ABC /* ManagerA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerA.h; sourceTree = "<group>"; };
+		40E5396929C71FE500B66ABC /* ManagerA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerA.m; sourceTree = "<group>"; };
 		B921331A29AA033E0066B823 /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Main/Other/M/SignView.h; sourceTree = SOURCE_ROOT; };
 		B921331B29AA033E0066B823 /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Main/Other/M/SignView.m; sourceTree = SOURCE_ROOT; };
 		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
@@ -410,8 +410,8 @@
 				403757582965C9B9006C834E /* SceneDelegate.m */,
 				401F5B09299CD33000EF22B4 /* TabViewController.h */,
 				401F5B0A299CD33000EF22B4 /* TabViewController.m */,
-				40E5396829C71FE500B66ABC /* Manager.h */,
-				40E5396929C71FE500B66ABC /* Manager.m */,
+				40E5396829C71FE500B66ABC /* ManagerA.h */,
+				40E5396929C71FE500B66ABC /* ManagerA.m */,
 				403757892965DE7A006C834E /* Main */,
 				403757942965E09C006C834E /* SpecialVideo */,
 				403757932965E05A006C834E /* Sign */,
@@ -1194,7 +1194,7 @@
 				B9252EA829AB7B5F0060CF6C /* HistoryView.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
 				401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */,
-				40E5396A29C71FE500B66ABC /* Manager.m in Sources */,
+				40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */,
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				B9310A62298ECA3F0083BE7A /* Model.m in Sources */,

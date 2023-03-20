@@ -63,12 +63,7 @@
     controllerForSettings.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"wode"]imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:
         @"wode-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    //设置标题文字
-//    controllerForMain.title = @"首页";
-//    controllerForAssistance.title = @"援助";
-//    controllerForSign.title = @"签到";
-//    controllerForForum.title = @"公益圈";
-//    controllerForSettings.title = @"我的";
+
     
     UINavigationController* navMain = [[UINavigationController alloc] initWithRootViewController:controllerForMain];
     UINavigationController* navAssistance = [[UINavigationController alloc] initWithRootViewController:controllerForAssistance];

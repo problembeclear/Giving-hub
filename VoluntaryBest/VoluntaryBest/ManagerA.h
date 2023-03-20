@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Manager : NSObject
+@interface ManagerA : NSObject
 + (instancetype) shareManage;
 
 
