@@ -258,7 +258,7 @@
     }];
     [buttonTwo addTarget:self action:@selector(pressErshisi) forControlEvents:UIControlEventTouchUpInside];
     UILabel* labelTwo = [[UILabel alloc] init];
-    labelTwo.text = @"二十四节气";
+    labelTwo.text = @"今日快讯";
     [self.scrollBack addSubview:labelTwo];
     labelTwo.textAlignment = NSTextAlignmentCenter;
     [labelTwo mas_makeConstraints:^(MASConstraintMaker *make) {
