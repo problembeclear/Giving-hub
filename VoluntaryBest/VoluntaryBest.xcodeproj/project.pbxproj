@@ -73,7 +73,6 @@
 		40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5396929C71FE500B66ABC /* ManagerA.m */; };
 		40E539F229D17C7300B66ABC /* HJCAnnotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E539F129D17C7300B66ABC /* HJCAnnotion.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
-		B921331C29AA033E0066B823 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921331B29AA033E0066B823 /* SignView.m */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
 		B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332729AA0DD70066B823 /* ErShiSiView.m */; };
 		B9252EA529AB51950060CF6C /* SaysBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9252EA429AB51950060CF6C /* SaysBack.jpeg */; };
@@ -105,6 +104,7 @@
 		B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A59298EC2CD0083BE7A /* SaysView.m */; };
 		B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A5E298ECA2E0083BE7A /* Manager.m */; };
 		B9310A62298ECA3F0083BE7A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A61298ECA3F0083BE7A /* Model.m */; };
+		B9A13E3B29D180C300F46B3F /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A13E3A29D180C300F46B3F /* SignView.m */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
 		B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A52973BE8E00CC0811 /* SearchViewController.m */; };
@@ -251,8 +251,6 @@
 		40E5396929C71FE500B66ABC /* ManagerA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerA.m; sourceTree = "<group>"; };
 		40E539F029D17C7300B66ABC /* HJCAnnotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJCAnnotion.h; sourceTree = "<group>"; };
 		40E539F129D17C7300B66ABC /* HJCAnnotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJCAnnotion.m; sourceTree = "<group>"; };
-		B921331A29AA033E0066B823 /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Main/Other/M/SignView.h; sourceTree = SOURCE_ROOT; };
-		B921331B29AA033E0066B823 /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Main/Other/M/SignView.m; sourceTree = SOURCE_ROOT; };
 		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
 		B921332429AA0D960066B823 /* ErShiSiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiViewController.m; sourceTree = "<group>"; };
 		B921332629AA0DD70066B823 /* ErShiSiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiView.h; sourceTree = "<group>"; };
@@ -296,6 +294,8 @@
 		B9310A5E298ECA2E0083BE7A /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		B9310A60298ECA3F0083BE7A /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		B9310A61298ECA3F0083BE7A /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		B9A13E3929D180C300F46B3F /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
+		B9A13E3A29D180C300F46B3F /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -594,8 +594,8 @@
 		403757A12965E216006C834E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				B9A13E3829D180AA00F46B3F /* V */,
 				40E539EF29D17C3800B66ABC /* M */,
-				B921331629AA03040066B823 /* V */,
 				403757A42965E22B006C834E /* C */,
 			);
 			path = Interface;
@@ -793,15 +793,6 @@
 			path = InSign;
 			sourceTree = "<group>";
 		};
-		B921331629AA03040066B823 /* V */ = {
-			isa = PBXGroup;
-			children = (
-				B921331A29AA033E0066B823 /* SignView.h */,
-				B921331B29AA033E0066B823 /* SignView.m */,
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		B9310A5C298EC9AB0083BE7A /* M */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,6 +806,15 @@
 				B9252EB029AB7D990060CF6C /* ModelTwo.m */,
 			);
 			path = M;
+			sourceTree = "<group>";
+		};
+		B9A13E3829D180AA00F46B3F /* V */ = {
+			isa = PBXGroup;
+			children = (
+				B9A13E3929D180C300F46B3F /* SignView.h */,
+				B9A13E3A29D180C300F46B3F /* SignView.m */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		B9B192FE297425DA00CC0811 /* sum */ = {
@@ -1189,6 +1189,7 @@
 				401F5B0B299CD33000EF22B4 /* TabViewController.m in Sources */,
 				B9252EAB29AB7B700060CF6C /* HistoryViewController.m in Sources */,
 				B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */,
+				B9A13E3B29D180C300F46B3F /* SignView.m in Sources */,
 				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
 				B9310A57298EC2BB0083BE7A /* SaysViewController.m in Sources */,
 				B93109E2298C1C3A0083BE7A /* ResultSearchViewController.m in Sources */,
@@ -1215,7 +1216,6 @@
 				B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */,
 				401F5B14299CD7F500EF22B4 /* CellForVideo.m in Sources */,
 				B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */,
-				B921331C29AA033E0066B823 /* SignView.m in Sources */,
 				403757562965C9B9006C834E /* AppDelegate.m in Sources */,
 				403757C1296ABA3A006C834E /* ForumView.m in Sources */,
 				403758A92973F529006C834E /* SignUpViewController.m in Sources */,

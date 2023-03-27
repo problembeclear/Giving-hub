@@ -410,7 +410,7 @@
     self.scrollActivity.pagingEnabled = NO;
     [self.scrollActivity mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).with.offset(0);
-            make.top.equalTo(self).with.offset(-50);
+            make.top.equalTo(self).with.offset(0);
             make.width.mas_equalTo(WIDTH);
             make.height.mas_equalTo(HEIGHT);
     }];
