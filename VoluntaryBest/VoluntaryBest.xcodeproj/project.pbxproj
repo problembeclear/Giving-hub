@@ -71,6 +71,7 @@
 		404E7C2B29B788A5006B1832 /* wodeketang.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2A29B788A5006B1832 /* wodeketang.png */; };
 		404E7C2D29B7893D006B1832 /* shuben.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2C29B7893D006B1832 /* shuben.png */; };
 		40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5396929C71FE500B66ABC /* ManagerA.m */; };
+		40E539F229D17C7300B66ABC /* HJCAnnotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E539F129D17C7300B66ABC /* HJCAnnotion.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B921331C29AA033E0066B823 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921331B29AA033E0066B823 /* SignView.m */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
@@ -248,6 +249,8 @@
 		404E7C2C29B7893D006B1832 /* shuben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuben.png; sourceTree = "<group>"; };
 		40E5396829C71FE500B66ABC /* ManagerA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerA.h; sourceTree = "<group>"; };
 		40E5396929C71FE500B66ABC /* ManagerA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerA.m; sourceTree = "<group>"; };
+		40E539F029D17C7300B66ABC /* HJCAnnotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJCAnnotion.h; sourceTree = "<group>"; };
+		40E539F129D17C7300B66ABC /* HJCAnnotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJCAnnotion.m; sourceTree = "<group>"; };
 		B921331A29AA033E0066B823 /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SignView.h; path = VoluntaryBest/Main/Other/M/SignView.h; sourceTree = SOURCE_ROOT; };
 		B921331B29AA033E0066B823 /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SignView.m; path = VoluntaryBest/Main/Other/M/SignView.m; sourceTree = SOURCE_ROOT; };
 		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
@@ -591,6 +594,7 @@
 		403757A12965E216006C834E /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				40E539EF29D17C3800B66ABC /* M */,
 				B921331629AA03040066B823 /* V */,
 				403757A42965E22B006C834E /* C */,
 			);
@@ -745,6 +749,15 @@
 				404E7C2429B78741006B1832 /* haoyou1-xianxing.png */,
 			);
 			path = settingsCell;
+			sourceTree = "<group>";
+		};
+		40E539EF29D17C3800B66ABC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				40E539F029D17C7300B66ABC /* HJCAnnotion.h */,
+				40E539F129D17C7300B66ABC /* HJCAnnotion.m */,
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 		ADCDA92C70442D99033CEC9E /* Frameworks */ = {
@@ -1198,6 +1211,7 @@
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				B9310A62298ECA3F0083BE7A /* Model.m in Sources */,
+				40E539F229D17C7300B66ABC /* HJCAnnotion.m in Sources */,
 				B93109E5298C1CDE0083BE7A /* ResultSearchView.m in Sources */,
 				401F5B14299CD7F500EF22B4 /* CellForVideo.m in Sources */,
 				B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */,
@@ -1400,6 +1414,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = test1.VoluntaryBest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1428,6 +1443,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = test1.VoluntaryBest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
