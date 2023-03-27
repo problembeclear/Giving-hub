@@ -97,7 +97,6 @@
 		B93109FA298C2EF90083BE7A /* CollectionView9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109F3298C2EF80083BE7A /* CollectionView9.jpeg */; };
 		B93109FB298C2EF90083BE7A /* CollectionView7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109F4298C2EF90083BE7A /* CollectionView7.jpeg */; };
 		B93109FD298C2EF90083BE7A /* CollectionView10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B93109F6298C2EF90083BE7A /* CollectionView10.jpeg */; };
-		B9310A05298C3AB80083BE7A /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A02298C3AB80083BE7A /* Main1.jpeg */; };
 		B9310A06298C3AB80083BE7A /* Main2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A03298C3AB80083BE7A /* Main2.jpeg */; };
 		B9310A07298C3AB80083BE7A /* Main3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9310A04298C3AB80083BE7A /* Main3.jpeg */; };
 		B9310A57298EC2BB0083BE7A /* SaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A56298EC2BA0083BE7A /* SaysViewController.m */; };
@@ -105,6 +104,7 @@
 		B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A5E298ECA2E0083BE7A /* Manager.m */; };
 		B9310A62298ECA3F0083BE7A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A61298ECA3F0083BE7A /* Model.m */; };
 		B9A13E3B29D180C300F46B3F /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A13E3A29D180C300F46B3F /* SignView.m */; };
+		B9A13E3D29D186AE00F46B3F /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9A13E3C29D186AE00F46B3F /* Main1.jpeg */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
 		B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A52973BE8E00CC0811 /* SearchViewController.m */; };
@@ -283,7 +283,6 @@
 		B93109F3298C2EF80083BE7A /* CollectionView9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CollectionView9.jpeg; sourceTree = "<group>"; };
 		B93109F4298C2EF90083BE7A /* CollectionView7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CollectionView7.jpeg; sourceTree = "<group>"; };
 		B93109F6298C2EF90083BE7A /* CollectionView10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CollectionView10.jpeg; sourceTree = "<group>"; };
-		B9310A02298C3AB80083BE7A /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main1.jpeg; sourceTree = "<group>"; };
 		B9310A03298C3AB80083BE7A /* Main2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main2.jpeg; sourceTree = "<group>"; };
 		B9310A04298C3AB80083BE7A /* Main3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main3.jpeg; sourceTree = "<group>"; };
 		B9310A55298EC2BA0083BE7A /* SaysViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaysViewController.h; sourceTree = "<group>"; };
@@ -296,6 +295,7 @@
 		B9310A61298ECA3F0083BE7A /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		B9A13E3929D180C300F46B3F /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		B9A13E3A29D180C300F46B3F /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
+		B9A13E3C29D186AE00F46B3F /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main1.jpeg; sourceTree = "<group>"; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -780,6 +780,7 @@
 		B921331229AA02560066B823 /* InLocation */ = {
 			isa = PBXGroup;
 			children = (
+				B9A13E3C29D186AE00F46B3F /* Main1.jpeg */,
 				B9252EBC29AD01930060CF6C /* lishi.png */,
 			);
 			path = InLocation;
@@ -905,7 +906,6 @@
 			isa = PBXGroup;
 			children = (
 				B921331229AA02560066B823 /* InLocation */,
-				B9310A02298C3AB80083BE7A /* Main1.jpeg */,
 				B9252EC229AD023C0060CF6C /* shequpinglun.png */,
 				B9252EBF29AD01990060CF6C /* ershisijieqi.png */,
 				B9252EBE29AD01990060CF6C /* wenzhang.png */,
@@ -1060,7 +1060,6 @@
 				B9B192B62973C25E00CC0811 /* xingxing.png in Resources */,
 				B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */,
 				403757612965C9BB006C834E /* Assets.xcassets in Resources */,
-				B9310A05298C3AB80083BE7A /* Main1.jpeg in Resources */,
 				B9252EBB29AD014D0060CF6C /* SignBackPicture.jpeg in Resources */,
 				B9B192C62973C27F00CC0811 /* shipin.png in Resources */,
 				403758A42973F42C006C834E /* zhuce.png in Resources */,
@@ -1092,6 +1091,7 @@
 				404E7BA329AB93C1006B1832 /* shezhi-2.png in Resources */,
 				B93109ED298C2EF00083BE7A /* CollectionView1.jpeg in Resources */,
 				B9310A07298C3AB80083BE7A /* Main3.jpeg in Resources */,
+				B9A13E3D29D186AE00F46B3F /* Main1.jpeg in Resources */,
 				B9B192CC2973C28C00CC0811 /* gongyi.png in Resources */,
 				B9B192C52973C27F00CC0811 /* gongyi-2.png in Resources */,
 				B9252EBD29AD01930060CF6C /* lishi.png in Resources */,
@@ -1404,6 +1404,9 @@
 				DEVELOPMENT_TEAM = T3358MNV2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoluntaryBest/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1433,6 +1436,9 @@
 				DEVELOPMENT_TEAM = T3358MNV2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoluntaryBest/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

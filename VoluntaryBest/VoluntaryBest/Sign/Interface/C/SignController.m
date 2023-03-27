@@ -15,9 +15,6 @@
 @end
 
 @implementation SignController
-// 文章地址 https://blog.51cto.com/u_15907570/5925348
-// https://www.bbsmax.com/A/x9J23jnZ56/
-// https://www.likecs.com/show-308229165.html
 - (void)viewDidLoad {
     [super viewDidLoad];
     

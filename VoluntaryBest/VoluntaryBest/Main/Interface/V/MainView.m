@@ -21,10 +21,22 @@
     //[self initScrollerButton];
     [self initCollctionView];
     
+    
+    UILabel* label = [[UILabel alloc] init];
+    [self addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).with.offset(0);
+        make.top.equalTo(self).with.offset(0);
+        make.width.mas_equalTo(WIDTH);
+        make.height.mas_equalTo(80);
+    }];
+    label.backgroundColor = [UIColor whiteColor];
+    
+    
     //地区选择
     self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.locationButton setTitle:@"杭州市" forState:UIControlStateNormal];
-    [self.scrollBack addSubview:self.locationButton];
+    [label addSubview:self.locationButton];
     [self.locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [self.locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -41,7 +53,7 @@
     UILabel* lablePeople = [[UILabel alloc] init];
     lablePeople.text = @"1,101,708";
     lablePeople.font = [UIFont systemFontOfSize:26];
-    [self.scrollBack addSubview:lablePeople];
+    [label addSubview:lablePeople];
     [lablePeople mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(WIDTH*0.27);
         make.top.equalTo(self).with.offset(34);
@@ -53,7 +65,7 @@
     UILabel* lablePeopleNum = [[UILabel alloc] init];
     lablePeopleNum.text = @"志愿者";
     lablePeopleNum.font = [UIFont systemFontOfSize:16];
-    [self.scrollBack addSubview:lablePeopleNum];
+    [label addSubview:lablePeopleNum];
     [lablePeopleNum mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(WIDTH*0.52);
         make.top.equalTo(self).with.offset(HEIGHT*0.05);
@@ -66,7 +78,7 @@
     //搜索button。二维码button，消息button
     UIButton* searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [searchButton setImage:[UIImage imageNamed:@"sousuo"] forState:UIControlStateNormal];
-    [self.scrollBack addSubview:searchButton];
+    [label addSubview:searchButton];
     [searchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     searchButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [searchButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,7 +93,7 @@
     
     UIButton* scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [scanButton setImage:[UIImage imageNamed:@"saomiao"] forState:UIControlStateNormal];
-    [self.scrollBack addSubview:scanButton];
+    [label addSubview:scanButton];
     [scanButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     scanButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [scanButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,7 +107,7 @@
     
     UIButton* newsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newsButton setImage:[UIImage imageNamed:@"xiaoxi"] forState:UIControlStateNormal];
-    [self.scrollBack addSubview:newsButton];
+    [label addSubview:newsButton];
     [newsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     newsButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [newsButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -400,39 +412,45 @@
 - (void)pressSays {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
 }
-- (void)initScrollActivity{
+- (void)initScrollActivity {
     self.scrollActivity = [[UIScrollView  alloc] init];
-    self.scrollActivity.contentSize = CGSizeMake(WIDTH*3, 0);
+    self.scrollActivity.contentSize = CGSizeMake(WIDTH, 0);
     [self addSubview:self.scrollActivity];
     self.scrollActivity.showsVerticalScrollIndicator = NO;
     self.scrollActivity.showsHorizontalScrollIndicator = NO;
     self.scrollActivity.scrollEnabled = NO;
     self.scrollActivity.pagingEnabled = NO;
     [self.scrollActivity mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).with.offset(0);
-            make.top.equalTo(self).with.offset(0);
-            make.width.mas_equalTo(WIDTH);
-            make.height.mas_equalTo(HEIGHT);
+        make.left.equalTo(self).with.offset(0);
+        make.top.equalTo(self).with.offset(0);
+        make.width.mas_equalTo(WIDTH);
+        make.height.mas_equalTo(HEIGHT);
     }];
-    for(int i = 0; i < 3; i++){
-            NSString* strName = [NSString stringWithFormat:@"Main%d.jpeg",i+1];
-            UIImage* image = [UIImage imageNamed:strName];
-            UIImageView* iView = [[UIImageView alloc]initWithImage:image];
-            iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);
-            [self.scrollActivity addSubview:iView];
-        }
-    NSTimer* timer = [[NSTimer alloc] init];
-    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(timer) userInfo:nil repeats:YES];
+    NSString* strName = [NSString stringWithFormat:@"Main1.jpeg"];
+    UIImage* image = [UIImage imageNamed:strName];
+    UIImageView* iView = [[UIImageView alloc]initWithImage:image];
+    iView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
+    [self addSubview:iView];
+    [self addSubview:self.scrollActivity];
+//    for (int i = 0; i < 1; i++) {
+//            NSString* strName = [NSString stringWithFormat:@"Main%d.jpeg",i+1];
+//            UIImage* image = [UIImage imageNamed:strName];
+//            UIImageView* iView = [[UIImageView alloc]initWithImage:image];
+//            iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);
+//            [self.scrollActivity addSubview:iView];
+//        }
+//    NSTimer* timer = [[NSTimer alloc] init];
+//    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(timer) userInfo:nil repeats:YES];
     //[self initCollctionView];
 }
-- (void)timer {
-    int dir = self.scrollActivity.contentOffset.x/WIDTH;
-    if(dir != 2){
-        [self.scrollActivity setContentOffset:CGPointMake(WIDTH * (dir % 3 + 1), 0) animated:YES];
-    } else {
-        self.scrollActivity.contentOffset = CGPointMake(0, 0);
-    }
-}
+//- (void)timer {
+//    int dir = self.scrollActivity.contentOffset.x/WIDTH;
+//    if (dir != 2) {
+//        [self.scrollActivity setContentOffset:CGPointMake(WIDTH * (dir % 3 + 1), 0) animated:YES];
+//    } else {
+//        self.scrollActivity.contentOffset = CGPointMake(0, 0);
+//    }
+//}
 - (void)initCollctionView {
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
