@@ -6,6 +6,7 @@
 //
 
 #import "SignView.h"
+#import "HJCAnnotion.h"
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
@@ -24,13 +25,14 @@
     if (_manager == nil) {
         _manager = [[CLLocationManager alloc] init];
         _manager.delegate = self;
+        
         [_manager startUpdatingLocation];
     }
     return _manager;
 }
 //经纬度
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    CLLocation *location = locations.lastObject;
+//    CLLocation *location = locations.lastObject;
 //    NSLog(@"Latitude: %f, Longitude: %f", location.coordinate.latitude, location.coordinate.longitude);
 }
 
@@ -45,15 +47,33 @@
 - (MKMapView *)mapView {
     if (!_mapView) {
         //当前地图跟踪模式
+        CLLocationCoordinate2D center;
+        center.latitude = 34.155739f;
+        center.longitude = 108.905731f;
+        MKCoordinateSpan span;
+        span.latitudeDelta = 0.2;
+        span.longitudeDelta = 0.2;
+        MKCoordinateRegion region = {center, span};
+        
+        
+        
         self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+        self.mapView.showsBuildings = YES;
+        self.mapView.showsCompass = YES;
+        self.mapView.showsScale = YES;
+        self.mapView.showsTraffic = YES;
         [self addSubview:self.mapView];
-        self.mapView.userTrackingMode = MKUserTrackingModeFollow;
         self.mapView.delegate = self;
-        _mapView.showsUserLocation = YES;
+        //self.mapView.showsUserLocation = YES;
+        self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+        [self.mapView setRegion:region];
+        
+        HJCAnnotion* ann1 = [[HJCAnnotion alloc ] init];
+        [self.mapView addAnnotation:ann1];
         //创建手势
-           UITapGestureRecognizer *top = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addMyAnootation:)];
-           //加入地图上
-           [self.mapView addGestureRecognizer:top];
+        //UITapGestureRecognizer *top = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addMyAnootation:)];
+        //   加入地图上 
+        //[self.mapView addGestureRecognizer:top];
     }
     return _mapView;
 }
@@ -73,24 +93,23 @@
 }
 
 //点击地图时候，添加大头针的方法
-- (void)addMyAnootation:(UITapGestureRecognizer *)top
-{
-    //获得手点击的坐标
-    CGPoint touchPoint = [top locationInView:top.view];
-    //装换为地图的坐标
-    CLLocationCoordinate2D cd = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
- 
-    //创建自定义的大头针
-    HJCAnnotion *annotation = [[HJCAnnotion alloc] init];
-    //设置大头针的坐标
-    annotation.coordinate = cd;
-    //设置大头针的标题
-    annotation.title = @"选中的位置";
-    annotation.subtitle = @"点击查看详情信息";
-    //添加到地图中
-    [self.mapView addAnnotation:annotation];
- 
-}
+//- (void)addMyAnootation:(UITapGestureRecognizer *)top
+//{
+//
+//    //获得手点击的坐标
+//    CGPoint touchPoint = [top locationInView:top.view];
+//    //装换为地图的坐标
+//    CLLocationCoordinate2D cd = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+//    //创建自定义的大头针
+//    HJCAnnotion *annotation = [[HJCAnnotion alloc] init];
+//    //设置大头针的坐标
+//    annotation.coordinate = cd;
+//    //设置大头针的标题
+//    annotation.title = @"选中的位置";
+//    annotation.subtitle = @"点击查看详情信息";
+//    //添加到地图中
+//    [self.mapView addAnnotation:annotation];
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

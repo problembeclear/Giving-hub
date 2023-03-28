@@ -105,6 +105,8 @@
 		B9310A62298ECA3F0083BE7A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A61298ECA3F0083BE7A /* Model.m */; };
 		B9A13E3B29D180C300F46B3F /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A13E3A29D180C300F46B3F /* SignView.m */; };
 		B9A13E3D29D186AE00F46B3F /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9A13E3C29D186AE00F46B3F /* Main1.jpeg */; };
+		B9A13E3F29D1B1E100F46B3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A13E3E29D1B1E100F46B3F /* MapKit.framework */; };
+		B9A13E4129D1B1F100F46B3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A13E4029D1B1F100F46B3F /* CoreGraphics.framework */; };
 		B9B192A02973BE3300CC0811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B1929F2973BE3300CC0811 /* NewsViewController.m */; };
 		B9B192A32973BE6100CC0811 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A22973BE6100CC0811 /* ScanViewController.m */; };
 		B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B192A52973BE8E00CC0811 /* SearchViewController.m */; };
@@ -296,6 +298,8 @@
 		B9A13E3929D180C300F46B3F /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		B9A13E3A29D180C300F46B3F /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		B9A13E3C29D186AE00F46B3F /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main1.jpeg; sourceTree = "<group>"; };
+		B9A13E3E29D1B1E100F46B3F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9A13E4029D1B1F100F46B3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B9B1929E2973BE3300CC0811 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B1929F2973BE3300CC0811 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B192A12973BE6100CC0811 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A13E4129D1B1F100F46B3F /* CoreGraphics.framework in Frameworks */,
+				B9A13E3F29D1B1E100F46B3F /* MapKit.framework in Frameworks */,
 				B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +769,8 @@
 		ADCDA92C70442D99033CEC9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9A13E4029D1B1F100F46B3F /* CoreGraphics.framework */,
+				B9A13E3E29D1B1E100F46B3F /* MapKit.framework */,
 				D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */,
 			);
 			name = Frameworks;

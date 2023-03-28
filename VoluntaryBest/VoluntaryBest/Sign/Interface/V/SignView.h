@@ -8,13 +8,12 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "HJCAnnotion.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SignView : UIView
 <MKMapViewDelegate, CLLocationManagerDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *manager;
 - (void)initView;
 @end
