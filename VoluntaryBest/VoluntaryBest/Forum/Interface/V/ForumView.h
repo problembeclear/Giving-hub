@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UISegmentedControl* segmentControlInForum;
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) UIScrollView* scrollView;
+@property (nonatomic, strong) UITableView* secondTableView;
 
 - (void) LayoutSelf;
 - (void) LayoutTableView;

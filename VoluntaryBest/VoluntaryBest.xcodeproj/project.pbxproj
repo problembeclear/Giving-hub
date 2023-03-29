@@ -72,6 +72,7 @@
 		404E7C2D29B7893D006B1832 /* shuben.png in Resources */ = {isa = PBXBuildFile; fileRef = 404E7C2C29B7893D006B1832 /* shuben.png */; };
 		40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5396929C71FE500B66ABC /* ManagerA.m */; };
 		40E539F229D17C7300B66ABC /* HJCAnnotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E539F129D17C7300B66ABC /* HJCAnnotion.m */; };
+		40E539F529D4885E00B66ABC /* createTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E539F429D4885E00B66ABC /* createTableViewCell.m */; };
 		B2ED9B50980EE0CE13EDA480 /* libPods-VoluntaryBest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */; };
 		B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332429AA0D960066B823 /* ErShiSiViewController.m */; };
 		B921332829AA0DD70066B823 /* ErShiSiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B921332729AA0DD70066B823 /* ErShiSiView.m */; };
@@ -253,6 +254,8 @@
 		40E5396929C71FE500B66ABC /* ManagerA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerA.m; sourceTree = "<group>"; };
 		40E539F029D17C7300B66ABC /* HJCAnnotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJCAnnotion.h; sourceTree = "<group>"; };
 		40E539F129D17C7300B66ABC /* HJCAnnotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJCAnnotion.m; sourceTree = "<group>"; };
+		40E539F329D4885E00B66ABC /* createTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = createTableViewCell.h; sourceTree = "<group>"; };
+		40E539F429D4885E00B66ABC /* createTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = createTableViewCell.m; sourceTree = "<group>"; };
 		B921332329AA0D960066B823 /* ErShiSiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiViewController.h; sourceTree = "<group>"; };
 		B921332429AA0D960066B823 /* ErShiSiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErShiSiViewController.m; sourceTree = "<group>"; };
 		B921332629AA0DD70066B823 /* ErShiSiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErShiSiView.h; sourceTree = "<group>"; };
@@ -582,6 +585,8 @@
 			children = (
 				403757BF296ABA3A006C834E /* ForumView.h */,
 				403757C0296ABA3A006C834E /* ForumView.m */,
+				40E539F329D4885E00B66ABC /* createTableViewCell.h */,
+				40E539F429D4885E00B66ABC /* createTableViewCell.m */,
 				403757C2296AD613006C834E /* ForumTableViewCell.h */,
 				403757C3296AD613006C834E /* ForumTableViewCell.m */,
 			);
@@ -1208,6 +1213,7 @@
 				403757AA2965E25D006C834E /* ForumController.m in Sources */,
 				403757B02965E28C006C834E /* AssistanceController.m in Sources */,
 				401F5B0E299CD6B700EF22B4 /* ViewForVideo.m in Sources */,
+				40E539F529D4885E00B66ABC /* createTableViewCell.m in Sources */,
 				B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */,
 				B9252EB129AB7D990060CF6C /* ModelTwo.m in Sources */,
 				401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */,
