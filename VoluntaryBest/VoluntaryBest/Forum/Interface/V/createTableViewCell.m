@@ -38,27 +38,29 @@
 
 - (void) layoutSubviews {
     [self.cellImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).with.offset(0);
-        make.top.equalTo(self).with.offset(0);
+        make.left.equalTo(self).with.offset(20);
+        make.top.equalTo(self).with.offset(5);
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
     }];
     
     [self.mainLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.cellImage.mas_right).with.offset(0);
-        make.top.equalTo(self).with.offset(0);
+        make.left.equalTo(self.cellImage.mas_right).with.offset(10);
+        make.top.equalTo(self).with.offset(5);
         make.width.mas_equalTo(80);
         make.height.mas_equalTo(30);
     }];
     [self.secondLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.mas_right).with.offset(-50);
-        make.top.equalTo(self).with.offset(0);
-        make.width.mas_equalTo(60);
+        make.right.equalTo(self.mas_right).with.offset(-30);
+        make.top.equalTo(self).with.offset(5);
+        make.width.mas_equalTo(100);
         make.height.mas_equalTo(30);
     }];
     
     
     
 }
+
+
 
 @end

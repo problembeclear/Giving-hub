@@ -132,10 +132,9 @@
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ForumTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"111"];
-    
+    createTableViewCell* cell2 = [tableView dequeueReusableCellWithIdentifier:@"222"];
     
     if (tableView.tag == 1) {
-        
         
         if (cell == nil) {
             cell = [[ForumTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"111"];
@@ -191,8 +190,23 @@
         return  cell;
     }
     if (tableView.tag == 2) {
-        createTableViewCell* cell2 = [[createTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"111"];
+        if (cell2 == nil) {
+            cell2 = [[createTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"222"];
+        }
+        if (indexPath.row == 0) {
+            cell2.cellImage.image = [UIImage imageNamed:@"quanxian.png"];
+            cell2.mainLabel.text = @"权限设置";
+            cell2.secondLabel.text = @"所有人可见";
+            cell2.secondLabel.textColor = [UIColor grayColor];
+        }
+        if (indexPath.row == 1) {
+            cell2.cellImage.image = [UIImage imageNamed:@"dingshirenwu.png"];
+            cell2.mainLabel.text = @"定时";
+            cell2.secondLabel.text = @"立即发表";
+            cell2.secondLabel.textColor = [UIColor grayColor];
+        }
         
+        cell2.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell2;
     }
     return cell;
@@ -279,14 +293,25 @@
 
 }
 - (void) LayoutSecondTableView {
-    self.secondTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.5, Width, Height*0.2) style:UITableViewStylePlain];
+    self.secondTableView = [[UITableView alloc] initWithFrame:CGRectMake(Width, Height*0.4, Width, Height*0.2) style:UITableViewStylePlain];
     
     self.secondTableView.tag = 2;
-    self.secondTableView.backgroundColor = [UIColor whiteColor];
+    self.secondTableView.backgroundColor = [UIColor clearColor];
+    
     self.secondTableView.delegate = self;
     self.secondTableView.dataSource = self;
     
     [self.scrollView addSubview:self.secondTableView];
+}
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView.tag == 1) {
+        
+    }
+    if (tableView.tag == 2) {
+        
+    }
 }
 
 - (IBAction) dismissKeyBoard {
