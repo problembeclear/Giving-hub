@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ForumController : UIViewController
 
+<UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
+
 @end
 
 NS_ASSUME_NONNULL_END

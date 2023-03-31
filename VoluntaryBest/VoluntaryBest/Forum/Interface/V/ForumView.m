@@ -9,6 +9,11 @@
 #import "Masonry.h"
 #import "ForumTableViewCell.h"
 #import "createTableViewCell.h"
+// 系统相机
+#import <AVFoundation/AVFoundation.h>
+// 系统相册
+#import <AssetsLibrary/AssetsLibrary.h>
+
 
 #define Width [UIScreen mainScreen].bounds.size.width
 #define Height [UIScreen mainScreen].bounds.size.height
@@ -16,6 +21,9 @@
 @interface ForumView ()
 
 @property (nonatomic, strong) UITextView* textView;
+@property (nonatomic, strong) UIButton* buttonForChangeImage;
+
+
 
 @end
 
@@ -70,7 +78,7 @@
 
 - (void) LayoutScrollView {
     self.scrollView = [[UIScrollView alloc] init];
-    self.scrollView.frame = CGRectMake(0, Height*0.14 - 10, Width, Height*0.78);
+    self.scrollView.frame = CGRectMake(0, Height*0.14 - 10, Width, Height*0.789);
     self.scrollView.contentSize = CGSizeMake(Width*2, 0);
     
     self.scrollView.scrollEnabled = YES;
@@ -119,12 +127,11 @@
 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return 2;
+   
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
@@ -289,6 +296,28 @@
     [self.textView setInputAccessoryView:topView];
     
     
+    
+    
+    //添加图片button
+    self.buttonForChangeImage = [UIButton buttonWithType: UIButtonTypeCustom];
+    [self.buttonForChangeImage setImage:[UIImage imageNamed:@"tianjiatupian.png"] forState:UIControlStateNormal];
+    [self.scrollView addSubview:self.buttonForChangeImage];
+    [self.buttonForChangeImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.scrollView).with.offset(Width + 40);
+        make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(80);
+    }];
+    
+    [self.buttonForChangeImage addTarget:self action:@selector(touchButtonImage) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    
+    
+    
+    
+    
     [self LayoutSecondTableView];
 
 }
@@ -304,7 +333,7 @@
     [self.scrollView addSubview:self.secondTableView];
 }
 
-
+//点击cell触发事件
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.tag == 1) {
         
@@ -313,6 +342,16 @@
         
     }
 }
+//点击添加图片时进入
+- (void) touchButtonImage {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"presentToForumController" object:nil];
+    
+    
+
+    
+}
+
 
 - (IBAction) dismissKeyBoard {
    [self.textView resignFirstResponder];
