@@ -357,6 +357,7 @@
         make.width.mas_equalTo(HEIGHT*0.07);
         make.height.mas_equalTo(HEIGHT*0.07);
     }];
+    [buttonFour addTarget:self action:@selector(pressButtonFour) forControlEvents:UIControlEventTouchUpInside];
     UILabel* labelFive = [[UILabel alloc] init];
     labelFive.text = @"精选美文";
     [self.scrollBack addSubview:labelFive];
@@ -408,6 +409,10 @@
             make.height.mas_equalTo(HEIGHT);
     }];
     [self addSubview:self.scrollBack];
+}
+- (void)pressButtonFour {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressRubbishButton" object:nil];
 }
 - (void)pressSays {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];

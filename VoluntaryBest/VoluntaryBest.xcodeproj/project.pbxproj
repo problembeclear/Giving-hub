@@ -106,6 +106,10 @@
 		B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A59298EC2CD0083BE7A /* SaysView.m */; };
 		B9310A5F298ECA2E0083BE7A /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A5E298ECA2E0083BE7A /* Manager.m */; };
 		B9310A62298ECA3F0083BE7A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B9310A61298ECA3F0083BE7A /* Model.m */; };
+		B94BA62429D6D32D00C6435F /* RubbishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94BA62329D6D32D00C6435F /* RubbishViewController.m */; };
+		B94BA62729D6D33E00C6435F /* RubbishView.m in Sources */ = {isa = PBXBuildFile; fileRef = B94BA62629D6D33E00C6435F /* RubbishView.m */; };
+		B94BA62A29D6DB2900C6435F /* ManagerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = B94BA62929D6DB2900C6435F /* ManagerThree.m */; };
+		B94BA62D29D6DB4100C6435F /* ModelThree.m in Sources */ = {isa = PBXBuildFile; fileRef = B94BA62C29D6DB4100C6435F /* ModelThree.m */; };
 		B9A13E3B29D180C300F46B3F /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A13E3A29D180C300F46B3F /* SignView.m */; };
 		B9A13E3D29D186AE00F46B3F /* Main1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9A13E3C29D186AE00F46B3F /* Main1.jpeg */; };
 		B9A13E3F29D1B1E100F46B3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A13E3E29D1B1E100F46B3F /* MapKit.framework */; };
@@ -302,6 +306,14 @@
 		B9310A5E298ECA2E0083BE7A /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		B9310A60298ECA3F0083BE7A /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		B9310A61298ECA3F0083BE7A /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		B94BA62229D6D32D00C6435F /* RubbishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RubbishViewController.h; sourceTree = "<group>"; };
+		B94BA62329D6D32D00C6435F /* RubbishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RubbishViewController.m; sourceTree = "<group>"; };
+		B94BA62529D6D33E00C6435F /* RubbishView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RubbishView.h; sourceTree = "<group>"; };
+		B94BA62629D6D33E00C6435F /* RubbishView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RubbishView.m; sourceTree = "<group>"; };
+		B94BA62829D6DB2900C6435F /* ManagerThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerThree.h; sourceTree = "<group>"; };
+		B94BA62929D6DB2900C6435F /* ManagerThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerThree.m; sourceTree = "<group>"; };
+		B94BA62B29D6DB4100C6435F /* ModelThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelThree.h; sourceTree = "<group>"; };
+		B94BA62C29D6DB4100C6435F /* ModelThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelThree.m; sourceTree = "<group>"; };
 		B9A13E3929D180C300F46B3F /* SignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		B9A13E3A29D180C300F46B3F /* SignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		B9A13E3C29D186AE00F46B3F /* Main1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Main1.jpeg; sourceTree = "<group>"; };
@@ -824,6 +836,10 @@
 				B9252EAD29AB7D6E0060CF6C /* ManagerTwo.m */,
 				B9252EAF29AB7D990060CF6C /* ModelTwo.h */,
 				B9252EB029AB7D990060CF6C /* ModelTwo.m */,
+				B94BA62829D6DB2900C6435F /* ManagerThree.h */,
+				B94BA62929D6DB2900C6435F /* ManagerThree.m */,
+				B94BA62B29D6DB4100C6435F /* ModelThree.h */,
+				B94BA62C29D6DB4100C6435F /* ModelThree.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -894,6 +910,8 @@
 				B921332729AA0DD70066B823 /* ErShiSiView.m */,
 				B9252EA629AB7B5F0060CF6C /* HistoryView.h */,
 				B9252EA729AB7B5F0060CF6C /* HistoryView.m */,
+				B94BA62529D6D33E00C6435F /* RubbishView.h */,
+				B94BA62629D6D33E00C6435F /* RubbishView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -917,6 +935,8 @@
 				B921332429AA0D960066B823 /* ErShiSiViewController.m */,
 				B9252EA929AB7B700060CF6C /* HistoryViewController.h */,
 				B9252EAA29AB7B700060CF6C /* HistoryViewController.m */,
+				B94BA62229D6D32D00C6435F /* RubbishViewController.h */,
+				B94BA62329D6D32D00C6435F /* RubbishViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1209,6 +1229,7 @@
 				B9B19332297E950000CC0811 /* LocationView.m in Sources */,
 				401F5B0B299CD33000EF22B4 /* TabViewController.m in Sources */,
 				B9252EAB29AB7B700060CF6C /* HistoryViewController.m in Sources */,
+				B94BA62429D6D32D00C6435F /* RubbishViewController.m in Sources */,
 				B9310A5A298EC2CD0083BE7A /* SaysView.m in Sources */,
 				B9A13E3B29D180C300F46B3F /* SignView.m in Sources */,
 				B9B1932F297E94EB00CC0811 /* LocationViewController.m in Sources */,
@@ -1220,17 +1241,20 @@
 				B9B192B22973BFAD00CC0811 /* SearchView.m in Sources */,
 				403757AA2965E25D006C834E /* ForumController.m in Sources */,
 				403757B02965E28C006C834E /* AssistanceController.m in Sources */,
+				B94BA62729D6D33E00C6435F /* RubbishView.m in Sources */,
 				401F5B0E299CD6B700EF22B4 /* ViewForVideo.m in Sources */,
 				40E539F529D4885E00B66ABC /* createTableViewCell.m in Sources */,
 				B9B192A62973BE8E00CC0811 /* SearchViewController.m in Sources */,
 				B9252EB129AB7D990060CF6C /* ModelTwo.m in Sources */,
 				401F5B18299CD9AF00EF22B4 /* MyPlayer.m in Sources */,
+				B94BA62D29D6DB4100C6435F /* ModelThree.m in Sources */,
 				403757C4296AD613006C834E /* ForumTableViewCell.m in Sources */,
 				B921332529AA0D960066B823 /* ErShiSiViewController.m in Sources */,
 				B9252EA829AB7B5F0060CF6C /* HistoryView.m in Sources */,
 				403757A72965E241006C834E /* SignController.m in Sources */,
 				401F5B25299D0ABE00EF22B4 /* SettingsCell.m in Sources */,
 				40E5396A29C71FE500B66ABC /* ManagerA.m in Sources */,
+				B94BA62A29D6DB2900C6435F /* ManagerThree.m in Sources */,
 				403758AC2973F545006C834E /* SignUpView.m in Sources */,
 				B9E5898A296C696900B7D15E /* MainView.m in Sources */,
 				B9310A62298ECA3F0083BE7A /* Model.m in Sources */,

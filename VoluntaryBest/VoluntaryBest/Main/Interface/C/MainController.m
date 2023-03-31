@@ -15,6 +15,7 @@
 #import "SaysViewController.h"
 #import "ErShiSiViewController.h"
 #import "HistoryViewController.h"
+#import "RubbishViewController.h"
 @interface MainController ()
 
 @end
@@ -44,6 +45,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saysView) name:@"pressSaysButton" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(erShiSiView) name:@"pressErShiSIiButton" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(historyView) name:@"pressHistoryButton" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rubbishButton) name:@"pressRubbishButton" object:nil];
     
     // Do any additional setup after loading the view.
 }
@@ -94,6 +96,13 @@
     pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:pickerController animated:NO completion:nil];
 }
+- (void)rubbishButton {
+    
+    RubbishViewController* pickerController = [[RubbishViewController alloc] init];
+    pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    pickerController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:pickerController animated:NO completion:nil];
+}
 - (void)dealloc{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressSearchButton" object:nil];
@@ -103,6 +112,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressSaysButton" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressErShiSIiButton" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressHistoryButton" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pressRubbishButton" object:nil];
     
 }
 /*

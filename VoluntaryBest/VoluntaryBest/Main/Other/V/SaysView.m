@@ -24,7 +24,7 @@
     
     preView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     
-    [self addSubview:preView] ;
+    [self addSubview:preView];
     
     
     
