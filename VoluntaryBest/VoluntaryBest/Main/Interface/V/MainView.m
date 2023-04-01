@@ -14,24 +14,31 @@
 @implementation MainView
 - (void)initView{
     
+    
+    
+    
     //[[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
-    self.backgroundColor = [UIColor colorWithRed:48.0/255 green:200.0/255 blue:149.0/255 alpha:1];
+    //self.backgroundColor = [UIColor colorWithRed:48.0/255 green:200.0/255 blue:149.0/255 alpha:1];
     [self initScrollActivity];
+    
+    
+
     [self initScrollBack];
+    
+    
     //[self initScrollerButton];
     [self initCollctionView];
     
     
-    UILabel* label = [[UILabel alloc] init];
+    UIView* label = [[UIView alloc] init];
     [self addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(0);
         make.top.equalTo(self).with.offset(0);
         make.width.mas_equalTo(WIDTH);
-        make.height.mas_equalTo(80);
+        make.height.mas_equalTo(90);
     }];
     label.backgroundColor = [UIColor whiteColor];
-    
     
     //地区选择
     self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -163,11 +170,13 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addLocationText:) name:@"postLocationtext" object:nil];
-
-
+    
+    
     
     [self addButton];
 }
+
+
 - (void)addLocationText:(NSNotification*)sender{
     [self.locationButton removeFromSuperview];
     
@@ -185,9 +194,13 @@
     }];
     [self.locationButton addTarget:self action:@selector(pressLoactionButton:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"postLocationtext" object:nil];
 }
+
+
 - (void)addButton{
     UIButton* buttonSearch = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonSearch];
@@ -261,7 +274,7 @@
     
     UIButton* buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonTwo];
-    [buttonTwo setImage:[UIImage imageNamed:@"ershisijieqi"] forState:UIControlStateNormal];
+    [buttonTwo setImage:[UIImage imageNamed:@"xinwen"] forState:UIControlStateNormal];
     [buttonTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelOrg).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -350,7 +363,7 @@
     
     UIButton* buttonFour = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonFour];
-    [buttonFour setImage:[UIImage imageNamed:@"wenzhang"] forState:UIControlStateNormal];
+    [buttonFour setImage:[UIImage imageNamed:@"lajifenlei"] forState:UIControlStateNormal];
     [buttonFour mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(labelFriends).with.offset(0);
         make.top.equalTo(self.textFieldItem).with.offset(HEIGHT*0.2);
@@ -359,7 +372,7 @@
     }];
     [buttonFour addTarget:self action:@selector(pressButtonFour) forControlEvents:UIControlEventTouchUpInside];
     UILabel* labelFive = [[UILabel alloc] init];
-    labelFive.text = @"精选美文";
+    labelFive.text = @"垃圾分类";
     [self.scrollBack addSubview:labelFive];
     [labelFive mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonFour).with.offset(0);
@@ -393,6 +406,13 @@
 - (void)pressHistory {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressHistoryButton" object:nil];
 }
+- (void)pressButtonFour {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressRubbishButton" object:nil];
+}
+- (void)pressSays {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
+}
 - (void)initScrollBack {
     self.scrollBack = [[UIScrollView  alloc] init];
     self.scrollBack.contentSize = CGSizeMake(WIDTH, HEIGHT*2.1);
@@ -403,19 +423,12 @@
     self.scrollBack.showsVerticalScrollIndicator = NO;
     self.scrollBack.showsHorizontalScrollIndicator = NO;
     [self.scrollBack mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.scrollActivity).with.offset(0);
-            make.top.equalTo(self.scrollActivity).with.offset(0);
-            make.width.mas_equalTo(WIDTH);
-            make.height.mas_equalTo(HEIGHT);
+        make.left.equalTo(self.scrollActivity).with.offset(0);
+        make.top.equalTo(self.scrollActivity).with.offset(0);
+        make.width.mas_equalTo(WIDTH);
+        make.height.mas_equalTo(HEIGHT);
     }];
     [self addSubview:self.scrollBack];
-}
-- (void)pressButtonFour {
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressRubbishButton" object:nil];
-}
-- (void)pressSays {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSaysButton" object:nil];
 }
 - (void)initScrollActivity {
     self.scrollActivity = [[UIScrollView  alloc] init];
@@ -437,15 +450,15 @@
     iView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     [self addSubview:iView];
     [self addSubview:self.scrollActivity];
-//    for (int i = 0; i < 1; i++) {
-//            NSString* strName = [NSString stringWithFormat:@"Main%d.jpeg",i+1];
-//            UIImage* image = [UIImage imageNamed:strName];
-//            UIImageView* iView = [[UIImageView alloc]initWithImage:image];
-//            iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);
-//            [self.scrollActivity addSubview:iView];
-//        }
-//    NSTimer* timer = [[NSTimer alloc] init];
-//    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(timer) userInfo:nil repeats:YES];
+    //    for (int i = 0; i < 1; i++) {
+    //            NSString* strName = [NSString stringWithFormat:@"Main%d.jpeg",i+1];
+    //            UIImage* image = [UIImage imageNamed:strName];
+    //            UIImageView* iView = [[UIImageView alloc]initWithImage:image];
+    //            iView.frame = CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT);
+    //            [self.scrollActivity addSubview:iView];
+    //        }
+    //    NSTimer* timer = [[NSTimer alloc] init];
+    //    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(timer) userInfo:nil repeats:YES];
     //[self initCollctionView];
 }
 //- (void)timer {
@@ -681,22 +694,26 @@
 }
 - (void)pressLoactionButton:(UIButton*)buttonLocation{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressLocationButton" object:nil];
+    NSLog(@"1111111");
 }
 - (void)pressSearchButton: (UIButton*)buttonSearch{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSearchButton" object:nil];
+    NSLog(@"1111111");
 }
 - (void)pressScanButton: (UIButton*)buttonScan{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressScanButton" object:nil];
+    NSLog(@"1111111");
 }
 - (void)pressNewsButton:(UIButton*)buttonNews{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressNewsButton" object:nil];
+    NSLog(@"1111111");
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

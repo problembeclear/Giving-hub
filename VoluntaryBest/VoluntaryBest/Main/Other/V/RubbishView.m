@@ -73,8 +73,6 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"111"];
     [self addSubview:self.tableView];
-    
-    
 }
 - (void)pressButton {
     [self.label removeFromSuperview];
