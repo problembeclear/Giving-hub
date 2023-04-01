@@ -90,12 +90,12 @@
 - (void) deliverAlert {
     UIAlertController* alertForImages = [UIAlertController alertControllerWithTitle:@"照片数量已达上限" message:@"最多添加五张照片" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* define = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [alertForImages dismissViewControllerAnimated:YES completion:nil];
     }];
     
     [alertForImages addAction:define];
     
-    [alertForImages presentViewController:alertForImages animated:YES completion:nil];
+    [self presentViewController:alertForImages animated:YES completion:nil];
     
 }
 @end
