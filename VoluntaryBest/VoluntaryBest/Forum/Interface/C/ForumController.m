@@ -12,6 +12,7 @@
 @interface ForumController ()
 
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
+@property (nonatomic, strong) ForumView* forumView;
 @end
 
 @implementation ForumController
@@ -21,14 +22,14 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
 
-    ForumView* forumView = [[ForumView alloc] init];
-    [self.view addSubview:forumView];
-    forumView.frame = CGRectMake(0, 0, Width, Height);
-    [forumView LayoutSelf];
+    _forumView = [[ForumView alloc] init];
+    [self.view addSubview:_forumView];
+    _forumView.frame = CGRectMake(0, 0, Width, Height);
+    [_forumView LayoutSelf];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pressAndCall) name:@"presentToForumController" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deliverAlert) name:@"turnOver" object:nil];
 }
 
 - (void) pressAndCall {
@@ -63,7 +64,7 @@
 
     //取消按钮
     UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [alert dismissViewControllerAnimated:YES completion:nil];
     }];
     //添加各个按钮事件
     [alert addAction:camera];
@@ -73,4 +74,27 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    //获取到的图片
+    UIImage * image = [info valueForKey:UIImagePickerControllerEditedImage];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"transferImage" object:nil userInfo:@{@"image":image}];
+
+}
+
+
+- (void) deliverAlert {
+    UIAlertController* alertForImages = [UIAlertController alertControllerWithTitle:@"照片数量已达上限" message:@"最多添加五张照片" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* define = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alertForImages addAction:define];
+    
+    [alertForImages presentViewController:alertForImages animated:YES completion:nil];
+    
+}
 @end

@@ -21,6 +21,9 @@ UIScrollViewDelegate
 @property (nonatomic, strong) UIScrollView* scrollView;
 @property (nonatomic, strong) UITableView* secondTableView;
 
+@property (nonatomic, strong) UIImageView* imageViewFromAlbum;
+
+
 - (void) LayoutSelf;
 - (void) LayoutTableView;
 @end

@@ -22,7 +22,7 @@
 
 @property (nonatomic, strong) UITextView* textView;
 @property (nonatomic, strong) UIButton* buttonForChangeImage;
-
+@property (nonatomic, assign) NSInteger imageCount;
 
 
 @end
@@ -31,12 +31,14 @@
 
 - (void) LayoutSelf {
     self.backgroundColor = [UIColor whiteColor];
-    
+    self.imageCount = 0;
     [self LayoutHead];
     [self LayoutScrollView];
     [self LayoutTableView];
     
     [self LayoutTextView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getImage:) name:@"transferImage" object:nil];
     
 }
 - (void) LayoutHead {
@@ -322,7 +324,7 @@
 
 }
 - (void) LayoutSecondTableView {
-    self.secondTableView = [[UITableView alloc] initWithFrame:CGRectMake(Width, Height*0.4, Width, Height*0.2) style:UITableViewStylePlain];
+    self.secondTableView = [[UITableView alloc] initWithFrame:CGRectMake(Width, Height*0.5, Width, Height*0.2) style:UITableViewStylePlain];
     
     self.secondTableView.tag = 2;
     self.secondTableView.backgroundColor = [UIColor clearColor];
@@ -346,12 +348,77 @@
 - (void) touchButtonImage {
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"presentToForumController" object:nil];
-    
-    
-
-    
+    self.imageCount++;
 }
 
+- (void) getImage:(NSNotification*) notification {
+    NSDictionary* dictionary = notification.userInfo;
+    
+//    if (self.imageCount == 1) {
+//        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
+//        [self.scrollView addSubview:imageViewForPhotosFirst];
+//        [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self.scrollView).with.offset(Width + 40);
+//            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
+//            make.width.mas_equalTo(80);
+//            make.height.mas_equalTo(80);
+//        }];
+//
+//        [self.buttonForChangeImage mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self.scrollView).with.offset(Width + 40 + self.imageCount * 100);
+//            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
+//            make.width.mas_equalTo(80);
+//            make.height.mas_equalTo(80);
+//        }];
+//
+//
+//    }
+    if (self.imageCount >= 1 && self.imageCount <= 3) {
+        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
+        [self.scrollView addSubview:imageViewForPhotosFirst];
+        [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.scrollView).with.offset(Width + 40 + (self.imageCount - 1) * 90);
+            make.top.equalTo(self.textView.mas_top).with.offset(Height*0.15);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        
+        [self.buttonForChangeImage mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.scrollView).with.offset(Width + 40 + self.imageCount * 90);
+            make.top.equalTo(self.textView.mas_top).with.offset(Height*0.15);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+    } else if (self.imageCount <= 5) {
+        self.textView.frame = CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25 + 100);
+        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
+        [self.scrollView addSubview:imageViewForPhotosFirst];
+        [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.scrollView).with.offset(Width + 40 + (self.imageCount - 4) * 90);
+            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        
+
+        [self.buttonForChangeImage mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.scrollView).with.offset(Width + 40 + (self.imageCount - 3) * 90);
+            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+    } else {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"turnOver" object:nil];
+        
+        
+    }
+    
+    
+    
+
+    [self.buttonForChangeImage reloadInputViews];
+}
 
 - (IBAction) dismissKeyBoard {
    [self.textView resignFirstResponder];
