@@ -286,7 +286,7 @@
         make.width.mas_equalTo(Width*0.2);
     }];
     
-    
+    //添加虚拟键盘的按钮栏
     UIToolbar * topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
        [topView setBarStyle:UIBarStyleBlack];
     topView.barTintColor = [UIColor whiteColor];
@@ -346,34 +346,18 @@
 }
 //点击添加图片时进入
 - (void) touchButtonImage {
-    
+    //转到controller来实现调用相册
     [[NSNotificationCenter defaultCenter] postNotificationName:@"presentToForumController" object:nil];
-    self.imageCount++;
+    
 }
 
 - (void) getImage:(NSNotification*) notification {
     NSDictionary* dictionary = notification.userInfo;
+    //每传回一次值就要加一，记录已选择照片数量
+    self.imageCount++;
     
-//    if (self.imageCount == 1) {
-//        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
-//        [self.scrollView addSubview:imageViewForPhotosFirst];
-//        [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self.scrollView).with.offset(Width + 40);
-//            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
-//            make.width.mas_equalTo(80);
-//            make.height.mas_equalTo(80);
-//        }];
-//
-//        [self.buttonForChangeImage mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self.scrollView).with.offset(Width + 40 + self.imageCount * 100);
-//            make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
-//            make.width.mas_equalTo(80);
-//            make.height.mas_equalTo(80);
-//        }];
-//
-//
-//    }
     if (self.imageCount >= 1 && self.imageCount <= 3) {
+        //当照片没超过一排时的布局
         UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
         [self.scrollView addSubview:imageViewForPhotosFirst];
         [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -390,6 +374,8 @@
             make.height.mas_equalTo(80);
         }];
     } else if (self.imageCount <= 5) {
+        //第二排的布局
+        
         self.textView.frame = CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25 + 100);
         UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
         [self.scrollView addSubview:imageViewForPhotosFirst];
@@ -408,18 +394,13 @@
             make.height.mas_equalTo(80);
         }];
     } else {
-        
+        //通知传值递交到controller来实现弹窗警告
         [[NSNotificationCenter defaultCenter] postNotificationName:@"turnOver" object:nil];
-        
-        
+    
     }
     
-    
-    
-
-    [self.buttonForChangeImage reloadInputViews];
 }
-
+//虚拟键盘上的收起按钮的响应事件
 - (IBAction) dismissKeyBoard {
    [self.textView resignFirstResponder];
 }

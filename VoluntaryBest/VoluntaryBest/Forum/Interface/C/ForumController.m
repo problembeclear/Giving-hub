@@ -33,6 +33,7 @@
 }
 
 - (void) pressAndCall {
+    //初始化UIImagePickerController
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.editing = YES;
     self.imagePicker.delegate = self;
@@ -74,9 +75,9 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-
+//在相册中捕获的照片转为UIImage并通过传值使view再布局
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
     //获取到的图片
     UIImage * image = [info valueForKey:UIImagePickerControllerEditedImage];
@@ -85,7 +86,7 @@
 
 }
 
-
+//照片超出上限时递交一个提示框
 - (void) deliverAlert {
     UIAlertController* alertForImages = [UIAlertController alertControllerWithTitle:@"照片数量已达上限" message:@"最多添加五张照片" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* define = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
