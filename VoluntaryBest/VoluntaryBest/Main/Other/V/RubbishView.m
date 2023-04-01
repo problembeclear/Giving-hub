@@ -49,7 +49,7 @@
     self.textField.frame = CGRectMake(50, 100, WIDTH - 130, 40);
     self.textField.backgroundColor = [UIColor systemGray2Color];
     self.textField.textColor = [UIColor systemGray6Color];
-    self.textField.text = @"请输入要查询的垃圾名称";
+    self.textField.placeholder = @"请输入要查询的垃圾名称";
     [self addSubview:self.textField];
     
     
@@ -66,15 +66,16 @@
     [button addTarget:self action:@selector(pressButton) forControlEvents:UIControlEventTouchUpInside];
     
     
-    self.tableView = [[UITableView alloc] init];
+    
+}
+- (void)pressButton {
+    [self.tableView removeFromSuperview];self.tableView = [[UITableView alloc] init];
     self.tableView.frame = CGRectMake(0, 150, WIDTH, HEIGHT - 100);
     self.tableView.backgroundColor = [UIColor systemGray4Color];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"111"];
     [self addSubview:self.tableView];
-}
-- (void)pressButton {
     [self.label removeFromSuperview];
     [[ManagerThree shareManger]makeData:^(ModelThree * _Nonnull ViewModel) {
         NSDictionary* dict = [ViewModel toDictionary];
