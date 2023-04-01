@@ -20,6 +20,8 @@
     [super viewDidLoad];
     self.historyView = [[HistoryView alloc] init];
     
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     //[self.historyView initView];
     self.historyView.dictionaryHistory = [[NSDictionary alloc] init];
     [[ManagerTwo shareManger]makeData:^(ModelTwo * _Nonnull ViewModel) {

@@ -14,7 +14,7 @@
 - (void)initView{
     
     
-    //self.backgroundColor = [UIColor yellowColor];
+    self.backgroundColor = [UIColor whiteColor];
     UIImageView* preView = [[UIImageView alloc] init] ;
     
     preView.image = [UIImage imageNamed:@"SaysBack.jpeg"] ;

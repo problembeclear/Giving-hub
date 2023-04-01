@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.viewSays = [[SaysView alloc] init];
     self.array = [[NSMutableArray alloc] init];
     self.viewSays.array = [[NSMutableArray alloc] init];

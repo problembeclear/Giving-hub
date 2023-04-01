@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     ErShiSiView* erShiSiView = [[ErShiSiView alloc] init];
     
     [self.view addSubview:erShiSiView];
