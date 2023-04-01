@@ -70,7 +70,7 @@
 }
 - (void)pressButton {
     [self.tableView removeFromSuperview];self.tableView = [[UITableView alloc] init];
-    self.tableView.frame = CGRectMake(0, 150, WIDTH, HEIGHT - 100);
+    self.tableView.frame = CGRectMake(0, 150, WIDTH, HEIGHT - 150);
     self.tableView.backgroundColor = [UIColor systemGray4Color];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -162,7 +162,7 @@
         labelOther.font = [UIFont systemFontOfSize:25];
         labelOther.textAlignment = NSTextAlignmentLeft;
         
-        for (int i = 0; i < [self.rubbishDictionary[@"data"][@"recommendList"] count]; i++) {
+        for (int i = 0; i < [self.rubbishDictionary[@"data"][@"recommendList"] count] &&i < 7; i++) {
             
             
             UILabel* labelGoodsTypeOne = [[UILabel alloc] init];
