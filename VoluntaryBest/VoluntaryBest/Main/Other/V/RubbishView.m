@@ -106,7 +106,7 @@
             make.height.mas_equalTo(40);
         }];
         self.label.text = @"查询名称：";
-        self.label.font = [UIFont systemFontOfSize:25];
+        self.label.font = [UIFont systemFontOfSize:20];
         self.label.textAlignment = NSTextAlignmentLeft;
         
         
@@ -115,11 +115,11 @@
         [labelNameGoods mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.label).with.offset(130);
             make.top.equalTo(self.label).with.offset(0);
-            make.width.mas_equalTo(WIDTH - 100);
+            make.width.mas_equalTo(WIDTH - 170);
             make.height.mas_equalTo(40);
         }];
         labelNameGoods.text = self.rubbishDictionary[@"data"][@"aim"][@"goodsName"];
-        labelNameGoods.font = [UIFont systemFontOfSize:25];
+        labelNameGoods.font = [UIFont systemFontOfSize:20];
         labelNameGoods.textAlignment = NSTextAlignmentLeft;
         
         
@@ -132,7 +132,7 @@
             make.height.mas_equalTo(40);
         }];
         labelType.text = @"垃圾类型：";
-        labelType.font = [UIFont systemFontOfSize:25];
+        labelType.font = [UIFont systemFontOfSize:20];
         labelType.textAlignment = NSTextAlignmentLeft;
         
         
@@ -141,11 +141,11 @@
         [labelNameType mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(labelType).with.offset(130);
             make.top.equalTo(labelType).with.offset(0);
-            make.width.mas_equalTo(WIDTH - 100);
+            make.width.mas_equalTo(WIDTH - 170);
             make.height.mas_equalTo(40);
         }];
         labelNameType.text = self.rubbishDictionary[@"data"][@"aim"][@"goodsType"];
-        labelNameType.font = [UIFont systemFontOfSize:25];
+        labelNameType.font = [UIFont systemFontOfSize:20];
         labelNameType.textAlignment = NSTextAlignmentLeft;
 
         
@@ -159,7 +159,7 @@
             make.height.mas_equalTo(40);
         }];
         labelOther.text = @"相关垃圾:";
-        labelOther.font = [UIFont systemFontOfSize:25];
+        labelOther.font = [UIFont systemFontOfSize:20];
         labelOther.textAlignment = NSTextAlignmentLeft;
         
         for (int i = 0; i < [self.rubbishDictionary[@"data"][@"recommendList"] count] &&i < 7; i++) {
@@ -174,7 +174,7 @@
                 make.height.mas_equalTo(40);
             }];
             labelGoodsTypeOne.text = @"垃圾名称：";
-            labelGoodsTypeOne.font = [UIFont systemFontOfSize:25];
+            labelGoodsTypeOne.font = [UIFont systemFontOfSize:20];
             labelGoodsTypeOne.textAlignment = NSTextAlignmentLeft;
             
             
@@ -188,7 +188,7 @@
                 make.height.mas_equalTo(40);
             }];
             labelGoodsType.text = @"垃圾类型：";
-            labelGoodsType.font = [UIFont systemFontOfSize:25];
+            labelGoodsType.font = [UIFont systemFontOfSize:20];
             labelGoodsType.textAlignment = NSTextAlignmentLeft;
             
             
@@ -198,11 +198,11 @@
             [labelGoodsName mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(labelGoodsTypeOne).with.offset(130);
                 make.top.equalTo(labelGoodsTypeOne).with.offset(0);
-                make.width.mas_equalTo(WIDTH - 100);
+                make.width.mas_equalTo(WIDTH - 170);
                 make.height.mas_equalTo(40);
             }];
             labelGoodsName.text = self.rubbishDictionary[@"data"][@"recommendList"][i][@"goodsName"];
-            labelGoodsName.font = [UIFont systemFontOfSize:25];
+            labelGoodsName.font = [UIFont systemFontOfSize:20];
             labelGoodsName.textAlignment = NSTextAlignmentLeft;
             
             
@@ -212,11 +212,11 @@
             [labelGoodsTypeTwo mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(labelGoodsType).with.offset(130);
                 make.top.equalTo(labelGoodsType).with.offset(0);
-                make.width.mas_equalTo(WIDTH - 100);
+                make.width.mas_equalTo(WIDTH - 170);
                 make.height.mas_equalTo(40);
             }];
             labelGoodsTypeTwo.text = self.rubbishDictionary[@"data"][@"recommendList"][i][@"goodsType"];
-            labelGoodsTypeTwo.font = [UIFont systemFontOfSize:25];
+            labelGoodsTypeTwo.font = [UIFont systemFontOfSize:20];
             labelGoodsTypeTwo.textAlignment = NSTextAlignmentLeft;
             
             
@@ -232,7 +232,7 @@
             make.height.mas_equalTo(40);
         }];
         self.label.text = @"查找失败！请重新输入";
-        self.label.font = [UIFont systemFontOfSize:25];
+        self.label.font = [UIFont systemFontOfSize:20];
         self.label.textAlignment = NSTextAlignmentLeft;
         [self addSubview:self.tableView];
     }
