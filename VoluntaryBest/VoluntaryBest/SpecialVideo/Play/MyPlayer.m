@@ -34,7 +34,7 @@
     [self.videoItem addObserver:self forKeyPath:@"loadTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
     
     CMTime duration = self.videoItem.duration;
-    CGFloat videoDuration = CMTimeGetSeconds(duration);
+//    CGFloat videoDuration = CMTimeGetSeconds(duration);
     
     
     

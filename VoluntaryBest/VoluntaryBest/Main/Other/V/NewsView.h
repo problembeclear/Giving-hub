@@ -10,8 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsView : UIView
+<UITableViewDelegate, UITableViewDataSource>
 - (void)initView;
-
+@property (nonatomic, strong) UITableView* tableView;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -69,7 +69,8 @@
     
 }
 - (void)pressButton {
-    [self.tableView removeFromSuperview];self.tableView = [[UITableView alloc] init];
+    [self.tableView removeFromSuperview];
+    self.tableView = [[UITableView alloc] init];
     self.tableView.frame = CGRectMake(0, 150, WIDTH, HEIGHT - 150);
     self.tableView.backgroundColor = [UIColor systemGray4Color];
     self.tableView.delegate = self;
