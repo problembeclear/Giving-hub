@@ -271,7 +271,6 @@
     
     
     
-    
     UIButton* buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollBack addSubview:buttonTwo];
     [buttonTwo setImage:[UIImage imageNamed:@"xinwen"] forState:UIControlStateNormal];
@@ -382,8 +381,7 @@
     }];
     
     
-    
-    
+     
     UILabel* labelGoodActivity = [[UILabel alloc] init];
     labelGoodActivity.text = @"精选活动";
     [self.scrollBack addSubview:labelGoodActivity];

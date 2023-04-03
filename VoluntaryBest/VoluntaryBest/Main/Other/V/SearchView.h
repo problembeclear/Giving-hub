@@ -16,7 +16,8 @@ UITableViewDataSource>
 @property (nonatomic, strong)UIButton* buttonOpen;
 @property (nonatomic, copy) NSMutableArray* buttonTitleArray;
 - (void)initView;
-
+@property (nonatomic, copy) NSArray* arrayActivity;
+@property (nonatomic, strong) UITextField* searchTextField;
 @end
 
 NS_ASSUME_NONNULL_END
