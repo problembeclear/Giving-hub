@@ -17,7 +17,7 @@
     self.backgroundColor = [UIColor whiteColor];
     UIImageView* preView = [[UIImageView alloc] init] ;
     
-    preView.image = [UIImage imageNamed:@"SaysBack.jpeg"] ;
+    preView.image = [UIImage imageNamed:@"Main1.jpeg"] ;
     
     preView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     

@@ -153,6 +153,7 @@
 		B9E58999296C848A00B7D15E /* xiaoxi.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58996296C848A00B7D15E /* xiaoxi.png */; };
 		B9E5899A296C848A00B7D15E /* saomiao.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58997296C848A00B7D15E /* saomiao.png */; };
 		B9E5899B296C848A00B7D15E /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58998296C848A00B7D15E /* sousuo.png */; };
+		B9F37D5829E04D0F008EC5B0 /* 1111.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9F37D5729E04D0F008EC5B0 /* 1111.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,6 +371,7 @@
 		B9E58996296C848A00B7D15E /* xiaoxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaoxi.png; sourceTree = "<group>"; };
 		B9E58997296C848A00B7D15E /* saomiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saomiao.png; sourceTree = "<group>"; };
 		B9E58998296C848A00B7D15E /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
+		B9F37D5729E04D0F008EC5B0 /* 1111.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1111.jpeg; path = ../../../1111.jpeg; sourceTree = "<group>"; };
 		BFD62B9CE786727B1EF9B7F1 /* Pods-VoluntaryBest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.debug.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoluntaryBest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45F58C014DFCF0A7D03608 /* Pods-VoluntaryBest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.release.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.release.xcconfig"; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 			isa = PBXGroup;
 			children = (
 				404E7C1229B7823E006B1832 /* qidongtu.jpg */,
+				B9F37D5729E04D0F008EC5B0 /* 1111.jpeg */,
 				401F5B19299CE97F00EF22B4 /* videoImage.png */,
 				B921331329AA02970066B823 /* InSign */,
 				B9B192FE297425DA00CC0811 /* sum */,
@@ -1158,6 +1161,7 @@
 				404E7BB429AC9919006B1832 /* backgroundForVideo.jpeg in Resources */,
 				B9B193042974262900CC0811 /* shouye-4.png in Resources */,
 				403757D0296CA28F006C834E /* icon.png in Resources */,
+				B9F37D5829E04D0F008EC5B0 /* 1111.jpeg in Resources */,
 				404E7BA829AB93C1006B1832 /* fankui.png in Resources */,
 				B93109EC298C2EF00083BE7A /* CollectionView4.jpeg in Resources */,
 				B9B192C22973C27A00CC0811 /* ketang.png in Resources */,
