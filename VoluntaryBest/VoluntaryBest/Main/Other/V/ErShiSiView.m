@@ -43,8 +43,13 @@
         make.height.mas_equalTo(50);
 
     }];
+    UIImageView* preView = [[UIImageView alloc] init] ;
     
+    preView.image = [UIImage imageNamed:@"22222.jpeg"] ;
     
+    preView.frame = CGRectMake(0, 100, WIDTH, HEIGHT);
+    
+    [self addSubview:preView];
     
 //    UILabel* label = [[UILabel alloc] init];
 //    label.text = @"精选名言";
@@ -59,13 +64,13 @@
 //
 //    }];
     //self.backgroundColor = [UIColor whiteColor];
-    WKWebView* webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    NSString* str = @"https://zj.v.api.aa1.cn/api/60s/";
-    NSURL* url = [NSURL URLWithString:str];
-    webView.frame = CGRectMake(0, 105, WIDTH, HEIGHT);
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
-    [self addSubview:webView];
+//    WKWebView* webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    NSString* str = @"https://zj.v.api.aa1.cn/api/60s/";
+//    NSURL* url = [NSURL URLWithString:str];
+//    webView.frame = CGRectMake(0, 105, WIDTH, HEIGHT);
+//    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+//    [webView loadRequest:request];
+//    [self addSubview:webView];
 //
 //    UILabel* labelLocation = [[UILabel alloc] init];
 //    [self addSubview:labelLocation];
