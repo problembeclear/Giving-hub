@@ -45,7 +45,7 @@
     }];
     UIImageView* preView = [[UIImageView alloc] init] ;
     
-    preView.image = [UIImage imageNamed:@"22222.jpeg"] ;
+    preView.image = [UIImage imageNamed:@"Today.jpeg"] ;
     
     preView.frame = CGRectMake(0, 100, WIDTH, HEIGHT);
     

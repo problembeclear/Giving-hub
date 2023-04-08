@@ -62,7 +62,7 @@
 
     UIImageView* preView = [[UIImageView alloc] init] ;
     
-    preView.image = [UIImage imageNamed:@"1111.jpeg"] ;
+    preView.image = [UIImage imageNamed:@"ScanBack.jpeg"] ;
     
     preView.frame = CGRectMake(0, 100, WIDTH, HEIGHT);
     
