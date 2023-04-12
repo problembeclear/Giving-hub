@@ -314,12 +314,6 @@
     [self.buttonForChangeImage addTarget:self action:@selector(touchButtonImage) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
-    
-    
-    
-    
-    
     [self LayoutSecondTableView];
 
 }

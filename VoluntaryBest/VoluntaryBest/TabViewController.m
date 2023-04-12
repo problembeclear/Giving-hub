@@ -34,7 +34,6 @@
 
     //计时器来添加加载事件
     NSTimer* preTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(startMainView) userInfo:nil repeats:NO] ;
-    
     [[NSRunLoop currentRunLoop] addTimer:preTimer forMode:NSDefaultRunLoopMode] ;
     
     

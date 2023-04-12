@@ -21,6 +21,8 @@
     TabViewController* mainController = [[TabViewController alloc] init];
     
     self.window.rootViewController = mainController;
+    
+    
 }
 
 

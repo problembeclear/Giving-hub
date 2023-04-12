@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SignController : UIViewController
-
+- (void) setTimer;
 @end
 
 NS_ASSUME_NONNULL_END
