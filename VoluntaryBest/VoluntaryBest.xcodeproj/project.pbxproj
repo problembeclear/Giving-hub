@@ -15,6 +15,7 @@
 		4001E17C29E66DE700AD4C1B /* WindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4001E17B29E66DE700AD4C1B /* WindowViewController.m */; };
 		4001E18129E689A000AD4C1B /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4001E18029E689A000AD4C1B /* OperationViewController.m */; };
 		4001E18329E68C0B00AD4C1B /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4001E18229E68C0B00AD4C1B /* down.png */; };
+		4001E18729E6EFCB00AD4C1B /* qiandaobeijing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4001E18629E6EFCA00AD4C1B /* qiandaobeijing.jpg */; };
 		401F5AFF29911B6000EF22B4 /* tupian2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 401F5AFE29911B5F00EF22B4 /* tupian2.jpeg */; };
 		401F5B0B299CD33000EF22B4 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B0A299CD33000EF22B4 /* TabViewController.m */; };
 		401F5B0E299CD6B700EF22B4 /* ViewForVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F5B0D299CD6B700EF22B4 /* ViewForVideo.m */; };
@@ -194,6 +195,7 @@
 		4001E17F29E689A000AD4C1B /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		4001E18029E689A000AD4C1B /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		4001E18229E68C0B00AD4C1B /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		4001E18629E6EFCA00AD4C1B /* qiandaobeijing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qiandaobeijing.jpg; sourceTree = "<group>"; };
 		401F5AFE29911B5F00EF22B4 /* tupian2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tupian2.jpeg; sourceTree = "<group>"; };
 		401F5B09299CD33000EF22B4 /* TabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		401F5B0A299CD33000EF22B4 /* TabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
@@ -880,6 +882,7 @@
 				4001E17129E66A6800AD4C1B /* 1931681273405_.pic.jpg */,
 				4001E17529E66A8B00AD4C1B /* 1911681273385_.pic.jpg */,
 				4001E17329E66A8300AD4C1B /* tanchuangbeijing.jpg */,
+				4001E18629E6EFCA00AD4C1B /* qiandaobeijing.jpg */,
 			);
 			path = InSign;
 			sourceTree = "<group>";
@@ -1191,6 +1194,7 @@
 				B9B1930A2974263D00CC0811 /* dingwei.png in Resources */,
 				4001E17629E66A8B00AD4C1B /* 1911681273385_.pic.jpg in Resources */,
 				B9B193102974264D00CC0811 /* friends.png in Resources */,
+				4001E18729E6EFCB00AD4C1B /* qiandaobeijing.jpg in Resources */,
 				404E7BB629AC99A9006B1832 /* cellImage1.jpg in Resources */,
 				40E539F729D58DED00B66ABC /* quanxian.png in Resources */,
 				404E7C2129B78545006B1832 /* f-video.png in Resources */,

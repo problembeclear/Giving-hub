@@ -17,6 +17,29 @@
     //请求允许访问位置
     [self.manager requestAlwaysAuthorization];
     [self.manager startUpdatingLocation];
+    
+    
+    UIButton* buttonForWindow = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonForWindow.frame = CGRectMake(30, HEIGHT-153, WIDTH-60, 60);
+    [buttonForWindow setBackgroundColor:[UIColor systemGreenColor]];
+    [buttonForWindow setTitle:@"点击签到，记录成长" forState:UIControlStateNormal];
+    buttonForWindow.titleLabel.font = [UIFont systemFontOfSize:30];
+    [buttonForWindow addTarget:self action:@selector(sendToSignController) forControlEvents:UIControlEventTouchUpInside];
+    buttonForWindow.titleLabel.textColor = [UIColor whiteColor];
+    buttonForWindow.layer.cornerRadius = 15;
+    buttonForWindow.clipsToBounds = YES;
+    
+
+    UIView* viewForButton = [[UIView alloc] initWithFrame:CGRectMake(0, HEIGHT-163, WIDTH, 80)];
+    viewForButton.backgroundColor = [UIColor whiteColor];
+    
+    [self addSubview:viewForButton];
+    [self addSubview:buttonForWindow];
+    
+}
+
+- (void) sendToSignController {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"callMyWindow" object:nil];
 }
 #pragma mark Manager
 //懒加载位置管理器

@@ -36,7 +36,7 @@
     [buttonLeft mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(0);
         make.bottom.equalTo(self.mas_bottom).with.offset(0);
-        make.width.mas_equalTo((WIDTH-200)/2);
+        make.width.mas_equalTo((WIDTH-140)/2);
         make.height.mas_equalTo(50);
     }];
     
@@ -51,14 +51,12 @@
     [buttonRight mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(buttonLeft.mas_right).with.offset(0);
         make.bottom.equalTo(self.mas_bottom).with.offset(0);
-        make.width.mas_equalTo((WIDTH-200)/2);
+        make.width.mas_equalTo((WIDTH-140)/2);
         make.height.mas_equalTo(50);
     }];
     
     [buttonLeft addTarget:self action:@selector(sendToWindowController) forControlEvents:UIControlEventTouchUpInside];
     [buttonRight addTarget:self action:@selector(getInSign) forControlEvents:UIControlEventTouchUpInside];
-    
-    
     
     
     UILabel* labelDelegate = [[UILabel alloc] init];
@@ -69,7 +67,7 @@
     [self addSubview:labelDelegate];
     [labelDelegate mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(14);
-        make.width.mas_equalTo(200);
+        make.right.equalTo(self).with.offset (-14);
         make.top.equalTo(imageView.mas_bottom).with.offset(10);
         make.height.mas_equalTo(80);
     }];

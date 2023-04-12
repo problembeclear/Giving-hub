@@ -34,16 +34,17 @@
 //    AlertSignViewController* alertWindow = [AlertSignViewController alertControllerWithTitle:@"签到" message:@"dad" preferredStyle:UIAlertControllerStyleAlert];
 //    [self presentViewController:alertWindow animated:YES completion:nil];
     
-    [self setTimer];
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PopSignWindow) name:@"callMyWindow" object:nil];
+
 }
-- (void) setTimer {
-    NSTimer* WindowTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(PopSignWindow) userInfo:nil repeats:NO] ;
-    [[NSRunLoop currentRunLoop] addTimer:WindowTimer forMode:NSDefaultRunLoopMode];
-}
+
 
 //计时一段时间后弹出窗口
 - (void) PopSignWindow {
+    NSLog(@"1111");
+    
     WindowViewController* WController = [[WindowViewController alloc] init];
     WController.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:WController animated:YES completion:nil];
