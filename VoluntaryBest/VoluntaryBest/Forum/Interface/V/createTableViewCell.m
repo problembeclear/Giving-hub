@@ -44,6 +44,9 @@
         make.height.mas_equalTo(18);
     }];
     
+    self.cellImage.clipsToBounds = YES;
+    self.cellImage.layer.cornerRadius = 10;
+    
     [self.mainLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.cellImage.mas_right).with.offset(10);
         make.top.equalTo(self).with.offset(5);

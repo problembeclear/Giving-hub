@@ -48,6 +48,8 @@
     }];
     self.textField.backgroundColor = [UIColor systemGray6Color];
     self.textField.textColor = [UIColor greenColor];
+    self.textField.clipsToBounds = YES;
+    self.textField.layer.cornerRadius = 15;
     self.textField.placeholder = @"请输入六位签到码数字";
     
     

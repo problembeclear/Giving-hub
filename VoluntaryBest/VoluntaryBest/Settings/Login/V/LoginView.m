@@ -99,6 +99,9 @@
         make.width.mas_equalTo(Width*0.2);
         make.height.mas_equalTo(40);
     }];
+    
+    loginButton.layer.borderWidth = 1;
+    loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
     //注册按钮
     UIButton* SignUpButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [SignUpButton setTitle:@"注册" forState:UIControlStateNormal];
@@ -111,8 +114,8 @@
         make.width.mas_equalTo(Width*0.2);
         make.height.mas_equalTo(40);
     }];
-    
-    
+    SignUpButton.layer.borderWidth = 1;
+    SignUpButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 - (void) returnByPressButton {

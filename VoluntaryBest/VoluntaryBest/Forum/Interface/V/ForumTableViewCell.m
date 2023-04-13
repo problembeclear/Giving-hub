@@ -126,18 +126,14 @@
     self.headImage.clipsToBounds = YES;
     self.headImage.layer.cornerRadius = 9;
     
-    
     self.labelName.font = [UIFont systemFontOfSize:25];
     
     [self.buttonMore setBackgroundImage:[UIImage imageNamed:@"gengduo-2.png"] forState:UIControlStateNormal];
-    
-    
     
     self.labelLocation.textColor = [UIColor grayColor];
     self.labelLocation.font = [UIFont systemFontOfSize:10];
     
     [self.buttonLike setImage:[UIImage imageNamed:@"icon-2.png"] forState:UIControlStateNormal];
-    
     
     [self.buttonComment setBackgroundImage:[UIImage imageNamed:@"pinglun-2.png"] forState:UIControlStateNormal];
 

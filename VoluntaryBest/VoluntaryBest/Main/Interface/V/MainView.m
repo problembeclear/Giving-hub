@@ -130,7 +130,7 @@
     self.textFieldItem = [[UITextField alloc] init];
     self.textFieldItem.frame = CGRectMake(70, HEIGHT*0.05, WIDTH - 80 - HEIGHT*0.05, HEIGHT*0.05);
     self.textFieldItem.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:0.6];
-    self.textFieldItem.text = @"志愿汇";
+    self.textFieldItem.text = @"志愿中国";
     [self.scrollBack addSubview:self.textFieldItem];
     
     
@@ -487,8 +487,12 @@
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"111" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:0.85];
+    
+    UIImageView* imageView = [[UIImageView alloc] init];
+    imageView.layer.cornerRadius = 20;
+    imageView.clipsToBounds = YES;
     if (indexPath.row == 0) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView1.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView1.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -508,7 +512,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 1) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView2.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView2.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -528,7 +532,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 2) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView9.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView9.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -548,7 +552,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 3) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView4.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView4.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -568,7 +572,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 4) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView5.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView5.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -588,7 +592,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 5) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView7.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView7.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -608,7 +612,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 6) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView6.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView6.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -628,7 +632,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 7) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView3.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView3.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -648,7 +652,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 8) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView10.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView10.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -668,7 +672,7 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     } else if (indexPath.row == 9) {
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CollectionView8.jpeg"]];
+        imageView.image = [UIImage imageNamed:@"CollectionView8.jpeg"];
         [cell addSubview:imageView];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell).with.offset(10);
@@ -688,23 +692,26 @@
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
     }
+    
+    cell.layer.cornerRadius = 15;
+    cell.clipsToBounds = YES;
     return cell;
 }
 - (void)pressLoactionButton:(UIButton*)buttonLocation{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressLocationButton" object:nil];
-    NSLog(@"1111111");
+    
 }
 - (void)pressSearchButton: (UIButton*)buttonSearch{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressSearchButton" object:nil];
-    NSLog(@"1111111");
+    
 }
 - (void)pressScanButton: (UIButton*)buttonScan{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressScanButton" object:nil];
-    NSLog(@"1111111");
+    
 }
 - (void)pressNewsButton:(UIButton*)buttonNews{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressNewsButton" object:nil];
-    NSLog(@"1111111");
+    
 }
 /*
  // Only override drawRect: if you perform custom drawing.

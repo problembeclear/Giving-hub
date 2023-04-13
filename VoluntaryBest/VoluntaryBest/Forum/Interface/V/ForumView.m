@@ -120,8 +120,6 @@
     self.tableView.estimatedRowHeight = 400;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    
-    
     [self.scrollView addSubview:self.tableView];
     
 }
@@ -164,6 +162,7 @@
             UIImageView* imageSecond = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"peitu2.jpg"]];
             [cell.content addSubview:imageFirst];
             [cell.content addSubview:imageSecond];
+            
             [imageFirst mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(cell.content).with.offset(0);
                 make.width.mas_equalTo((Width-30)/3);
@@ -350,10 +349,13 @@
     //每传回一次值就要加一，记录已选择照片数量
     self.imageCount++;
     
+    UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
+    [self.scrollView addSubview:imageViewForPhotosFirst];
+    imageViewForPhotosFirst.clipsToBounds = YES;
+    imageViewForPhotosFirst.layer.cornerRadius = 5;
     if (self.imageCount >= 1 && self.imageCount <= 3) {
         //当照片没超过一排时的布局
-        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
-        [self.scrollView addSubview:imageViewForPhotosFirst];
+        
         [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.scrollView).with.offset(Width + 40 + (self.imageCount - 1) * 90);
             make.top.equalTo(self.textView.mas_top).with.offset(Height*0.15);
@@ -371,8 +373,7 @@
         //第二排的布局
         
         self.textView.frame = CGRectMake(30 + Width, 20, Width - 30*2, Height*0.25 + 100);
-        UIImageView* imageViewForPhotosFirst = [[UIImageView alloc] initWithImage:dictionary[@"image"]];
-        [self.scrollView addSubview:imageViewForPhotosFirst];
+        
         [imageViewForPhotosFirst mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.scrollView).with.offset(Width + 40 + (self.imageCount - 4) * 90);
             make.bottom.equalTo(self.textView.mas_bottom).with.offset(-10);
