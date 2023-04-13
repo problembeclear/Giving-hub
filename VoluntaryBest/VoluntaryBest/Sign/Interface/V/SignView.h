@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *manager;
+@property (nonatomic, strong) UIButton *buttonForWindow;
 - (void)initView;
 @end
 

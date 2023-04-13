@@ -19,6 +19,7 @@ UICollectionViewDataSource>
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) UICollectionViewFlowLayout* flowLayout;
 @property (strong, nonatomic) UIButton* locationButton;
+@property (strong, nonatomic) UIView* label;
 
 @end
 

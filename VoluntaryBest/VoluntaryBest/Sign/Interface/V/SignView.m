@@ -38,7 +38,7 @@
     
 }
 
-- (void) sendToSignController {
+- (void) sendToSignController{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"callMyWindow" object:nil];
 }
 #pragma mark Manager

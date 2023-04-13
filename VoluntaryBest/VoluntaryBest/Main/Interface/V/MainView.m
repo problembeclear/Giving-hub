@@ -30,20 +30,20 @@
     [self initCollctionView];
     
     
-    UIView* label = [[UIView alloc] init];
-    [self addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.label = [[UIView alloc] init];
+    [self addSubview:self.label];
+    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(0);
         make.top.equalTo(self).with.offset(0);
         make.width.mas_equalTo(WIDTH);
         make.height.mas_equalTo(90);
     }];
-    label.backgroundColor = [UIColor whiteColor];
+    self.label.backgroundColor = [UIColor whiteColor];
     
     //地区选择
     self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.locationButton setTitle:@"杭州市" forState:UIControlStateNormal];
-    [label addSubview:self.locationButton];
+    [self.label addSubview:self.locationButton];
     [self.locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [self.locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,7 +60,7 @@
     UILabel* lablePeople = [[UILabel alloc] init];
     lablePeople.text = @"1,101,708";
     lablePeople.font = [UIFont systemFontOfSize:26];
-    [label addSubview:lablePeople];
+    [self.label addSubview:lablePeople];
     [lablePeople mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(WIDTH*0.27);
         make.top.equalTo(self).with.offset(34);
@@ -72,7 +72,7 @@
     UILabel* lablePeopleNum = [[UILabel alloc] init];
     lablePeopleNum.text = @"志愿者";
     lablePeopleNum.font = [UIFont systemFontOfSize:16];
-    [label addSubview:lablePeopleNum];
+    [self.label addSubview:lablePeopleNum];
     [lablePeopleNum mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(WIDTH*0.52);
         make.top.equalTo(self).with.offset(HEIGHT*0.05);
@@ -85,7 +85,7 @@
     //搜索button。二维码button，消息button
     UIButton* searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [searchButton setImage:[UIImage imageNamed:@"sousuo"] forState:UIControlStateNormal];
-    [label addSubview:searchButton];
+    [self.label addSubview:searchButton];
     [searchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     searchButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [searchButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,7 +100,7 @@
     
     UIButton* scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [scanButton setImage:[UIImage imageNamed:@"saomiao"] forState:UIControlStateNormal];
-    [label addSubview:scanButton];
+    [self.label addSubview:scanButton];
     [scanButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     scanButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [scanButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -114,7 +114,7 @@
     
     UIButton* newsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newsButton setImage:[UIImage imageNamed:@"xiaoxi"] forState:UIControlStateNormal];
-    [label addSubview:newsButton];
+    [self.label addSubview:newsButton];
     [newsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     newsButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [newsButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -182,7 +182,7 @@
     
     self.locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.locationButton setTitle:sender.userInfo[@"111"] forState:UIControlStateNormal];
-    [self.scrollBack addSubview:self.locationButton];
+    [self.label addSubview:self.locationButton];
     [self.locationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.locationButton.titleLabel.font = [UIFont boldSystemFontOfSize:26];
     [self.locationButton mas_makeConstraints:^(MASConstraintMaker *make) {
