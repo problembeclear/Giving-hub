@@ -27,6 +27,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissToSignController) name:@"sendToWindowController" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentSign) name:@"getInSign" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeWindowController) name:@"removeWindowController" object:nil];
 }
 
 - (void) dismissToSignController {
@@ -35,7 +37,9 @@
 - (void) presentSign {
     
     OperationViewController* OperationController = [[OperationViewController alloc] init];
-//    OperationController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:OperationController animated:YES completion:nil];
+}
+- (void) removeWindowController {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 @end

@@ -41,10 +41,8 @@
 }
 
 
-//计时一段时间后弹出窗口
+//点击绿色签到按钮
 - (void) PopSignWindow {
-    NSLog(@"1111");
-    
     WindowViewController* WController = [[WindowViewController alloc] init];
     WController.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:WController animated:YES completion:nil];
