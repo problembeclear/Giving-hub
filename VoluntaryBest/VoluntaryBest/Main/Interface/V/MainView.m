@@ -391,7 +391,7 @@
         make.width.mas_equalTo(HEIGHT*0.12);
         make.height.mas_equalTo(HEIGHT*0.06);
     }];
-    labelGoodActivity.backgroundColor = [UIColor colorWithRed:180.0/255 green:180.0/255 blue:180.0/255 alpha:0.85];
+    labelGoodActivity.backgroundColor = [UIColor colorWithRed:180.0/255 green:180.0/255 blue:180.0/255 alpha:0.45];
     labelGoodActivity.font = [UIFont systemFontOfSize:25];
     labelGoodActivity.textAlignment = NSTextAlignmentCenter;
     labelGoodActivity.layer.cornerRadius = 10;
@@ -470,7 +470,7 @@
 - (void)initCollctionView {
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    //self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, HEIGHT*0.45, WIDTH, HEIGHT*3) collectionViewLayout:self.flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -511,6 +511,7 @@
             make.width.mas_equalTo(WIDTH/2 - 30);
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
+        
     } else if (indexPath.row == 1) {
         imageView.image = [UIImage imageNamed:@"CollectionView2.jpeg"];
         [cell addSubview:imageView];
@@ -524,10 +525,10 @@
         labelText.text = @"助学、筑梦、铸人！贫困儿童资助活动";
         [cell addSubview:labelText];
         labelText.font = [UIFont systemFontOfSize:19];
-        labelText.numberOfLines = 3;
+        labelText.numberOfLines = 2;
         [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView).with.offset(0);
-            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 90);
             make.width.mas_equalTo(WIDTH/2 - 30);
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
@@ -567,7 +568,7 @@
         labelText.numberOfLines = 3;
         [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView).with.offset(0);
-            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 90);
             make.width.mas_equalTo(WIDTH/2 - 30);
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
@@ -627,7 +628,7 @@
         labelText.numberOfLines = 3;
         [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView).with.offset(0);
-            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 90);
             make.width.mas_equalTo(WIDTH/2 - 30);
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
@@ -647,7 +648,7 @@
         labelText.numberOfLines = 3;
         [labelText mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView).with.offset(0);
-            make.top.equalTo(imageView).with.offset(WIDTH/2 - 80);
+            make.top.equalTo(imageView).with.offset(WIDTH/2 - 90);
             make.width.mas_equalTo(WIDTH/2 - 30);
             make.height.mas_equalTo(WIDTH/2 - 30);
         }];
@@ -696,6 +697,33 @@
     cell.layer.cornerRadius = 15;
     cell.clipsToBounds = YES;
     return cell;
+}
+- (CGSize)collectionView: (UICollectionView*) collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    } else if (indexPath.row == 1) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 45);
+    } else if (indexPath.row == 2) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    } else if (indexPath.row == 3) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 45);
+    } else if (indexPath.row == 4) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    } else if (indexPath.row == 5) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    } else if (indexPath.row == 6) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 45);
+    } else if (indexPath.row == 7) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 45);
+    } else if (indexPath.row == 8) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    } else if (indexPath.row == 9) {
+        return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    }
+    
+    
+    return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
+    
 }
 - (void)pressLoactionButton:(UIButton*)buttonLocation{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pressLocationButton" object:nil];
