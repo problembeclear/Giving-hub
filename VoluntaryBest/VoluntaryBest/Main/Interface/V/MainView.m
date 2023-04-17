@@ -720,8 +720,6 @@
     } else if (indexPath.row == 9) {
         return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
     }
-    
-    
     return self.flowLayout.itemSize = CGSizeMake(WIDTH/2 - 5, HEIGHT / 3 - 25);
     
 }

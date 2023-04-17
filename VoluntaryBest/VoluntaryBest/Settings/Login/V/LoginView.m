@@ -14,35 +14,57 @@
 
 
 - (void) LayoutSelf {
-    self.backgroundColor = [UIColor systemCyanColor];
-    UIButton* buttonReturn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [buttonReturn setImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
-    [self addSubview:buttonReturn];
-    [buttonReturn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).with.offset(Width*0.05);
-        make.top.equalTo(self).with.offset(Height*0.05);
+    
+    
+    
+    
+    UIImageView* preView = [[UIImageView alloc] init] ;
+    preView.image = [UIImage imageNamed:@"LogInBack.jpeg"] ;
+    preView.frame = CGRectMake(0, 0, Width, Height);
+    [self addSubview:preView];
+    
+    
+    
+    //self.backgroundColor = [UIColor whiteColor];
+    UIButton* buttonReturnMain = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonReturnMain setImage:[UIImage imageNamed:@"return.png"] forState:UIControlStateNormal];
+    [self addSubview:buttonReturnMain];
+    buttonReturnMain.titleLabel.font = [UIFont systemFontOfSize:50];
+    [buttonReturnMain setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [buttonReturnMain mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).with.offset(15);
+        make.top.equalTo(self).with.offset(34);
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
+        
     }];
-    [buttonReturn addTarget:self action:@selector(returnByPressButton) forControlEvents:UIControlEventTouchUpInside];
+    [buttonReturnMain addTarget:self action:@selector(returnByPressButton) forControlEvents:UIControlEventTouchUpInside];
     
     
-    UIImageView* logoViewInLogin = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"denglu.png"]];
-    [self addSubview:logoViewInLogin];
-    [logoViewInLogin mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).with.offset(Width*0.3);
-        make.width.mas_equalTo(Width*0.4);
-        make.top.equalTo(self).with.offset(Height*0.2);
-        make.height.mas_equalTo(Height*0.1);
-    }];
+    
+    
+    
+
+    
+    
+    
+    
+//    UIImageView* logoViewInLogin = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"denglu.png"]];
+//    [self addSubview:logoViewInLogin];
+//    [logoViewInLogin mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self).with.offset(Width*0.3);
+//        make.width.mas_equalTo(Width*0.4);
+//        make.top.equalTo(self).with.offset(Height*0.2);
+//        make.height.mas_equalTo(Height*0.1);
+//    }];
     
     //账号栏
     self.countField = [[UITextField alloc] init];
-    [self addSubview:self.countField];
+    [preView addSubview:self.countField];
     [self.countField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(Width*0.25);
         make.width.mas_equalTo(Width*0.6);
-        make.top.equalTo(logoViewInLogin.mas_bottom).with.offset(30);
+        make.top.equalTo(preView.mas_bottom).with.offset(30);
         make.height.mas_equalTo(40);
     }];
     self.countField.backgroundColor = [UIColor whiteColor];
@@ -52,7 +74,7 @@
     //账号图标
     UIImageView* countImage = [[UIImageView alloc] init];
     countImage.image = [UIImage imageNamed:@"zhanghao.png"];
-    [self addSubview:countImage];
+    [preView addSubview:countImage];
     [countImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.countField.mas_left).with.offset(-5);
         make.width.mas_equalTo(40);
@@ -63,7 +85,7 @@
     
     //密码栏
     self.passwordField = [[UITextField alloc] init];
-    [self addSubview:self.passwordField];
+    [preView addSubview:self.passwordField];
     [self.passwordField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).with.offset(Width*0.25);
         make.width.mas_equalTo(Width*0.6);
@@ -78,7 +100,7 @@
     //密码图标
     UIImageView* passwordImage = [[UIImageView alloc] init];
     passwordImage.image = [UIImage imageNamed:@"mima.png"];
-    [self addSubview:passwordImage];
+    [preView addSubview:passwordImage];
     [passwordImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.passwordField.mas_left).with.offset(-5);
         make.width.mas_equalTo(40);
@@ -92,7 +114,7 @@
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     loginButton.tintColor = [UIColor whiteColor];
     [loginButton addTarget:self action:@selector(pressLogin) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:loginButton];
+    [preView addSubview:loginButton];
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(countImage).with.offset(0);
         make.top.equalTo(self.passwordField.mas_bottom).with.offset(20);
@@ -107,7 +129,7 @@
     [SignUpButton setTitle:@"注册" forState:UIControlStateNormal];
     SignUpButton.tintColor = [UIColor whiteColor];
     [SignUpButton addTarget:self action:@selector(pressSignUp) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:SignUpButton];
+    [preView addSubview:SignUpButton];
     [SignUpButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.passwordField).with.offset(0);
         make.top.equalTo(self.passwordField.mas_bottom).with.offset(20);

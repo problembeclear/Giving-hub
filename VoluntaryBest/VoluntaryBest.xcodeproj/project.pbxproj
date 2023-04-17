@@ -163,6 +163,7 @@
 		B9E5899B296C848A00B7D15E /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E58998296C848A00B7D15E /* sousuo.png */; };
 		B9F37D5829E04D0F008EC5B0 /* ScanBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9F37D5729E04D0F008EC5B0 /* ScanBack.jpeg */; };
 		B9F37D5A29E17836008EC5B0 /* Today.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9F37D5929E17836008EC5B0 /* Today.jpeg */; };
+		B9F37DB529E97CB2008EC5B0 /* LogInBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9F37DB429E97CB2008EC5B0 /* LogInBack.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -394,6 +395,7 @@
 		B9E58998296C848A00B7D15E /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
 		B9F37D5729E04D0F008EC5B0 /* ScanBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ScanBack.jpeg; path = ../../../ScanBack.jpeg; sourceTree = "<group>"; };
 		B9F37D5929E17836008EC5B0 /* Today.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Today.jpeg; path = ../../../Today.jpeg; sourceTree = "<group>"; };
+		B9F37DB429E97CB2008EC5B0 /* LogInBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LogInBack.jpeg; path = ../../../LogInBack.jpeg; sourceTree = "<group>"; };
 		BFD62B9CE786727B1EF9B7F1 /* Pods-VoluntaryBest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.debug.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0899E6DFBF7F30A84D7E409 /* libPods-VoluntaryBest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoluntaryBest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45F58C014DFCF0A7D03608 /* Pods-VoluntaryBest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoluntaryBest.release.xcconfig"; path = "Target Support Files/Pods-VoluntaryBest/Pods-VoluntaryBest.release.xcconfig"; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 				B9F37D5729E04D0F008EC5B0 /* ScanBack.jpeg */,
 				B9F37D5929E17836008EC5B0 /* Today.jpeg */,
 				401F5B19299CE97F00EF22B4 /* videoImage.png */,
+				B9F37DB429E97CB2008EC5B0 /* LogInBack.jpeg */,
 				B921331329AA02970066B823 /* InSign */,
 				B9B192FE297425DA00CC0811 /* sum */,
 				B9E58995296C847400B7D15E /* InMain */,
@@ -1191,6 +1194,7 @@
 				404E7C1F29B78400006B1832 /* video-6.png in Resources */,
 				B9B193062974263200CC0811 /* aixin-2.png in Resources */,
 				404E7BA929AB93C1006B1832 /* wodeshipin.png in Resources */,
+				B9F37DB529E97CB2008EC5B0 /* LogInBack.jpeg in Resources */,
 				B9B192CD2973C28C00CC0811 /* qizhi.png in Resources */,
 				B9B1930A2974263D00CC0811 /* dingwei.png in Resources */,
 				4001E17629E66A8B00AD4C1B /* 85_.pic.jpg in Resources */,
